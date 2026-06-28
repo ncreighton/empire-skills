@@ -1,37 +1,27 @@
 ---
 name: content-calendar-generator
-description: "Generate AI-powered monthly content calendars from trending topics, seasonal events, and keyword gaps. Use when the user needs SEO content planning, editorial calendars, or multi-channel content strategies for blogs, social media, and email."
+description: "Generate AI-powered monthly content calendars from trending topics, seasonal events, and keyword gaps. Use when the user needs SEO content planning, editorial calendars, or multi-channel publishing schedules."
 version: 1.0.0
 homepage: https://github.com/ncreighton/empire-skills
 metadata:
-  {
-    "openclaw": {
-      "requires": {
-        "env": ["OPENAI_API_KEY", "GOOGLE_TRENDS_API_KEY"],
-        "bins": []
-      },
-      "os": ["macos", "linux", "win32"],
-      "files": ["SKILL.md"],
-      "emoji": "📅"
-    }
-  }
+  {"openclaw":{"requires":{"env":["OPENAI_API_KEY","GOOGLE_SEARCH_API_KEY","SERPAPI_KEY"],"bins":["python3"]},"os":["macos","linux","win32"],"files":["SKILL.md"],"emoji":"📅"}}
 ---
-
-# Content Calendar Generator
 
 ## Overview
 
-The **Content Calendar Generator** is an AI-powered skill that automates the creation of strategic, data-driven monthly content calendars. It synthesizes trending topics from Google Trends, identifies seasonal opportunities, performs keyword gap analysis, and generates a comprehensive editorial roadmap optimized for SEO performance.
+The **Content Calendar Generator** is an AI-powered automation skill that builds comprehensive monthly editorial calendars tailored to your industry, audience, and SEO strategy. This skill eliminates manual research by analyzing trending topics, seasonal events, keyword gaps, and competitor content to produce a structured, publication-ready calendar.
 
-This skill eliminates the manual research overhead of content planning by:
-- **Analyzing real-time trends** via Google Trends API
-- **Identifying keyword gaps** in your niche using semantic search
-- **Mapping seasonal events** and industry milestones
-- **Generating content briefs** with SEO recommendations
-- **Exporting to multiple formats** (CSV, JSON, Markdown, Google Sheets)
-- **Integrating with WordPress, Slack, and email workflows**
+### Why This Matters
 
-Perfect for content strategists, marketing teams, and agencies managing multiple content streams. Supports blogs, social media, email newsletters, and video content planning.
+Content teams spend 10-15 hours weekly on calendar planning, research, and coordination. This skill automates that entire workflow, delivering:
+
+- **SEO-optimized topics** based on Google Trends, keyword difficulty, and search volume
+- **Seasonal relevance** with holiday hooks, industry events, and cultural moments
+- **Multi-channel scheduling** for blog, email, social media, and video
+- **Competitor gap analysis** to find untapped content opportunities
+- **Cross-platform integration** with WordPress, HubSpot, Asana, Slack, and Google Calendar
+
+Perfect for marketing teams, agencies, solopreneurs, and content creators who need data-driven planning without the research overhead.
 
 ---
 
@@ -39,122 +29,121 @@ Perfect for content strategists, marketing teams, and agencies managing multiple
 
 Try these prompts immediately to see the skill in action:
 
-### Example 1: Basic Monthly Calendar
+### Example 1: SaaS Product Launch Calendar
 ```
-Generate a content calendar for my SaaS product management blog for March 2025.
-Focus on trending topics in project management and agile methodologies.
-Include 12-15 content pieces with SEO keywords and publish dates.
-```
-
-### Example 2: Seasonal + Keyword Gap Analysis
-```
-Create a 30-day content calendar for an e-commerce fashion brand.
-Include seasonal spring trends, holiday events, and keyword gaps.
-Identify 20 high-intent keywords we're not currently ranking for.
-Format as CSV with columns: Date, Title, Topic, Primary Keyword, Content Type, Estimated Traffic.
+Generate a 90-day content calendar for a B2B SaaS product launch (project management tool).
+Include:
+- 15 blog posts targeting product keywords
+- 20 social media posts (LinkedIn, Twitter)
+- 4 email nurture sequences
+- Seasonal tie-ins for Q1
+- Competitor gap analysis vs. Asana, Monday.com, and Jira
+Format as CSV with columns: Date, Channel, Topic, Keyword, Search Volume, Difficulty, CTA
 ```
 
-### Example 3: Multi-Channel Strategy
+### Example 2: E-commerce Holiday Planning
 ```
-Build a content calendar for Q2 2025 covering blog posts, LinkedIn articles, 
-and email newsletter content for a B2B SaaS company in HR tech.
-Prioritize trending topics in employee engagement and remote work.
-Include content pillars, CTAs, and cross-promotion opportunities.
-Export as JSON with metadata for WordPress integration.
+Create a 6-month content calendar for an eco-friendly fashion e-commerce brand.
+Focus on:
+- Seasonal events (Earth Day, Black Friday, New Year)
+- Trending hashtags and TikTok/Instagram Reels topics
+- Product launch announcements (3 new collections)
+- User-generated content campaigns
+- Email campaigns tied to each season
+Include estimated reach and engagement metrics for each piece.
+Output as JSON with metadata for WordPress scheduling.
 ```
 
-### Example 4: Competitive Gap Analysis
+### Example 3: Personal Brand / Newsletter
 ```
-Generate a content calendar for a fitness niche blog.
-Analyze my top 5 competitors' content strategies.
-Identify content gaps and untapped keyword opportunities.
-Create 25 unique content ideas with difficulty scores and traffic estimates.
+Generate a 12-week content calendar for a personal finance newsletter targeting millennials.
+Analyze trending topics in:
+- Cryptocurrency and Web3
+- Side hustles and remote work
+- Sustainable investing
+- Debt payoff strategies
+Include:
+- Weekly newsletter themes
+- 3 viral content ideas per week
+- Guest post opportunities
+- Podcast episode topics
+- LinkedIn article calendar
+Rank by estimated engagement potential.
 ```
 
 ---
 
 ## Capabilities
 
-### 1. Trend Analysis & Topic Discovery
-- Pulls real-time trending topics from **Google Trends API**
-- Analyzes search volume velocity and seasonal patterns
-- Identifies emerging topics in your industry vertical
-- Filters for relevance to your niche and audience
-- Ranks topics by traffic potential and competition level
+### 1. **Trend & Keyword Analysis**
+Analyzes Google Trends, SEMrush, Ahrefs, and SerpAPI data to identify:
+- Rising keywords in your niche (30-day, 90-day, 12-month trends)
+- Search volume and keyword difficulty scores
+- Long-tail keyword opportunities with low competition
+- Question-based keywords (People Also Ask)
+- Seasonal search patterns
 
 **Usage Example:**
 ```
-Analyze trending topics in "sustainable fashion" for the next 90 days.
-Show search volume trends, related queries, and rising topics.
-Recommend which trends are worth creating content around.
+Analyze trending topics in "sustainable fashion" for Q1 2024.
+Show keywords with:
+- Search volume > 500/month
+- Difficulty < 40
+- Trend trajectory (up/down)
+List the top 20 opportunities with estimated traffic potential.
 ```
 
-### 2. Keyword Gap Analysis
-- Compares your current content against competitor keyword coverage
-- Identifies high-intent keywords you're not targeting
-- Calculates keyword difficulty and traffic potential
-- Groups keywords into content clusters (topic modeling)
-- Recommends content pieces to fill gaps
-
-**Usage Example:**
-```
-Analyze keyword gaps for my fitness blog vs. top 10 competitors.
-Focus on long-tail keywords with 500-2000 monthly searches.
-Show which keywords have low competition but high relevance.
-```
-
-### 3. Seasonal & Event Mapping
-- Automatically detects relevant holidays, industry events, and seasonal peaks
-- Maps content opportunities to peak search periods
-- Creates themed content clusters around major events
-- Provides lead-time recommendations (when to publish before events)
-- Includes historical performance data for recurring events
+### 2. **Seasonal & Event-Based Planning**
+Automatically maps:
+- National holidays and observances (US, UK, EU, Asia-Pacific)
+- Industry-specific events (conferences, award seasons, fiscal calendars)
+- Cultural moments and trending conversations
+- Product launch windows
+- Promotional periods (Black Friday, Cyber Monday, Prime Day, etc.)
 
 **Usage Example:**
 ```
-Map seasonal content opportunities for a gardening blog for 2025.
-Include spring planting season, summer maintenance, fall prep, and winter planning.
-Show optimal publish dates to rank before peak search periods.
+Map all relevant seasonal events for a fitness brand in 2024.
+Include:
+- Fitness industry events (IHRSA, fitness expos)
+- New Year's resolutions (Jan), summer body (Apr-May), fall training (Sep)
+- Holiday gift guides (Nov-Dec)
+- Weather-based content (winter workouts, spring training)
 ```
 
-### 4. Content Brief Generation
-- Generates SEO-optimized content briefs for each calendar item
-- Includes target keywords, search intent, outline structure
-- Recommends content format (blog, video, infographic, email)
-- Suggests internal linking opportunities
-- Provides estimated word count and reading time
-
-**Usage Example:**
-```
-Generate detailed content briefs for 10 blog posts in my calendar.
-Include target keywords, search intent analysis, H2/H3 structure,
-internal linking suggestions, and estimated traffic potential.
-```
-
-### 5. Multi-Format Export & Integration
-- **CSV/Excel**: Import directly into project management tools
-- **JSON**: API-ready for custom integrations
-- **Markdown**: Ready for GitHub wikis and documentation
-- **Google Sheets**: Auto-populate with formulas and formatting
-- **WordPress XML**: Direct import into WordPress editorial calendar
-- **Slack**: Push calendar to team channels with notifications
-- **Zapier/Make**: Trigger workflows for content creation and scheduling
+### 3. **Competitor Gap Analysis**
+Crawls competitor content and identifies:
+- Topics competitors are covering (and you're not)
+- Content formats they're using (blogs, videos, podcasts, infographics)
+- Publishing frequency and cadence
+- Engagement metrics (estimated shares, comments)
+- Backlink opportunities and cited sources
 
 **Usage Example:**
 ```
-Export the calendar as a Google Sheet with formulas for:
-- Days until publish date
-- Content status tracking (draft, editing, published)
-- Traffic performance vs. forecast
-- Auto-update from WordPress API
+Analyze content gaps vs. HubSpot, Mailchimp, and ConvertKit in the email marketing space.
+Show:
+- Topics they cover that we don't
+- Topics we cover that they don't (our advantages)
+- Underperforming content we could improve
+- Emerging topics none of us cover yet
+Prioritize by search volume and engagement potential.
 ```
 
-### 6. Content Performance Forecasting
-- Estimates traffic potential based on keyword difficulty and volume
-- Predicts ranking timeline for new content
-- Calculates ROI by content type and topic cluster
-- Recommends content repurposing opportunities
-- Provides competitive benchmarking
+### 4. **Multi-Channel Distribution Planning**
+Generates channel-specific content for:
+- **Blog/Website**: Long-form SEO articles (2,000-5,000 words)
+- **Email**: Newsletter themes, nurture sequences, promotional campaigns
+- **Social Media**: LinkedIn posts, Twitter threads, TikTok/Instagram Reels scripts
+- **Video**: YouTube video outlines, thumbnail ideas, script frameworks
+- **Podcast**: Episode topics, guest suggestions, show notes templates
+
+### 5. **Audience Segmentation & Personalization**
+Tailors content calendar to:
+- Buyer journey stage (awareness, consideration, decision)
+- Audience personas (role, industry, company size, pain points)
+- Content preferences (visual, textual, interactive, educational)
+- Engagement history and past performance data
 
 ---
 
@@ -163,281 +152,231 @@ Export the calendar as a Google Sheet with formulas for:
 ### Required Environment Variables
 
 ```bash
-# OpenAI API key for content generation and analysis
+# OpenAI API (for content generation and analysis)
 export OPENAI_API_KEY="sk-..."
 
-# Google Trends and Search Console API credentials
-export GOOGLE_TRENDS_API_KEY="your-api-key"
-export GOOGLE_SEARCH_CONSOLE_PROPERTY="https://your-domain.com"
+# Google Search API (for trend analysis)
+export GOOGLE_SEARCH_API_KEY="your-key-here"
 
-# Optional: Content management system integrations
-export WORDPRESS_API_URL="https://your-site.com/wp-json"
-export WORDPRESS_API_TOKEN="your-jwt-token"
+# SerpAPI (for competitor analysis and keyword data)
+export SERPAPI_KEY="your-key-here"
 
-export SLACK_WEBHOOK_URL="https://hooks.slack.com/services/..."
-export GOOGLE_SHEETS_API_KEY="your-sheets-api-key"
-```
-
-### Configuration Options
-
-```json
-{
-  "calendar_length": "30",
-  "content_types": ["blog", "social", "email", "video"],
-  "target_audience": "B2B SaaS decision makers",
-  "niche": "project management software",
-  "competitors": ["asana.com", "monday.com", "jira.com"],
-  "min_search_volume": 100,
-  "max_keyword_difficulty": 50,
-  "focus_regions": ["US", "UK", "CA"],
-  "languages": ["en"],
-  "publication_frequency": "3-4 posts per week",
-  "include_seasonal_events": true,
-  "include_competitor_analysis": true,
-  "export_formats": ["csv", "json", "google_sheets"],
-  "auto_publish_schedule": false
-}
+# Optional: HubSpot, WordPress, Slack, Asana integrations
+export HUBSPOT_API_KEY="your-key-here"
+export WORDPRESS_API_KEY="your-key-here"
+export SLACK_WEBHOOK_URL="https://hooks.slack.com/..."
+export ASANA_API_KEY="your-key-here"
 ```
 
 ### Setup Instructions
 
-1. **Obtain API Keys**
-   - Google Cloud: Enable Trends API and Search Console API
-   - OpenAI: Create API key at platform.openai.com
-   - WordPress (optional): Generate JWT token in plugin settings
+1. **API Keys**: Obtain keys from OpenAI, Google Cloud Console, and SerpAPI
+2. **Python Dependencies**: Install `openai`, `google-api-python-client`, `serpapi`, `pandas`, `requests`
+3. **Data Files**: Provide CSV with competitor URLs, audience personas, or historical performance data (optional)
+4. **Integrations**: Connect WordPress, HubSpot, Asana, or Slack for automatic scheduling/notifications
 
-2. **Environment Configuration**
-   ```bash
-   # Save to .env file
-   source .env
-   ```
+### Configuration Options
 
-3. **Verify Integrations**
-   ```bash
-   # Test Google Trends connection
-   openclaw test-connection --service google-trends
-   
-   # Test WordPress integration
-   openclaw test-connection --service wordpress
-   ```
-
-4. **First Run**
-   ```bash
-   openclaw run content-calendar-generator \
-     --niche "your-niche" \
-     --calendar-length 30 \
-     --export-format csv
-   ```
+```yaml
+calendar_config:
+  duration: "30"              # days (30, 60, 90, 365)
+  channels:
+    - blog
+    - email
+    - social_media
+    - video
+  
+  seo_settings:
+    min_search_volume: 100
+    max_keyword_difficulty: 50
+    include_long_tail: true
+    
+  competitor_analysis:
+    competitors: ["competitor1.com", "competitor2.com"]
+    analyze_backlinks: true
+    
+  seasonal_focus: "all"       # "all", "q1", "q2", "q3", "q4"
+  
+  output_format: "csv"        # csv, json, markdown, google_sheets
+```
 
 ---
 
 ## Example Outputs
 
-### Output 1: CSV Calendar Format
+### Output Format 1: CSV Calendar
 ```
-Date,Title,Topic,Primary Keyword,Content Type,Estimated Traffic,Keyword Difficulty,Search Intent,Status
-2025-03-01,10 Project Management Tips for Remote Teams,Remote Work,project management remote teams,Blog,450,35,Informational,Draft
-2025-03-03,Agile Retrospectives: Complete Guide,Agile,agile retrospectives,Blog,320,28,Informational,Draft
-2025-03-05,5 Mistakes Killing Your Sprint Planning,Sprint Planning,sprint planning mistakes,Blog,280,32,Problem-solving,Planning
-2025-03-08,Kanban vs Scrum: Detailed Comparison,Methodology,kanban vs scrum,Blog,890,42,Comparison,Scheduled
-2025-03-10,Team Collaboration Tools 2025 Review,Tools,best team collaboration tools,Roundup,620,38,Comparison,Draft
+Date,Channel,Topic,Keyword,Search Volume,Difficulty,CTA,Estimated Reach,Format
+2024-01-08,Blog,New Year Fitness Goals for Busy Professionals,fitness goals 2024,8900,32,Sign up for 7-day challenge,1200,Article
+2024-01-10,Email,New Year Motivation Series Part 1,new year fitness,6500,28,Click to read blog,2400,Newsletter
+2024-01-12,Social,5 Quick Workouts Under 15 Minutes,quick workout,12000,25,Link in bio,450,Instagram Carousel
+2024-01-15,Blog,The Science Behind HIIT Training,HIIT training benefits,5600,42,Download free guide,800,Long-form Article
+2024-01-17,Video,How to Build a Home Gym on a Budget,home gym setup,4200,35,Subscribe for more,350,YouTube Script
 ```
 
-### Output 2: JSON with Metadata
+### Output Format 2: JSON with Metadata
 ```json
 {
-  "calendar_meta": {
-    "month": "March 2025",
-    "total_pieces": 15,
-    "estimated_total_traffic": 8940,
-    "average_difficulty": 35.2,
-    "coverage": {
-      "blog": 10,
-      "social": 3,
-      "email": 2
-    }
+  "calendar_metadata": {
+    "generated_date": "2024-01-01",
+    "duration_days": 30,
+    "total_pieces": 24,
+    "estimated_reach": 45000,
+    "channels": ["blog", "email", "social", "video"]
   },
-  "calendar_items": [
+  "content_pieces": [
     {
-      "id": "2025-03-001",
-      "publish_date": "2025-03-01",
-      "title": "10 Project Management Tips for Remote Teams",
-      "primary_keyword": "project management remote teams",
-      "related_keywords": [
-        "remote team management",
-        "distributed team productivity",
-        "asynchronous collaboration"
+      "id": "piece_001",
+      "date": "2024-01-08",
+      "channel": "blog",
+      "topic": "New Year Fitness Goals for Busy Professionals",
+      "keyword": "fitness goals 2024",
+      "seo_metrics": {
+        "search_volume": 8900,
+        "difficulty": 32,
+        "trend": "up"
+      },
+      "content_outline": [
+        "Why goals matter for fitness success",
+        "5 SMART goal examples for 2024",
+        "How to track progress without obsessing"
       ],
-      "content_type": "blog",
-      "estimated_traffic": 450,
-      "keyword_difficulty": 35,
-      "search_intent": "informational",
-      "outline": [
-        "Introduction: Why remote PM is different",
-        "Tip 1: Clear communication protocols",
-        "Tip 2: Asynchronous-first mindset",
-        "Tip 3: Regular sync touchpoints",
-        "Conclusion: Tools aren't enough"
-      ],
-      "internal_links": [
-        "asynchronous-collaboration-guide",
-        "communication-tools-comparison"
-      ],
-      "cta": "Download our Remote Team Playbook",
-      "estimated_word_count": 2200,
-      "competitor_coverage": 0.7
+      "cta": "Sign up for our 7-day challenge",
+      "estimated_reach": 1200,
+      "format": "2500-word article",
+      "internal_links": ["challenge-page", "goal-tracking-tool"]
     }
   ]
 }
 ```
 
-### Output 3: Google Sheets Integration
+### Output Format 3: Google Sheets Integration
 Automatically creates a shared Google Sheet with:
-- Color-coded status tracking (Draft → Editing → Published)
-- Formulas for days-until-publish countdown
-- Traffic forecasts vs. actual performance
-- Team assignment and ownership
-- Links to published content and analytics
+- Sortable/filterable calendar
+- Color-coded by channel and priority
+- Embedded competitor analysis sidebar
+- Collaboration features (comments, assignments)
+- Auto-synced with WordPress/HubSpot for scheduling
 
 ---
 
 ## Tips & Best Practices
 
-### 1. Start with Your Audience, Not Keywords
-```
-❌ Wrong: "Generate calendar for all marketing keywords"
-✅ Right: "Generate calendar for B2B SaaS CFOs interested in 
-           financial automation and cost reduction"
-```
-The skill performs better when you define your target persona first.
+### 1. **Align Calendar with Business Goals**
+Before generating, define:
+- Primary KPI (traffic, leads, revenue, brand awareness)
+- Target audience persona(s)
+- Seasonal revenue patterns
+- Product launch dates or promotions
 
-### 2. Leverage Competitor Analysis
-- Provide 3-5 top competitors for gap analysis
-- The skill identifies content they're ranking for that you're not
-- Prioritize "quick wins" (low difficulty, relevant keywords)
-- Use for differentiation opportunities, not copying
+**Pro Tip**: Include historical performance data (past blog traffic, email open rates) so the skill can prioritize high-performing content types.
 
-### 3. Balance Trend-Chasing with Evergreen Content
-The calendar automatically allocates:
-- **60% Evergreen**: Timeless content that ranks long-term
-- **30% Seasonal**: Holiday and event-driven content
-- **10% Trending**: Hot topics with short shelf life
+### 2. **Leverage Competitor Intelligence**
+- Provide 3-5 competitor URLs for gap analysis
+- Analyze both direct competitors and adjacent players
+- Look for underserved topics with high search volume
+- Identify content formats that drive engagement in your space
 
-Adjust ratios based on your content strategy.
+### 3. **Balance Evergreen & Trending Content**
+- **Evergreen (60%)**: Foundational topics, how-tos, ultimate guides (sustained traffic)
+- **Trending (30%)**: News hooks, seasonal content, viral opportunities (quick wins)
+- **Promotional (10%)**: Product launches, sales, webinars, CTAs (conversion focus)
 
-### 4. Optimal Publish Frequency
-```
-Blog posts: 2-3 per week (consistent ranking signals)
-Social media: 4-5 per week (engagement, not ranking)
-Email: 1-2 per week (subscriber retention)
-```
-The skill respects your configured frequency.
-
-### 5. Content Repurposing Strategy
-One blog post can become:
-- 3-5 social media posts (LinkedIn, Twitter, Instagram)
-- 1 email newsletter feature
-- 1 video script
-- 1 infographic
+### 4. **Optimize for Multi-Channel Repurposing**
+One piece of core research can become:
+- 1 long-form blog post (2,500+ words)
+- 1 email sequence (4-5 emails)
+- 8-10 social media posts (LinkedIn, Twitter, Instagram)
+- 1 video script (YouTube, TikTok)
 - 1 podcast episode outline
 
-Use the JSON export to create repurposing workflows.
+Use the skill's "repurpose" feature to maximize ROI on research.
 
-### 6. Timing Matters for Seasonal Content
-- **3-4 weeks before**: Publish major seasonal content
-- **2 weeks before**: Publish supporting content
-- **1 week before**: Social amplification and email teasers
-- **During event**: Real-time updates and live content
+### 5. **Plan for Consistency**
+- Set a realistic publishing cadence (2x/week blog, 3x/day social, 1x/week email)
+- Build in 2-week buffer for editing, design, and approvals
+- Schedule content batching sessions (dedicate 1 day/week to creation)
+- Use integrations to auto-publish and notify teams
 
-The skill recommends optimal publish dates automatically.
-
-### 7. Monitor and Iterate
-- Track actual traffic vs. forecasts
-- Update keyword difficulty monthly (it changes)
-- Identify underperforming topics early
-- Reallocate resources to high-performers
-
-Export performance data to refine next month's calendar.
+### 6. **Monitor & Iterate**
+- Track actual performance vs. estimates (traffic, engagement, conversions)
+- Feed performance data back into the skill for next month's calendar
+- Identify your top-performing content types and topics
+- Adjust keyword targets based on actual search volume and difficulty
 
 ---
 
 ## Safety & Guardrails
 
-### What This Skill WILL Do
-✅ Analyze public data (Google Trends, search volume, competitor websites)
-✅ Generate content ideas and strategic recommendations
-✅ Create editorial calendars and briefs
-✅ Suggest SEO optimizations and keyword targets
-✅ Export data to your tools (WordPress, Google Sheets, etc.)
-
 ### What This Skill WILL NOT Do
-❌ **Plagiarize or copy competitor content** — It identifies gaps, not copy opportunities
-❌ **Create actual written content** — It generates briefs and outlines only; you write the content
-❌ **Guarantee rankings** — SEO results depend on content quality, backlinks, and user experience
-❌ **Violate robots.txt or scrape protected content** — Uses only public APIs and ethical data sources
-❌ **Bypass WordPress authentication** — Requires valid API tokens for integrations
-❌ **Make financial predictions** — Traffic estimates are forecasts, not guarantees
-❌ **Target private/protected keywords** — Respects robots.txt and terms of service
 
-### Ethical Boundaries
-- **Competitor analysis** is limited to public, indexed content only
-- **Keyword recommendations** exclude adult, illegal, or harmful niches
-- **Content suggestions** comply with platform guidelines (YouTube, TikTok, LinkedIn policies)
-- **Data privacy**: No personal data collection; respects GDPR/CCPA compliance
-- **Rate limiting**: Respects API quotas to avoid service disruption
+- **Create plagiarized content**: The skill generates topic ideas and outlines; actual content creation requires human authorship
+- **Bypass SEO best practices**: Recommends only ethical, white-hat SEO tactics (no keyword stuffing, cloaking, or manipulative linking)
+- **Violate competitor IP**: Analyzes publicly available content only; does not scrape proprietary data
+- **Generate misinformation**: Recommends fact-checking and expert review for health, legal, financial, and scientific claims
+- **Automate publishing without approval**: Generates calendars for human review; integrations require explicit approval before publishing
 
-### Limitations
-- **Google Trends data** has a 3-day lag (not real-time)
-- **Keyword difficulty** is estimated; actual difficulty varies by domain authority
-- **Traffic forecasts** assume average CTR and ranking position; your results may differ
-- **Competitor data** is limited to publicly indexed pages (no private content)
-- **Seasonal events** are US-centric by default; customize for other regions
+### Limitations & Boundaries
 
-### Content Guardrails
-The skill will refuse to generate calendars for:
-- Adult/NSFW content
-- Illegal products or services
-- Misinformation or medical advice (without expert review)
-- Hateful, discriminatory, or harassing content
-- Spam or low-quality content farms
+1. **Data Freshness**: Trend data is 24-48 hours old; real-time trending topics may not be captured
+2. **Niche Markets**: Works best for industries with significant search volume; ultra-niche topics may lack data
+3. **Personalization**: Calendar reflects provided personas; accuracy depends on persona quality
+4. **Competitor Analysis**: Limited to publicly available content; cannot access private/gated content
+5. **Forecast Accuracy**: Estimated reach/traffic is based on historical benchmarks; actual results vary by execution quality and audience
+
+### Recommended Guardrails
+
+- **Always fact-check**: Verify claims, especially in health, finance, and legal spaces
+- **Attribute sources**: Link to original research and cite competitor content appropriately
+- **Respect robots.txt**: Ensure competitor analysis respects website crawling policies
+- **Get approval**: Have stakeholders approve calendar before publishing
+- **Monitor performance**: Track actual metrics; adjust strategy if targets aren't met
 
 ---
 
 ## Troubleshooting
 
-### Q: "Google Trends API returns no data"
-**A:** Google Trends has rate limits. Solutions:
-- Increase API quota in Google Cloud Console
-- Narrow your search scope (specific region, language)
-- Try again in 1 hour (rate limit resets)
-- Verify API key has Trends API enabled
+### Common Issues & Solutions
 
-### Q: "Keyword difficulty scores seem inaccurate"
-**A:** Difficulty is estimated from:
-- Search volume
-- SERP feature count
-- Average domain authority of top 10 results
-- Your own domain authority
+**Q: "API key not found" error**
+- **A**: Ensure all required env vars are set. Run `echo $OPENAI_API_KEY` to verify. Restart your terminal after setting variables.
 
-For more accuracy, integrate with Ahrefs, SEMrush, or Moz API.
+**Q: "No trending topics found for my niche"**
+- **A**: Niche is too specific. Try broader keywords first (e.g., "sustainable fashion" instead of "eco-friendly hemp activewear"). Add 2-3 competitor URLs for gap analysis.
 
-### Q: "Calendar items don't match my niche"
-**A:** Improve results by being specific:
-```
-❌ "Generate calendar for tech"
-✅ "Generate calendar for B2B SaaS project management tools, 
-     targeting CTOs and engineering leaders, focused on 
-     enterprise features and remote team collaboration"
-```
+**Q: "Search volume estimates seem too high/low"**
+- **A**: Estimates are based on US search data. Adjust for target geography. Use SerpAPI directly to verify keyword data.
 
-### Q: "WordPress integration failing"
-**A:** Common causes:
-1. JWT token expired → Regenerate in WordPress plugin
-2. API URL incorrect → Verify `https://your-site.com/wp-json` is accessible
-3. Insufficient permissions → Ensure token has Editor+ role
-4. Firewall blocking → Check server logs for IP blocks
+**Q: "Calendar doesn't match my brand voice"**
+- **A**: The skill generates topic ideas and outlines, not final copy. Customize content during creation phase. Provide brand guidelines in the prompt for tone/style preferences.
 
-Test with:
-```bash
-curl -H "Authorization: Bearer YOUR_TOKEN" \
-  https
+**Q: "How do I integrate with WordPress/HubSpot?"**
+- **A**: Use the `output_format: "json"` option and export to Zapier, Make.com, or native integrations (WordPress REST API, HubSpot API). See references/ folder for integration templates.
+
+**Q: "Can I generate a calendar for multiple brands/products?"**
+- **A**: Yes. Run the skill separately for each brand, or provide multiple audience personas in a single request. Output will segment by persona.
+
+**Q: "How often should I regenerate the calendar?"**
+- **A**: Monthly is standard. Regenerate weekly for fast-moving industries (news, tech, finance). Update mid-month if major trends shift.
+
+**Q: "What if my competitors aren't ranking for the keywords recommended?"**
+- **A**: That's a gap opportunity! Low-difficulty keywords with high search volume are ideal targets. Rank for them before competitors do.
+
+**Q: "Can I use this for non-English content?"**
+- **A**: Yes. Specify language in the prompt (e.g., "Generate calendar in Spanish for Mexican audience"). Trend data may be less robust for non-English queries.
+
+---
+
+## Next Steps
+
+1. **Set up API keys** (5 minutes)
+2. **Define your audience personas** (15 minutes)
+3. **List 3-5 competitors** (5 minutes)
+4. **Run your first calendar** (2 minutes)
+5. **Customize and approve** (30 minutes)
+6. **Integrate with WordPress/HubSpot** (optional, 15 minutes)
+7. **Start publishing** and track performance
+
+---
+
+**Tags for ClawHub Discovery**: content-calendar, SEO, editorial-planning, content-
