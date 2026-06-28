@@ -1,13 +1,18 @@
 ---
 name: wordpress-seo-autopilot
-description: "Automate WordPress SEO optimization with meta tags, schema markup, internal linking, and RankMath integration. Use when the user needs on-page SEO, technical SEO audits, or bulk content optimization for WordPress sites."
+description: "Automate WordPress SEO optimization with meta tags, schema markup, internal linking, and RankMath integration. Use when the user needs to improve search rankings, bulk optimize pages, or set up continuous SEO monitoring."
 version: 1.0.0
 homepage: https://github.com/ncreighton/empire-skills
 metadata:
   {
     "openclaw": {
       "requires": {
-        "env": ["WORDPRESS_API_KEY", "WORDPRESS_SITE_URL", "RANKMATH_API_KEY", "GOOGLE_SEARCH_CONSOLE_KEY"],
+        "env": [
+          "WORDPRESS_API_KEY",
+          "WORDPRESS_SITE_URL",
+          "RANKMATH_API_KEY",
+          "GOOGLE_SEARCH_CONSOLE_KEY"
+        ],
         "bins": []
       },
       "os": ["macos", "linux", "win32"],
@@ -17,199 +22,154 @@ metadata:
   }
 ---
 
+# WordPress SEO Autopilot
+
 ## Overview
 
-**WordPress SEO Autopilot** is a comprehensive SEO automation engine that transforms your WordPress site's search visibility through intelligent, data-driven optimization. This skill automates the tedious, repetitive tasks that consume hours of manual effort while maintaining best practices and brand consistency.
+WordPress SEO Autopilot is a comprehensive automation skill that transforms your WordPress site into a search-engine-optimized powerhouse. This skill eliminates manual SEO grunt work by automatically generating and applying meta titles, meta descriptions, schema markup, internal linking strategies, and RankMath configurations across your entire site.
 
-### Why This Matters
+**Why this matters:** Most WordPress sites lose 40-60% of potential organic traffic due to poor SEO fundamentals. Manual optimization is time-consuming and error-prone. This skill automates the repetitive work so you can focus on content strategy and user experience.
 
-WordPress powers 43% of all websites, yet most site owners struggle with:
-- **Manual meta tag creation** for hundreds of pages
-- **Missing schema markup** that prevents rich snippets
-- **Broken internal linking strategies** that waste link equity
-- **Inconsistent SEO practices** across content
-- **Slow RankMath configuration** for large sites
-
-This skill eliminates these bottlenecks by integrating directly with WordPress REST API, RankMath's automation engine, and Google Search Console for real-time optimization based on actual search performance data.
-
-### Key Integrations
-
-- **WordPress REST API** — Direct post/page optimization
-- **RankMath SEO** — Native integration for advanced features
-- **Google Search Console** — Real-time search analytics
-- **Slack** — Optimization reports and alerts
-- **Google Sheets** — Bulk optimization workflows
-- **Yoast SEO** (fallback) — Alternative plugin support
+**Key Integrations:**
+- **WordPress REST API** — Direct site access and bulk page updates
+- **RankMath API** — Advanced SEO settings, focus keywords, and readability scoring
+- **Google Search Console** — Performance data, indexing status, and keyword insights
+- **Slack** — Real-time notifications for optimization progress and issues
+- **Google Analytics 4** — Traffic correlation with SEO improvements
 
 ---
 
 ## Quick Start
 
-Try these prompts immediately in your ClawHub interface:
-
-### Example 1: Optimize All Posts for Target Keywords
+### Example 1: Bulk Meta Tag Optimization
 ```
-Optimize all WordPress posts published in the last 30 days for SEO.
-Target keywords: "sustainable packaging", "eco-friendly shipping", "green logistics".
-Set meta descriptions to 155-160 characters.
-Add schema markup for Product and Organization.
-Update internal links to relevant posts.
-Generate a Slack report with optimization score for each post.
+"Analyze my WordPress site at example.com and generate optimized meta titles 
+and descriptions for all 47 published posts. Use the RankMath API to set 
+focus keywords based on current search volume. Send me a Slack summary when done."
 ```
 
-### Example 2: Bulk Meta Tag Generation
+### Example 2: Schema Markup Implementation
 ```
-Generate meta tags for my top 50 underperforming pages from Google Search Console.
-Current average CTR: 2.1%, target: 4.5%.
-Focus on title tags (55-60 chars) and meta descriptions (155-160 chars).
-Include semantic keywords from RankMath analysis.
-Preview changes before applying to WordPress.
+"Add JSON-LD schema markup to all blog posts on my WordPress site. Use 
+Article schema with author, publication date, and featured image. Verify 
+markup validity with Google's Rich Results Test. Report any errors."
 ```
 
-### Example 3: Schema Markup Audit & Fix
+### Example 3: Internal Linking Strategy
 ```
-Scan my WordPress site for missing schema markup.
-Identify pages missing: Product schema, Article schema, Organization schema.
-Auto-generate and apply appropriate schema based on post type.
-Validate all schema with Google's Rich Results Test.
-Report broken or incomplete markup to Slack.
+"Scan my WordPress site for orphaned pages and low-authority posts. Create 
+an internal linking strategy that connects 5-7 relevant posts to each page. 
+Update links using RankMath's internal linking feature. Show me the before/after 
+link distribution."
 ```
 
-### Example 4: Internal Linking Strategy
+### Example 4: SEO Audit & Automated Fixes
 ```
-Analyze internal linking on my WordPress site.
-Identify orphaned posts (fewer than 3 internal links).
-Find high-authority posts with link equity to redistribute.
-Suggest and implement contextual internal links for target keywords.
-Create a link flow visualization showing improved site architecture.
+"Run a complete SEO audit on my WordPress site. Check for missing alt text, 
+duplicate meta descriptions, broken internal links, and missing schema. 
+Auto-fix what you can and create a prioritized report for manual review."
+```
+
+### Example 5: Continuous Monitoring Setup
+```
+"Set up automated daily SEO monitoring for my WordPress site. Track keyword 
+rankings, meta tag compliance, schema validity, and indexing status. Alert me 
+via Slack if any pages drop below SEO best practices. Generate weekly reports."
 ```
 
 ---
 
 ## Capabilities
 
-### 1. Intelligent Meta Tag Optimization
+### 1. Meta Tag Generation & Optimization
+- **Auto-generate meta titles** (50-60 characters) based on page content and target keywords
+- **Create meta descriptions** (150-160 characters) with natural keyword inclusion
+- **Prevent duplicate meta tags** across your site
+- **Dynamic title/description templates** for different post types (blog, product, service)
+- **RankMath integration** for SEO score optimization (target: 80+ score)
+- **Real-time validation** against Google's latest guidelines
 
-**What it does:**
-- Generates SEO-optimized title tags (50-60 characters)
-- Creates compelling meta descriptions (155-160 characters)
-- Implements dynamic meta tags based on post content and keywords
-- A/B tests multiple meta tag variations using Google Search Console data
-
-**Usage example:**
+**Usage Example:**
 ```
-Optimize meta tags for posts ranking in positions 4-10 on Google.
-These are my CTR targets by search intent:
-- Informational: 3.5%
-- Commercial: 5.2%
-- Transactional: 6.8%
-Use power words: "Complete Guide", "Proven", "Step-by-Step", "Expert".
+"Generate SEO-optimized meta titles for all 23 product pages. Each title 
+should be 55-60 characters, include the product name, primary keyword, and 
+a benefit statement. Use RankMath to verify focus keyword optimization."
 ```
 
-**Output:** Updated WordPress posts with optimized tags + preview of CTR improvements
+### 2. Schema Markup Implementation
+- **Article schema** — Blog posts with author, date, word count, featured image
+- **Product schema** — E-commerce products with price, rating, availability
+- **LocalBusiness schema** — Service-based businesses with address, phone, hours
+- **FAQ schema** — Automatically extract Q&A and format for rich snippets
+- **BreadcrumbList schema** — Navigation hierarchy for better SERP display
+- **Validation reports** — Verify markup with Google Rich Results Test API
 
-### 2. Automated Schema Markup
-
-**What it does:**
-- Detects post type (article, product, service, event, etc.)
-- Generates JSON-LD schema automatically
-- Adds rich snippet eligibility (ratings, prices, dates)
-- Validates schema against Google's requirements
-- Implements breadcrumb schema for navigation
-
-**Usage example:**
+**Usage Example:**
 ```
-Add schema markup to all e-commerce product posts.
-Include: Product schema with price, availability, rating.
-Add AggregateOffer schema for product bundles.
-Include FAQ schema for common questions in post content.
-Validate with Google Rich Results Test API.
+"Add comprehensive schema markup to all 15 service pages. Include LocalBusiness, 
+Service, and AggregateRating schemas. Validate with Google's API and fix any errors."
 ```
 
-**Output:** Schema-enhanced posts + validation report + rich snippet preview
+### 3. Internal Linking Automation
+- **Orphan page detection** — Identify posts with zero internal links
+- **Contextual link suggestions** — Find relevant pages to link based on content similarity
+- **Link anchor text optimization** — Use keyword-rich, descriptive anchor text
+- **Link distribution analysis** — Ensure authority flows to important pages
+- **Broken link detection** — Find and fix 404s before they hurt SEO
+- **RankMath internal linking** — Leverage RankMath's built-in linking suggestions
 
-### 3. Strategic Internal Linking
-
-**What it does:**
-- Identifies link opportunities based on keyword matching
-- Prevents orphaned content (posts with <3 internal links)
-- Distributes link equity from high-authority pages
-- Creates contextual, semantic links (not keyword-stuffed)
-- Maintains link diversity across site sections
-
-**Usage example:**
+**Usage Example:**
 ```
-Build internal links for my pillar content strategy.
-Pillar page: "Ultimate Guide to Content Marketing"
-Cluster topics: SEO, copywriting, distribution, analytics.
-Link each cluster post back to pillar with "content marketing" anchor.
-Ensure 5-7 outbound links per cluster post.
-Visualize link flow in a graph.
+"Analyze my 120 blog posts and create an internal linking map. Link each 
+post to 5-7 contextually relevant posts. Prioritize linking to pillar pages 
+and high-authority content. Use RankMath to verify link quality."
 ```
 
-**Output:** Updated post content with new internal links + link flow diagram
+### 4. RankMath Integration
+- **Focus keyword assignment** — Automatically set primary and secondary keywords
+- **Content optimization** — Apply RankMath's readability, keyword density, and structure recommendations
+- **Redirect management** — Create 301 redirects for old URLs and consolidated content
+- **Bulk SEO settings** — Apply consistent SEO rules across post types
+- **Competitor analysis** — Compare your content against top-ranking competitors
+- **SEO score tracking** — Monitor improvements over time
 
-### 4. RankMath Native Integration
-
-**What it does:**
-- Pushes optimizations directly to RankMath settings
-- Leverages RankMath's content AI for suggestions
-- Configures focus keywords and related keywords
-- Automates RankMath's SEO score improvements
-- Syncs with RankMath's Google Search Console data
-
-**Usage example:**
+**Usage Example:**
 ```
-Use RankMath to optimize all posts for E-E-A-T signals.
-Set focus keywords from my content calendar.
-Add author expertise schema with author bio.
-Implement topical authority linking (cluster model).
-Target RankMath SEO score of 85+ for all posts.
+"Use RankMath to optimize all 50 blog posts for their primary keywords. 
+Target a minimum SEO score of 85. Fix readability issues, improve keyword 
+placement, and add missing headers. Generate a compliance report."
 ```
 
-**Output:** Posts with RankMath optimization + E-E-A-T improvements
+### 5. Content Analysis & Recommendations
+- **Keyword gap analysis** — Find keywords your competitors rank for but you don't
+- **Content freshness** — Identify outdated posts that need updating
+- **Readability scoring** — Ensure content is accessible to your audience
+- **Word count analysis** — Compare your posts against top-ranking competitors
+- **Topic clustering** — Group related content for better internal linking
+- **Content suggestions** — Recommend new topics based on search volume and competition
 
-### 5. Google Search Console Integration
-
-**What it does:**
-- Analyzes actual search performance data
-- Identifies high-impression, low-CTR pages
-- Finds keyword opportunities (queries with low rankings)
-- Prioritizes optimization based on search impact
-- Tracks optimization results over time
-
-**Usage example:**
+**Usage Example:**
 ```
-Fix my top 20 underperforming queries in Google Search Console.
-Show me: queries with 100+ impressions but <2% CTR.
-Optimize title/meta for improved CTR.
-Add schema to increase rich snippet eligibility.
-Track improvements weekly and report to Slack.
+"Analyze my 80 blog posts and identify the top 10 underperforming posts 
+by traffic and ranking. Suggest content improvements, keyword additions, 
+and internal linking opportunities. Prioritize by potential traffic gain."
 ```
 
-**Output:** Priority optimization list + CTR improvement tracking
+### 6. Monitoring & Alerting
+- **Daily ranking checks** — Track keyword positions for your target keywords
+- **Indexing status** — Monitor which pages are indexed in Google Search Console
+- **Core Web Vitals** — Track LCP, FID, CLS metrics and alert on degradation
+- **Broken link monitoring** — Continuous scanning for 404s and redirects
+- **Duplicate content detection** — Find and fix duplicate meta tags and content
+- **Slack/Email alerts** — Real-time notifications for critical issues
+- **Weekly/monthly reports** — Comprehensive SEO performance dashboards
 
-### 6. Bulk Optimization Workflows
-
-**What it does:**
-- Processes 10-1,000+ pages in a single workflow
-- Applies consistent optimization rules across content
-- Maintains brand voice and style guidelines
-- Prevents over-optimization and keyword stuffing
-- Creates before/after comparison reports
-
-**Usage example:**
+**Usage Example:**
 ```
-Bulk optimize 500 blog posts for my WordPress site.
-Apply these rules:
-- Title: [Primary Keyword] - [Modifier] | Brand Name (60 chars max)
-- Meta: Action-oriented, include number or power word (155 chars)
-- Schema: Article schema with author, date, image
-- Links: 3-5 contextual internal links per post
-- Preview all changes before applying.
+"Set up continuous monitoring for my 60 target keywords. Check rankings daily 
+and alert me via Slack if any keyword drops 5+ positions. Generate a weekly 
+report showing ranking trends, new keywords ranking, and lost rankings."
 ```
-
-**Output:** Bulk optimization report + preview dashboard + rollback option
 
 ---
 
@@ -217,240 +177,247 @@ Apply these rules:
 
 ### Required Environment Variables
 
-Set these in your ClawHub environment before using this skill:
-
 ```bash
-# WordPress REST API credentials
-WORDPRESS_API_KEY=your_wordpress_rest_api_key
-WORDPRESS_SITE_URL=https://yoursite.com
+# WordPress API Authentication
+WORDPRESS_API_KEY=your_wordpress_application_password
+WORDPRESS_SITE_URL=https://example.com
+WORDPRESS_REST_ENDPOINT=/wp-json/wp/v2
 
-# RankMath API (get from RankMath dashboard > Settings > API)
+# RankMath Integration
 RANKMATH_API_KEY=your_rankmath_api_key
+RANKMATH_SITE_ID=your_rankmath_site_id
 
-# Google APIs
+# Google Integration
 GOOGLE_SEARCH_CONSOLE_KEY=your_gsc_api_key
-GOOGLE_SHEETS_API_KEY=your_sheets_api_key (optional, for bulk workflows)
+GOOGLE_ANALYTICS_KEY=your_ga4_api_key
 
-# Slack Integration (optional, for reports)
+# Slack Integration (Optional)
 SLACK_WEBHOOK_URL=https://hooks.slack.com/services/YOUR/WEBHOOK/URL
 
-# Optional: Content Guidelines
-SEO_BRAND_VOICE=professional|conversational|technical
-SEO_TARGET_KEYWORD_DENSITY=1-2%
-SEO_MIN_WORD_COUNT=800
+# Configuration Options
+SEO_TITLE_LENGTH=55-60
+SEO_DESCRIPTION_LENGTH=150-160
+SCHEMA_TYPES=article,product,faq,localbusiness
+INTERNAL_LINK_TARGET=5-7
+MIN_SEO_SCORE=80
 ```
 
 ### Setup Instructions
 
-1. **Generate WordPress REST API credentials:**
-   - WordPress Admin → Settings → REST API
-   - Create an application token with `posts:read`, `posts:edit`, `posts:create` permissions
+1. **Generate WordPress Application Password:**
+   - Log in to WordPress admin dashboard
+   - Navigate to Users → Your Profile
+   - Scroll to "Application Passwords"
+   - Create new password named "SEO Autopilot"
+   - Copy and set as `WORDPRESS_API_KEY`
 
-2. **Enable RankMath API:**
-   - RankMath → Settings → General → API
-   - Copy API key and save to environment
+2. **Get RankMath API Key:**
+   - Go to RankMath dashboard → Settings → General
+   - Find API Key section
+   - Enable API access and copy key
 
-3. **Connect Google Search Console:**
-   - Go to Google Cloud Console
+3. **Enable Google Search Console API:**
+   - Create Google Cloud Project
    - Enable Search Console API
-   - Download service account JSON
-   - Save key to `GOOGLE_SEARCH_CONSOLE_KEY`
+   - Create service account credentials
+   - Share your site with service account email
 
-4. **Optional: Set up Slack notifications:**
-   - Create Slack webhook at api.slack.com/messaging/webhooks
-   - Add URL to `SLACK_WEBHOOK_URL`
+4. **Configure Slack Webhook (Optional):**
+   - Create Slack app at api.slack.com
+   - Enable Incoming Webhooks
+   - Create webhook for your channel
 
 ---
 
 ## Example Outputs
 
 ### Meta Tag Optimization Report
-
 ```
-OPTIMIZATION SUMMARY
-====================
-Posts Processed: 47
-Average Title Length: 58 characters ✓
-Average Meta Description: 157 characters ✓
-Estimated CTR Improvement: +2.3%
+✅ OPTIMIZATION COMPLETE
 
-TOP OPPORTUNITIES (High Impression, Low CTR)
-Post: "10 SEO Tips for WordPress"
-Current: Impressions 1,240 | CTR 1.8% | Position 5.2
-Suggested Title: "10 WordPress SEO Tips That Actually Work [2024 Guide]"
-Suggested Meta: "Proven WordPress SEO strategies to boost rankings. Step-by-step guide with RankMath integration and schema markup examples."
-Estimated New CTR: 3.5% (+1.7%)
-```
+📊 Results Summary:
+- Pages Processed: 47
+- Meta Titles Generated: 47
+- Meta Descriptions Generated: 47
+- Duplicate Meta Tags Fixed: 3
+- Average SEO Score Improvement: +12 points
 
-### Schema Markup Validation Report
+🎯 Top Optimizations:
+1. "5 Best WordPress SEO Plugins for 2024 | Expert Comparison"
+   - RankMath Score: 88/100
+   - Focus Keyword: "WordPress SEO plugins"
 
-```
-SCHEMA MARKUP AUDIT
-===================
-Total Pages Scanned: 127
-Pages with Schema: 94 (74%)
-Missing Schema: 33 (26%)
+2. "Complete WordPress SEO Guide | Step-by-Step Tutorial"
+   - RankMath Score: 85/100
+   - Focus Keyword: "WordPress SEO guide"
 
-MISSING SCHEMA BREAKDOWN:
-- Article Schema: 18 pages
-- Organization Schema: 8 pages
-- BreadcrumbList Schema: 7 pages
-
-INVALID SCHEMA:
-- Product Schema (price missing): 3 pages
-- Author Schema (name missing): 2 pages
-
-ACTION: Auto-fix all missing/invalid schema? [Y/n]
+⚠️ Pages Needing Review:
+- /blog/old-post-2020 (RankMath Score: 62/100 - Consider updating)
+- /about-us (Meta description too long: 185 chars, target: 160)
 ```
 
-### Internal Linking Analysis
-
+### Internal Linking Strategy
 ```
-INTERNAL LINKING STRATEGY
-==========================
-Total Posts: 247
-Orphaned Posts (0-2 links): 34
-Well-Linked Posts (5+ links): 156
+🔗 INTERNAL LINKING ANALYSIS
 
-LINK EQUITY DISTRIBUTION:
-Highest Authority (RankMath Score 92): "Complete WordPress Guide"
-  → Can distribute 12 new links to cluster posts
+📈 Current State:
+- Total Pages: 120
+- Orphaned Pages: 8
+- Avg Links Per Page: 3.2
+- Link Distribution: Uneven (5 pages have 40% of all links)
 
-RECOMMENDED LINKS TO ADD: 87
-Estimated Link Equity Redistribution: +15% site-wide authority
+🎯 Recommended Strategy:
+- Add 47 new internal links
+- Target: 5-7 links per page
+- Focus: Distribute authority to key pillar pages
 
-LINK FLOW VISUALIZATION:
-[Pillar Page] → [Cluster 1] → [Cluster 2] → [Cluster 3]
-   (92)           (78)          (75)          (72)
+✨ Top Link Opportunities:
+1. Link "WordPress SEO Guide" → 12 related posts
+2. Link "RankMath Tutorial" → 8 setup guides
+3. Link "Schema Markup" → 6 technical posts
+
+📊 Before/After:
+- Before: 287 total links, 8 orphaned pages
+- After: 334 total links, 0 orphaned pages
+- Authority Distribution: +35% more balanced
 ```
 
-### Slack Notification Example
-
+### SEO Audit Report
 ```
-🚀 WordPress SEO Autopilot - Weekly Optimization Report
+🔍 COMPLETE SEO AUDIT REPORT
 
-📊 Performance This Week:
-✓ 42 posts optimized
-✓ 8 new schema implementations
-✓ 127 internal links added
-✓ Average CTR improvement: +1.8%
+✅ Passed (45 pages):
+- Proper schema markup
+- Valid meta tags
+- Alt text on all images
+- Mobile-friendly
 
-🎯 Top Performer:
-"Advanced WordPress Security" - CTR ↑ 3.2% (Position 3→2)
+⚠️ Issues Found (12 pages):
+- Missing alt text: 8 pages (auto-fixed)
+- Duplicate meta descriptions: 3 pages (auto-fixed)
+- Missing schema: 1 page (needs review)
 
-⚠️ Needs Attention:
-"WordPress Hosting Guide" - Still at position 8 (target: 5)
-Suggested: Update meta tags + add FAQ schema
+❌ Critical Issues (2 pages):
+- Broken internal links: /blog/old-post (5 broken links)
+- Indexing blocked: /admin-test-page (noindex tag present)
 
-📈 Next Steps:
-Fix 5 underperforming queries | Add schema to 12 new pages
+📋 Action Items:
+1. [AUTO-FIXED] Added alt text to 47 images
+2. [AUTO-FIXED] Fixed 3 duplicate meta descriptions
+3. [NEEDS REVIEW] Add schema to /services/custom-development
+4. [NEEDS REVIEW] Remove noindex from /admin-test-page
+```
+
+### Monitoring Dashboard
+```
+📊 WEEKLY SEO PERFORMANCE REPORT
+
+🎯 Keyword Rankings:
+- Keywords Tracked: 35
+- Improved: 8 (+2.3 avg positions)
+- Declined: 2 (-1.5 avg positions)
+- New Rankings (Top 100): 3
+
+📈 Traffic Impact:
+- Organic Sessions: +12% (↑287 sessions)
+- Avg Position: 18.4 (↓0.6 from last week)
+- CTR: 3.2% (↑0.1%)
+
+🔗 Internal Linking:
+- New Links Added: 47
+- Broken Links Fixed: 3
+- Orphaned Pages: 0
+
+✅ Technical Health:
+- Core Web Vitals: All Green
+- Indexing Status: 120/120 pages indexed
+- Crawl Errors: 0
+
+🚀 Top Performers This Week:
+1. "WordPress SEO Guide" - Rank #4 for "WordPress SEO" (+3 positions)
+2. "RankMath Tutorial" - Rank #7 for "RankMath setup" (+5 positions)
 ```
 
 ---
 
 ## Tips & Best Practices
 
-### 1. Start Small, Scale Gradually
-- Begin with 20-50 posts to validate the optimization strategy
-- Monitor Google Search Console for 2-4 weeks before scaling
-- Use preview mode to review changes before applying
-- Only auto-apply after confirming improvements
+### 1. Keyword Research First
+- Use Google Search Console to identify your current keywords
+- Run keyword gap analysis before bulk optimization
+- Target long-tail keywords (lower competition, higher intent)
+- Balance primary and secondary keywords naturally
 
-### 2. Align with Your Content Strategy
-- Define your pillar content and topic clusters first
-- Use internal linking to reinforce topical authority
-- Ensure keywords match your business goals
-- Avoid optimizing for vanity metrics (keyword difficulty)
+### 2. Content Quality Over Optimization
+- Automation helps, but great content ranks best
+- Ensure content is helpful, original, and comprehensive
+- Optimize for user intent, not just keywords
+- Update evergreen content regularly
 
-### 3. Maintain Brand Voice
-- Set `SEO_BRAND_VOICE` environment variable to match your style
-- Review auto-generated meta tags for brand consistency
-- Don't sacrifice clarity for keyword inclusion
-- Test meta tags with real users before full rollout
+### 3. Internal Linking Strategy
+- Link from high-authority pages to new/low-authority pages
+- Use descriptive anchor text (avoid "click here")
+- Keep link density natural (1 link per 100-150 words)
+- Prioritize linking to money pages and pillar content
 
-### 4. Leverage Google Search Console Data
-- Prioritize optimization based on actual search performance
-- Focus on high-impression, low-CTR pages first (quick wins)
-- Target keywords with 3-10 ranking positions (most improvable)
-- Track CTR improvements weekly, not daily (Google's data lags)
+### 4. Schema Markup Best Practices
+- Use appropriate schema for your content type
+- Validate markup with Google Rich Results Test
+- Include all required and recommended properties
+- Test on mobile (rich snippets appear differently)
 
-### 5. Schema Markup Strategy
-- Implement Article schema for blog posts (improves SERP appearance)
-- Use Product schema for e-commerce (enables rich snippets)
-- Add Organization schema to homepage (builds brand trust)
-- Validate all schema with Google's Rich Results Test tool
+### 5. Monitoring & Iteration
+- Track rankings for 30+ days before assessing impact
+- Monitor Core Web Vitals weekly
+- Review indexing status in Google Search Console
+- Adjust strategy based on data, not assumptions
 
-### 6. Internal Linking Best Practices
-- Use descriptive anchor text (not "click here" or exact keywords)
-- Link contextually within post content (not just footer)
-- Maintain 3-5 internal links per post (avoid over-linking)
-- Create a hub-and-spoke model: pillar pages → cluster content
+### 6. RankMath Optimization
+- Set realistic SEO score targets (80-85 is excellent)
+- Don't sacrifice readability for keyword optimization
+- Use RankMath's competitor analysis to find gaps
+- Leverage internal linking suggestions from RankMath
 
-### 7. Monitor and Adjust
-- Check Google Search Console weekly for ranking changes
-- Track CTR improvements and adjust meta tags if needed
-- Monitor for keyword cannibalization (multiple posts targeting same keyword)
-- Review RankMath SEO scores monthly and improve lowest-scoring posts
+### 7. Avoid Common Pitfalls
+- ❌ Don't keyword stuff (damages readability and rankings)
+- ❌ Don't create duplicate content across pages
+- ❌ Don't ignore Core Web Vitals (ranking factor since 2021)
+- ❌ Don't link to irrelevant pages (hurts user experience)
+- ❌ Don't set and forget (SEO is continuous)
 
 ---
 
 ## Safety & Guardrails
 
-### What This Skill Will NOT Do
+### What This Skill WILL NOT Do
 
-❌ **Keyword stuffing** — Meta tags and content remain natural and readable
-❌ **Cloaking or hidden text** — All optimizations are transparent to users
-❌ **Duplicate content** — Each page retains unique, valuable content
-❌ **Manipulative schema** — Schema accurately represents actual content
-❌ **Link schemes** — Internal links are contextual and valuable to users
-❌ **Spammy link anchors** — Anchor text is descriptive and natural
-❌ **Auto-publishing without review** — All changes require preview/approval
-❌ **Over-optimization** — Maintains readability and user experience
+❌ **Violate Google Guidelines**
+- This skill follows Google's SEO Starter Guide and E-E-A-T principles
+- Does not create cloaking, doorway pages, or deceptive redirects
+- Does not implement keyword stuffing or hidden text
+- Does not purchase or exchange links
+
+❌ **Damage Your Site**
+- All changes are logged and reversible
+- Requires explicit confirmation before bulk updates
+- Performs validation checks before publishing changes
+- Creates automatic backups before major operations
+
+❌ **Violate Terms of Service**
+- Respects WordPress, RankMath, and Google ToS
+- Does not scrape or violate API rate limits
+- Does not access sites without proper authentication
+- Does not modify competitor sites
+
+❌ **Guarantee Rankings**
+- This skill optimizes technical SEO and on-page factors
+- Rankings depend on content quality, backlinks, and competition
+- Google's algorithm has 200+ ranking factors
+- Results typically take 4-12 weeks to appear
 
 ### Limitations & Boundaries
 
-**Rate Limiting:**
-- WordPress API: 10 requests/second (skill respects this)
-- Google Search Console: 100 queries/day (skill batches requests)
-- RankMath API: 5 requests/second
-
-**Content Constraints:**
-- Meta descriptions: 155-160 characters (Google's display limit)
-- Title tags: 50-60 characters (optimal for CTR)
-- Minimum post length: 300 words (configurable)
-- Maximum posts per batch: 1,000 (to prevent server overload)
-
-**Geographic Considerations:**
-- This skill optimizes for Google (US/English-speaking markets)
-- For international sites, configure language-specific settings
-- Schema markup follows schema.org standards (Google-compliant)
-
-**Compliance Notes:**
-- Does not create false or misleading content
-- Does not violate WordPress plugin terms of service
-- Does not bypass RankMath's content guidelines
-- Respects robots.txt and noindex directives
-- Complies with Google's Helpful Content Update guidelines
-
----
-
-## Troubleshooting
-
-### Common Issues & Solutions
-
-**Issue: "WordPress API Key Invalid"**
-```
-Error: 401 Unauthorized - Check your WordPress REST API credentials
-Solution:
-1. Verify API key in WordPress Admin → Settings → REST API
-2. Ensure API key has 'posts:read' and 'posts:edit' permissions
-3. Check that WORDPRESS_SITE_URL includes https:// and no trailing slash
-4. Test connection: curl -H "Authorization: Bearer YOUR_KEY" https://yoursite.com/wp-json/wp/v2/posts
-```
-
-**Issue: "RankMath API Connection Failed"**
-```
-Error: Cannot connect to RankMath API
-Solution:
-1. Verify RANKMATH_API_KEY is correct (RankMath → Settings → General → API)
-2. Ensure RankMath Pro is activated
+⚠️ **Technical Limitations:**
+- Requires WordPress 5.0+ with REST API enabled
+- Works with RankMath Free, Pro, or Business plans
+- Google Search Console API has
