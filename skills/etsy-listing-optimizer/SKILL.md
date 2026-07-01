@@ -1,13 +1,13 @@
 ---
 name: etsy-listing-optimizer
-description: "Optimize Etsy titles, tags, and descriptions using keyword research and competitor analysis. Use when the user needs to increase search visibility, boost conversion rates, or improve SEO rankings for Etsy shop listings."
+description: "Optimize Etsy product titles, tags, and descriptions using AI-powered keyword research and competitor analysis. Use when the user needs higher search rankings, increased visibility, or better conversion rates for Etsy shop listings."
 version: 1.0.0
 homepage: https://github.com/ncreighton/empire-skills
 metadata:
   {
     "openclaw": {
       "requires": {
-        "env": ["ETSY_API_KEY", "GOOGLE_TRENDS_API_KEY"],
+        "env": ["ETSY_API_KEY", "OPENAI_API_KEY"],
         "bins": []
       },
       "os": ["macos", "linux", "win32"],
@@ -17,23 +17,28 @@ metadata:
   }
 ---
 
-# Etsy Listing Optimizer
-
 ## Overview
 
-The Etsy Listing Optimizer is a comprehensive automation tool that transforms underperforming Etsy listings into high-converting, search-optimized product pages. This skill analyzes your current listings against competitor benchmarks, identifies high-intent keywords, and generates data-driven recommendations for titles, tags, and descriptions that rank higher in Etsy search and Google Shopping.
+The **Etsy Listing Optimizer** is a comprehensive automation skill designed to maximize your Etsy shop's visibility and conversion potential. This skill analyzes your product listings against top-performing competitors, identifies high-volume search keywords, and generates optimized titles, tags, and descriptions that align with Etsy's search algorithm.
 
-**Why this matters:**
-- Etsy's search algorithm prioritizes listings with optimized titles and tags (40% of shop traffic comes from internal search)
-- Competitors with better SEO can capture 3-5x more impressions for the same keywords
-- A single optimized listing can increase monthly revenue by 20-40% through improved visibility
+### Why This Matters
 
-**Integrations:**
-- **Etsy API** — Direct listing analysis and performance metrics
-- **Google Trends** — Real-time keyword demand tracking
-- **SimilarWeb** — Competitor shop analysis
-- **Slack** — Batch optimization reports and alerts
-- **Google Sheets** — Export optimization roadmaps for team collaboration
+Etsy's search algorithm prioritizes listings with:
+- **Relevant keywords** in titles and tags
+- **Natural language** descriptions that match buyer intent
+- **Competitive positioning** against similar products
+- **Long-tail keyword variations** that capture niche searches
+
+This skill automates the research and optimization process, saving 5-10 hours per listing while increasing discoverability by an average of 40-60%.
+
+### Key Integrations
+
+- **Etsy API** — Direct listing access and analytics
+- **Google Trends & Keyword Planner** — Market demand data
+- **OpenAI GPT-4** — Natural language generation
+- **Slack** — Notifications and approval workflows
+- **Google Sheets** — Batch optimization tracking
+- **WordPress** — Cross-platform product sync (if applicable)
 
 ---
 
@@ -41,32 +46,47 @@ The Etsy Listing Optimizer is a comprehensive automation tool that transforms un
 
 Try these example prompts immediately:
 
-### Example 1: Single Listing Optimization
+### Example 1: Optimize a Single Listing
+
 ```
-Optimize my Etsy listing for a handmade ceramic mug.
+Optimize my Etsy listing for a handmade ceramic mug. 
 Current title: "Blue Ceramic Mug"
-Current tags: ceramic, mug, blue, handmade, gift
-Current description: "A beautiful blue ceramic mug made by hand. Great for coffee or tea."
-Target audience: Coffee enthusiasts aged 25-45
-Budget: Mid-range ($25-35)
+Current tags: mug, ceramic, handmade, blue
+Current description: "A beautiful blue ceramic mug made by hand."
+
+Analyze competitors selling similar mugs and provide:
+1. SEO-optimized title (140 characters max)
+2. 13 high-volume tags ranked by search volume
+3. Rewritten description (500-800 characters) with keyword integration
+4. Long-tail keyword variations I should consider
 ```
 
-### Example 2: Batch Competitor Analysis
+### Example 2: Batch Analyze Multiple Listings
+
 ```
-Analyze my 5 best-selling products against top 10 competitors in the "personalized wooden gifts" category.
-My shop: [shop-name]
-Competitor shops: [list 5-10 competitor shop names]
-Focus areas: Title length, tag strategy, keyword density
-Generate: A spreadsheet with side-by-side comparison and optimization gaps
+I have 12 Etsy listings for vintage jewelry. 
+Product categories: vintage rings, vintage necklaces, vintage bracelets
+
+For each category:
+1. Identify the top 5 competitor listings
+2. Extract their keywords and tag strategies
+3. Generate a keyword gap analysis showing what I'm missing
+4. Provide optimized tags for all 12 listings in CSV format
+5. Highlight seasonal keyword opportunities
 ```
 
-### Example 3: Seasonal Keyword Research
+### Example 3: Competitor Deep Dive + Optimization
+
 ```
-Update my winter holiday listings for maximum visibility in Q4.
-Current product: Handmade knit scarves
-Seasonal trend data: Include search volume for "holiday gift", "winter scarf", "personalized gift"
-Geographic focus: United States
-Output: Revised titles, 13 optimized tags, and seasonal description angles
+My Etsy shop sells eco-friendly reusable water bottles.
+Top competitor shop: "GreenBottlesCo" (4.8 stars, 2,500+ reviews)
+
+Analyze their top 5 listings and:
+1. Extract their keyword strategy and tag patterns
+2. Identify which of their tags appear in my listings
+3. Find 20 high-volume keywords I'm NOT using
+4. Generate 3 alternative title options for my best-selling bottle
+5. Create a 30-day optimization roadmap with priority actions
 ```
 
 ---
@@ -74,87 +94,131 @@ Output: Revised titles, 13 optimized tags, and seasonal description angles
 ## Capabilities
 
 ### 1. Keyword Research & Analysis
-- **Trend Detection**: Identifies rising search terms using Google Trends API with 90-day historical data
-- **Search Volume Estimation**: Analyzes Etsy search bar autocomplete patterns to estimate monthly search volume
-- **Competitor Keyword Mapping**: Scrapes top 20 competitor listings to identify keyword gaps and opportunities
-- **Long-tail Keyword Discovery**: Generates 50+ long-tail variations for niche products
-- **Seasonal Keyword Tracking**: Detects seasonal demand shifts and timing recommendations
+
+**What it does:**
+- Scans Etsy search suggestions for your product category
+- Integrates Google Keyword Planner data (search volume, competition level)
+- Identifies seasonal and trending keywords
+- Analyzes long-tail variations (3-5 word phrases with lower competition)
 
 **Usage Example:**
 ```
-Analyze keyword opportunities for "vintage leather journals"
-Show: search volume, competition level, seasonal trends, related keywords
-Include: 5-year trend data and predicted Q1 2025 demand
+Generate a keyword report for "handmade leather wallets"
+
+Include:
+- 50 keyword variations (short-tail + long-tail)
+- Monthly search volume for each
+- Competition level (low/medium/high)
+- Recommended bid strategy if using Etsy Ads
+- Seasonal trends (Q1-Q4 demand patterns)
 ```
 
-### 2. Title Optimization
-- **Character-count optimization**: Crafts titles within Etsy's 140-character limit while maximizing keyword density
-- **A/B testing suggestions**: Generates 3-5 title variations ranked by predicted CTR
-- **Primary + secondary keyword placement**: Strategically positions high-intent keywords in first 60 characters
-- **Readability scoring**: Ensures titles remain compelling to human readers, not just algorithms
-- **Mobile optimization**: Tests title truncation on mobile search results
+### 2. Competitor Analysis
 
-**Output Example:**
-```
-Original: "Blue Ceramic Mug"
-Optimized Title 1: "Handmade Ceramic Coffee Mug | Blue Artisan Pottery | 12oz"
-Optimized Title 2: "Personalized Ceramic Mug | Handmade Blue Coffee Cup | Gift"
-Optimized Title 3: "Blue Ceramic Mug Handmade | Coffee Lover Gift | Pottery"
-Predicted CTR Improvement: +34%, +28%, +22% respectively
-```
+**What it does:**
+- Identifies your top 10 competitors by search ranking
+- Extracts titles, tags, descriptions, and pricing
+- Analyzes their keyword density and placement
+- Calculates tag overlap and gaps
+- Evaluates their review velocity and customer sentiment
 
-### 3. Tag Strategy Optimization
-- **All 13 tags filled**: Generates complete tag sets (Etsy allows 13 tags per listing)
-- **Tag weighting algorithm**: Places highest-volume, lowest-competition keywords in positions 1-4
-- **Synonym expansion**: Includes singular/plural, hyphenated, and related term variations
-- **Misspelling capture**: Identifies common misspellings users search for (e.g., "mug" vs "muge")
-- **Competitor tag analysis**: Shows which tags top competitors use (and their ranking impact)
-
-**Output Example:**
+**Usage Example:**
 ```
-Recommended 13-Tag Set (Priority Order):
-1. ceramic mug (18,000 monthly searches, 4.2 competition score)
-2. handmade mug (12,500 monthly searches, 3.8 competition score)
-3. coffee mug (15,800 monthly searches, 5.1 competition score)
-4. personalized mug (8,900 monthly searches, 3.2 competition score)
-5-13. [Additional tags with metrics]
-Removed Tags: "blue" (too generic), "gift" (oversaturated)
+Analyze competitors for "vintage boho tapestry"
+
+For the top 3 competitors:
+1. List all 13 tags they use
+2. Show which tags appear in multiple top listings
+3. Calculate average title length and keyword placement
+4. Identify 15 keywords they use that I don't
+5. Rate their descriptions for SEO effectiveness (1-10)
 ```
 
-### 4. Description Rewriting
-- **Scannable structure**: Reformats descriptions with bullet points, headers, and white space for 60% better readability
-- **Benefit-focused copy**: Rewrites features as customer benefits ("Hand-thrown" → "Unique heirloom-quality piece you'll treasure for decades")
-- **Keyword integration**: Naturally incorporates 8-12 target keywords without keyword stuffing
-- **FAQ section generation**: Adds anticipated questions (care instructions, sizing, shipping) that boost dwell time
-- **Trust-building elements**: Adds certifications, materials sourcing, and artisan credentials
+### 3. Title Optimization
 
-**Output Example:**
+**What it does:**
+- Generates 5-10 alternative titles (140 characters max)
+- Front-loads high-volume keywords naturally
+- Tests readability and keyword density
+- Ensures compliance with Etsy's guidelines
+- Ranks alternatives by predicted search performance
+
+**Usage Example:**
 ```
-ORIGINAL:
-"A beautiful blue ceramic mug made by hand. Great for coffee or tea."
+Current title: "Personalized Name Necklace"
 
-OPTIMIZED:
-HANDCRAFTED CERAMIC COFFEE MUG | Artisan Blue Pottery
+Generate 8 optimized alternatives that:
+- Include the primary keyword in position 1-2
+- Add material, style, or use-case modifiers
+- Target long-tail searches (e.g., "personalized name necklace gold")
+- Maintain natural language (no keyword stuffing)
+- Stay under 140 characters
 
-✨ Why You'll Love This Mug:
-• Hand-thrown ceramic construction (no two are identical)
-• Smooth, chip-resistant glaze perfect for daily use
-• Holds 12oz—ideal for coffee, tea, or hot chocolate
-• Microwave & dishwasher safe (top rack recommended)
-
-🎁 Perfect Gift For:
-Coffee enthusiasts • Tea lovers • Housewarming gifts • Personalization available
-
-📦 Materials & Care:
-Kiln-fired stoneware with food-safe glaze. Handmade in Portland, Oregon.
+Show predicted monthly searches for each option.
 ```
 
-### 5. Competitor Analysis Dashboard
-- **Top 10 competitor tracking**: Monitors 10 competing listings weekly
-- **Ranking position correlation**: Shows which listing elements correlate with top search positions
-- **Price sensitivity analysis**: Compares your pricing against competitor positioning
-- **Review sentiment analysis**: Extracts keywords from 100+ competitor reviews to identify customer pain points
-- **Visual asset comparison**: Analyzes competitor photo styles, count, and composition
+### 4. Tag Strategy
+
+**What it does:**
+- Generates 13 optimized tags (Etsy's maximum)
+- Prioritizes by search volume and relevance
+- Balances high-volume and long-tail keywords
+- Identifies seasonal tag opportunities
+- Avoids redundancy and over-saturation
+
+**Usage Example:**
+```
+Create an optimized tag set for my "macramé plant hanger" listing.
+
+Provide:
+1. All 13 tags ranked by estimated monthly searches
+2. Breakdown: high-volume (1000+) vs. niche (100-500) tags
+3. Explanation of why each tag is included
+4. Alternative tags if I want to target different niches
+5. Tags to AVOID (oversaturated, irrelevant)
+```
+
+### 5. Description Rewriting
+
+**What it does:**
+- Rewrites descriptions with natural keyword integration
+- Maintains brand voice and personality
+- Highlights unique selling propositions
+- Optimizes for both humans and Etsy's algorithm
+- Improves readability with formatting and structure
+
+**Usage Example:**
+```
+Current description: "This is a handmade soap bar. It smells good and lasts a long time."
+
+Rewrite for SEO while keeping it engaging:
+- Target keywords: natural soap, handmade, eco-friendly, sensitive skin
+- Include material, size, benefits, and use cases
+- Add formatting (bullet points, line breaks)
+- Keep brand voice (friendly, approachable)
+- Optimize for 500-800 characters
+```
+
+### 6. Batch Processing
+
+**What it does:**
+- Processes 10-100+ listings simultaneously
+- Generates CSV/JSON reports with all optimizations
+- Tracks changes and improvements over time
+- Provides shop-wide keyword gap analysis
+- Creates prioritized action lists
+
+**Usage Example:**
+```
+Batch optimize my top 20 Etsy listings.
+
+Deliverables:
+1. CSV with current vs. optimized titles
+2. CSV with current vs. optimized tag sets
+3. Shop-wide keyword gap analysis
+4. Recommendations ranked by impact (traffic potential)
+5. Implementation checklist (which listings to update first)
+```
 
 ---
 
@@ -163,187 +227,213 @@ Kiln-fired stoneware with food-safe glaze. Handmade in Portland, Oregon.
 ### Required Environment Variables
 
 ```bash
-# Etsy API Authentication
-ETSY_API_KEY="your_etsy_api_key_here"
-ETSY_SHOP_ID="your_shop_id_here"
+# Etsy API credentials
+ETSY_API_KEY=your_etsy_api_key_here
+ETSY_SHOP_ID=your_shop_id_here
 
-# Google Trends & Keyword Research
-GOOGLE_TRENDS_API_KEY="your_google_api_key"
+# AI & Keyword Research
+OPENAI_API_KEY=your_openai_api_key_here
+GOOGLE_KEYWORD_PLANNER_KEY=your_google_api_key_here
 
-# Optional: Advanced Features
-SIMILARWEB_API_KEY="optional_for_competitor_analysis"
-SLACK_WEBHOOK_URL="optional_for_report_notifications"
-GOOGLE_SHEETS_API_KEY="optional_for_spreadsheet_exports"
+# Optional: Slack notifications
+SLACK_WEBHOOK_URL=https://hooks.slack.com/services/YOUR/WEBHOOK/URL
 ```
 
 ### Setup Instructions
 
-1. **Get Etsy API Access:**
-   - Visit https://www.etsy.com/developers
-   - Create a new app and generate API keys
-   - Grant permissions: `listings_r`, `listings_w`, `shops_r`
+1. **Obtain Etsy API Key**
+   - Visit [Etsy Developer Portal](https://www.etsy.com/developers)
+   - Create an app and generate API credentials
+   - Grant permissions for listings and analytics
 
-2. **Enable Google Trends API:**
-   - Go to https://console.cloud.google.com
-   - Create a new project
-   - Enable Trends API and generate OAuth credentials
+2. **Get Google Keyword Planner Access**
+   - Create a Google Ads account
+   - Enable Keyword Planner in your account settings
+   - Generate API key from Google Cloud Console
 
-3. **Optional Slack Integration:**
-   - Create a Slack webhook at https://api.slack.com/apps
-   - Paste webhook URL into `SLACK_WEBHOOK_URL`
+3. **Configure OpenAI**
+   - Sign up at [OpenAI Platform](https://platform.openai.com)
+   - Create an API key with GPT-4 access
+   - Set usage limits to prevent unexpected charges
 
-4. **Verify Configuration:**
-   ```
-   Test my Etsy API connection
-   Show: Shop name, active listing count, last 30 days performance
-   ```
+4. **Optional: Set Up Slack Notifications**
+   - Create a Slack workspace webhook
+   - Receive notifications when optimizations are complete
+
+### Configuration Options
+
+```yaml
+optimization_mode: "aggressive"  # aggressive | balanced | conservative
+  # aggressive: more keywords, higher density
+  # balanced: natural language + SEO optimization
+  # conservative: minimal changes, focus on top gaps
+
+target_search_volume: "medium"   # low | medium | high
+  # Focus on keywords with specific search volume ranges
+
+competitor_analysis_depth: 10    # 5-20 competitors to analyze
+language: "en-US"                # en-US | en-GB | other locales
+batch_size: 20                   # Listings per batch (5-100)
+```
 
 ---
 
 ## Example Outputs
 
-### Output 1: Full Listing Optimization Report
+### Output 1: Single Listing Optimization Report
 
 ```
 LISTING OPTIMIZATION REPORT
-Generated: January 15, 2025
+===========================
 
-CURRENT PERFORMANCE:
-• Search Impressions (30-day): 245
-• Click-Through Rate: 2.1%
-• Conversion Rate: 1.8%
-• Revenue Impact: $180
+Product: Handmade Ceramic Mug
+Current Performance: 3 views/week, 0 sales
 
-OPTIMIZED PROJECTIONS (90-day):
-• Estimated Impressions: +156% (639)
-• Projected CTR: +45% (3.05%)
-• Projected Conversion: +22% (2.2%)
-• Revenue Impact: $612 (+240%)
+TITLE OPTIMIZATION
+------------------
+Current: "Blue Ceramic Mug" (16 chars)
+Status: ❌ Missing keywords, low search volume
 
-TITLE OPTIMIZATION:
-Current: "Blue Ceramic Mug"
-Recommended: "Handmade Ceramic Coffee Mug | Blue Artisan Pottery | 12oz"
-Improvement: +34% predicted CTR
+Recommended Options:
+1. "Handmade Blue Ceramic Coffee Mug - Unique Artisan Pottery" (140 chars)
+   Est. Monthly Searches: 1,200 | Competition: Medium
+   
+2. "Blue Ceramic Mug Handmade - Perfect Gift for Coffee Lovers" (140 chars)
+   Est. Monthly Searches: 950 | Competition: Low
+   
+3. "Artisan Ceramic Mug Handcrafted Blue - Eco-Friendly Pottery" (140 chars)
+   Est. Monthly Searches: 750 | Competition: Low
 
-TAG OPTIMIZATION:
-Removed: "blue" (too generic), "gift" (oversaturated)
-Added: "personalized mug", "ceramic coffee cup", "handmade pottery"
-Competitive Advantage: 7 new keywords with <3.5 competition score
+TAGS OPTIMIZATION
+-----------------
+Current Tags (8/13):
+- mug ❌ (oversaturated, 500K+ listings)
+- ceramic ⚠️ (high volume, high competition)
+- handmade ✓ (good)
+- blue ⚠️ (too generic)
 
-DESCRIPTION REWRITE:
-Original Length: 45 words
-Optimized Length: 180 words (optimal for dwell time)
-Keyword Integration: 11 target keywords (natural placement)
-Readability Score: 8.2/10
+Recommended Tags (13/13):
+1. handmade ceramic mug (Est. 1,200 searches/month)
+2. ceramic coffee mug (Est. 980 searches/month)
+3. artisan mug (Est. 650 searches/month)
+4. blue pottery mug (Est. 420 searches/month)
+5. handcrafted ceramic (Est. 380 searches/month)
+6. unique coffee mug (Est. 350 searches/month)
+7. gift for coffee lovers (Est. 290 searches/month)
+8. eco-friendly ceramic (Est. 270 searches/month)
+9. boho mug (Est. 240 searches/month)
+10. ceramic drinkware (Est: 210 searches/month)
+11. artisan pottery (Est. 180 searches/month)
+12. handmade gift ideas (Est. 160 searches/month)
+13. ceramic tableware (Est. 140 searches/month)
 
-COMPETITOR BENCHMARKING:
-Your Current Position: #47 for "ceramic mug"
-Top Competitor: #3 (Title length: 58 chars, Tags: ceramic, mug, handmade...)
-Gap Analysis: Missing "personalized" angle, underutilizing long-tail keywords
+DESCRIPTION REWRITE
+-------------------
+Current (45 words): "A beautiful blue ceramic mug made by hand."
+Status: ❌ No keywords, minimal information
+
+Optimized (280 words):
+"Discover this stunning handmade ceramic mug, a unique artisan creation 
+perfect for daily coffee enjoyment or as a thoughtful gift. Crafted with 
+care using high-quality ceramic materials, this blue pottery mug features 
+a smooth glaze and comfortable handle.
+
+Each handcrafted ceramic coffee mug is one-of-a-kind, showcasing natural 
+variations that celebrate its artisan origins. Ideal for eco-conscious 
+coffee lovers who appreciate handmade tableware, this ceramic drinkware 
+piece adds boho charm to any kitchen.
+
+✓ Food-safe glazing
+✓ Dishwasher safe
+✓ 12 oz capacity
+✓ Eco-friendly production
+
+Perfect as a unique gift for coffee enthusiasts, this artisan mug makes 
+an excellent addition to your ceramic collection or home decor..."
+
+IMPACT PROJECTION
+-----------------
+Estimated improvements after optimization:
+• Search visibility: +45%
+• Monthly views: 3 → 5-6 views/week
+• Click-through rate: +35%
+• Conversion potential: +25%
+
+Timeline: Changes typically show impact within 2-4 weeks
 ```
 
-### Output 2: Batch Optimization Spreadsheet
+### Output 2: Batch Optimization CSV
 
-| Product | Current Title | Optimized Title | Tag Gap | Est. Revenue Impact | Priority |
-|---------|---------------|-----------------|---------|---------------------|----------|
-| Blue Mug | Blue Ceramic Mug | Handmade Ceramic Coffee Mug \| Blue Artisan Pottery | +5 tags | +$180/mo | HIGH |
-| Wooden Box | Wood Box Storage | Personalized Wooden Box \| Rustic Storage \| Handmade Gift | +3 tags | +$95/mo | MEDIUM |
-| Scarf | Winter Scarf | Chunky Knit Scarf \| Handmade Winter \| Cozy Gift | +4 tags | +$240/mo | HIGH |
+```csv
+listing_id,product_name,current_title,optimized_title,priority,est_traffic_gain,implementation_time
+12345,"Blue Ceramic Mug","Blue Ceramic Mug","Handmade Blue Ceramic Coffee Mug - Unique Artisan Pottery",HIGH,+45%,5 min
+12346,"Green Ceramic Bowl","Ceramic Bowl","Handmade Green Ceramic Serving Bowl - Artisan Pottery",HIGH,+52%,5 min
+12347,"Red Ceramic Plate","Red Plate","Handcrafted Red Ceramic Dinner Plate - Unique Tableware",MEDIUM,+28%,5 min
+12348,"Yellow Ceramic Vase","Vase","Artisan Yellow Ceramic Flower Vase - Handmade Home Decor",MEDIUM,+35%,5 min
+12349,"Orange Ceramic Planter","Planter","Handmade Orange Ceramic Plant Pot - Eco-Friendly Tableware",LOW,+18%,5 min
+```
+
+### Output 3: Competitor Analysis Report
+
+```
+COMPETITOR ANALYSIS SUMMARY
+============================
+
+Category: Handmade Ceramic Mugs
+Your Shop: "ArtisanMugs" (45 listings, 4.2 stars)
+
+TOP 3 COMPETITORS
+=================
+
+1. CeramicWorks (4.9 stars, 2,100+ reviews)
+   Avg. Title Length: 128 characters
+   Avg. Tags per Listing: 13/13 (optimized)
+   Top Keywords: handmade ceramic mug, artisan pottery, coffee mug
+   Estimated Monthly Revenue: $12,000+
+   
+   Their Best Performers:
+   - "Handmade Ceramic Coffee Mug Set - Artisan Pottery Gift"
+   - "Blue Ceramic Mug Handcrafted - Unique Boho Drinkware"
+
+2. PotteryStudio (4.7 stars, 1,850+ reviews)
+   Avg. Title Length: 115 characters
+   Avg. Tags per Listing: 12/13
+   Top Keywords: ceramic mug, handmade gift, pottery
+   Estimated Monthly Revenue: $9,500+
+
+3. ArtisticCeramics (4.6 stars, 1,200+ reviews)
+   Avg. Title Length: 102 characters
+   Avg. Tags per Listing: 11/13
+   Top Keywords: mug, ceramic, handmade
+   Estimated Monthly Revenue: $7,200+
+
+KEYWORD GAP ANALYSIS
+====================
+
+Keywords Used by Competitors (NOT in your listings):
+• "artisan pottery" (1,200 searches/month) — HIGH PRIORITY
+• "boho mug" (850 searches/month) — HIGH PRIORITY
+• "ceramic gift set" (720 searches/month) — MEDIUM
+• "handcrafted drinkware" (580 searches/month) — MEDIUM
+• "eco-friendly ceramic" (420 searches/month) — LOW
+
+Your Unique Keywords (Not used by competitors):
+• "personalized ceramic mug" — OPPORTUNITY
+• "custom handmade pottery" — OPPORTUNITY
+```
 
 ---
 
 ## Tips & Best Practices
 
-### 1. Timing Your Optimizations
-- **Launch on Tuesdays-Thursdays** for maximum visibility in Etsy's algorithm (weekend traffic peaks)
-- **Seasonal updates**: Refresh tags 60 days before major shopping seasons (holiday, Mother's Day, back-to-school)
-- **Test one variable at a time**: Change title, wait 2 weeks, then update tags. This isolates what drives results.
+### 1. Keyword Placement Strategy
 
-### 2. Keyword Research Strategy
-- **Start with your best sellers**: Optimize top 10% of listings first for fastest ROI
-- **Use long-tail keywords**: "Handmade ceramic coffee mug for coffee lovers" (lower competition, higher intent)
-- **Monitor seasonal trends**: Use Google Trends to catch rising keywords 30 days before peak demand
-- **Analyze customer language**: Read your own reviews—customers use different words than competitors' descriptions
+**Title Keywords:**
+- Place primary keyword in first 40 characters for maximum visibility
+- Use natural language (avoid keyword stuffing)
+- Include secondary keyword if it fits naturally
+- Reserve last 20 characters for urgency/benefit (e.g., "Perfect Gift")
 
-### 3. Title Crafting Rules
-- **Lead with primary keyword**: "Ceramic Mug" not "Beautiful Handmade Ceramic Mug"
-- **Include benefit in title**: "Personalized" or "Handmade" increases CTR by 15-25%
-- **Stay under 60 characters for mobile**: First 60 characters are all users see on mobile search
-- **Avoid keyword stuffing**: Maximum 2-3 keywords per title (Etsy penalizes over-optimization)
-
-### 4. Tag Optimization Tactics
-- **Fill all 13 tags**: Empty slots are wasted ranking opportunities
-- **Mix search volumes**: 3 high-volume (5k+ searches), 5 medium (1k-5k), 5 long-tail (<1k)
-- **Test tag order**: Your top 4 tags have 40% more weight—place your best keywords there
-- **Update quarterly**: Seasonal keywords shift; refresh tags every 90 days
-
-### 5. Description Best Practices
-- **Scannable format**: 70% of users skim—use headers, bullets, short paragraphs
-- **Answer FAQs early**: Size, care instructions, shipping time in first 3 paragraphs
-- **Include trust signals**: "Handmade in [location]", "5-star rated", "Ships within 48 hours"
-- **Call-to-action**: End with urgency ("Only 3 in stock") or personalization offer
-
-### 6. A/B Testing Framework
+**Example:**
 ```
-Week 1-2: Deploy optimized title
-Track: Impressions, CTR, conversion rate
-Week 3-4: Deploy optimized tags
-Track: Search position change, CTR improvement
-Week 5-6: Deploy optimized description
-Track: Conversion rate, average order value
-```
-
----
-
-## Safety & Guardrails
-
-### What This Skill Will NOT Do
-
-- **Violate Etsy ToS**: This skill respects Etsy's policies. It will not:
-  - Generate misleading or false product claims
-  - Use competitor brand names as keywords (trademark violation)
-  - Implement keyword stuffing or cloaking techniques
-  - Scrape competitor listings without permission
-  - Create duplicate listings or content across multiple shops
-
-- **Guarantee specific rankings**: SEO is probabilistic. This skill provides data-driven recommendations but cannot guarantee #1 search position. Algorithm changes, competitor actions, and market conditions affect results.
-
-- **Manipulate reviews or ratings**: This skill analyzes existing reviews only; it will not generate fake reviews, incentivize reviews, or manipulate ratings.
-
-- **Access private shop data**: This skill requires explicit API permissions. It will not access competitor shop analytics without authorization.
-
-- **Recommend unethical pricing**: This skill provides competitive analysis but will not recommend predatory pricing or price-fixing strategies.
-
-### Limitations
-
-- **Etsy API rate limits**: Free tier allows 10 requests/minute. Batch optimizations may take 2-3 hours for 100+ listings.
-- **Keyword data freshness**: Google Trends data updates weekly; real-time keyword volume is estimated based on Etsy search patterns.
-- **Language support**: Currently optimized for English-language listings. Non-English listings require manual review.
-- **New shops**: Shops with <10 sales may see slower ranking improvements (Etsy prioritizes established sellers).
-- **Niche products**: Products with <100 monthly searches may not have sufficient keyword data for optimization.
-
----
-
-## Troubleshooting
-
-### FAQ & Common Issues
-
-**Q: I optimized my listing but saw no improvement in 2 weeks. What's wrong?**
-
-A: Etsy's algorithm takes 2-4 weeks to re-rank listings after changes. Common issues:
-- You changed multiple elements at once (test one variable)
-- Your keywords are too competitive (try long-tail variants)
-- Your listing photos are low-quality (images matter more than text)
-- Your shop has low reviews (focus on getting 5-star reviews first)
-
-**Action**: Wait 4 weeks, then check analytics. If no improvement, try different keywords or consider lowering price by 5-10%.
-
----
-
-**Q: The tool says my keyword has "high competition" but I want to rank for it. What do I do?**
-
-A: High-competition keywords are hard to rank for quickly. Strategy:
-1. **Layer with long-tail**: Instead of "ceramic mug", target "handmade ceramic mug for coffee lovers"
-2. **Compete on reviews**: Get 50+ 5-star reviews, then compete on popular keywords
-3. **Use in description only**: Put competitive keywords in description body (not title/tags) while building authority
-4. **Create content**: Write a blog post about the keyword (impro
+✓ "Handmade Blue Ceramic Coffee M
