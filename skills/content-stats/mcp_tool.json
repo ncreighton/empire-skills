@@ -1,0 +1,26 @@
+{
+  "name": "content_stats",
+  "description": "Use this skill to get objective stats for a piece of text: word count, character count, sentence count, paragraph count, and estimated reading time in minutes (at 220 wpm). Deterministic, offline, no dependencies. Good for grading draft length before publishing.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Text to analyze"
+      },
+      "wpm": {
+        "type": "number",
+        "description": "Reading speed (default 220)"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "content-stats",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
