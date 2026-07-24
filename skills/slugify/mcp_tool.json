@@ -1,0 +1,26 @@
+{
+  "name": "slugify",
+  "description": "Use this skill whenever you need to convert an arbitrary string into a clean URL slug: lowercase, non-alphanumerics to single hyphens, collapse repeats, trim, optional max length on a word boundary. Deterministic, offline, no dependencies.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Text to slugify"
+      },
+      "max_length": {
+        "type": "number",
+        "description": "Max slug length (word-boundary trim)"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "slugify",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
