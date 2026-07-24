@@ -1,0 +1,26 @@
+{
+  "name": "smart_truncate",
+  "description": "Use this skill to truncate text to a max length at a word boundary with an ellipsis, without cutting words in half. Ideal for meta descriptions (155 chars), social previews, and card summaries. Deterministic, offline.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Text to truncate"
+      },
+      "max_length": {
+        "type": "number",
+        "description": "Max length incl ellipsis (default 155)"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "smart-truncate",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
