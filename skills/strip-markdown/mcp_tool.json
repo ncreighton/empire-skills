@@ -1,0 +1,22 @@
+{
+  "name": "strip_markdown",
+  "description": "Use this skill to strip markdown formatting from text and return clean plain text: removes headings, bold/italic, links (keeps link text), code fences, list markers, and blockquotes. Deterministic, offline. Great for generating previews or plain-text excerpts.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "markdown": {
+        "type": "string",
+        "description": "Markdown text"
+      }
+    },
+    "required": [
+      "markdown"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "strip-markdown",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
