@@ -1,0 +1,26 @@
+{
+  "name": "format_price",
+  "description": "Use this skill to format a numeric amount as a currency string with the correct symbol, thousands separators, and two decimals (USD, EUR, GBP, etc.). Handles ints, floats, and numeric strings. Deterministic, offline.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "amount": {
+        "type": "number",
+        "description": "The amount"
+      },
+      "currency": {
+        "type": "string",
+        "description": "ISO code (USD/EUR/GBP/JPY), default USD"
+      }
+    },
+    "required": [
+      "amount"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "format-price",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
