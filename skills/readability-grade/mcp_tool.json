@@ -1,0 +1,22 @@
+{
+  "name": "readability_grade",
+  "description": "Use this skill to score text readability with the correct Flesch Reading Ease (0-100) and Flesch-Kincaid grade-level formulas, plus a plain-language difficulty band. Deterministic, offline, no dependencies. Grade a draft before publishing to check it matches your audience.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Text to grade"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "readability-grade",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
