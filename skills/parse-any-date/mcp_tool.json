@@ -1,0 +1,22 @@
+{
+  "name": "parse_any_date",
+  "description": "Use this skill to parse a date/time from almost any format (ISO 8601, GMT/RFC, epoch seconds or millis, common US/EU formats), normalize it to UTC, and get a humanized 'time ago' string plus age in hours. Deterministic, offline. Handles the messy timestamps agents get from APIs and scraped pages.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "value": {
+        "type": "string",
+        "description": "A date/time in any common format (or epoch number)"
+      }
+    },
+    "required": [
+      "value"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "parse-any-date",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
