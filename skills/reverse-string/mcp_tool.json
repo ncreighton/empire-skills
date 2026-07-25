@@ -1,0 +1,22 @@
+{
+  "name": "reverse_string",
+  "description": "Use this skill to reverse a string character by character. Deterministic offline.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "text to reverse"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "reverse-string",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
