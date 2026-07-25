@@ -1,0 +1,26 @@
+{
+  "name": "csv_to_json",
+  "description": "Use this skill to convert CSV text into a list of JSON records, auto-detecting the delimiter (comma, semicolon, tab, or pipe) and using the first row as headers. Handles ragged rows. Deterministic, offline. The reliable first step before processing spreadsheet exports.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "csv": {
+        "type": "string",
+        "description": "CSV text to parse"
+      },
+      "delimiter": {
+        "type": "string",
+        "description": "Force a delimiter (default: auto-detect)"
+      }
+    },
+    "required": [
+      "csv"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "csv-to-json",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}

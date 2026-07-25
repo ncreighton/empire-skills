@@ -1,0 +1,47 @@
+{
+  "name": "csv-to-json",
+  "description": "Use this skill to convert CSV text into a list of JSON records, auto-detecting the delimiter (comma, semicolon, tab, or pipe) and using the first row as headers. Handles ragged rows. Deterministic, offline. The reliable first step before processing spreadsheet exports.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "ai",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "csv",
+      "type": "string",
+      "description": "CSV text to parse",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "delimiter",
+      "type": "string",
+      "description": "Force a delimiter (default: auto-detect)",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "csv",
+    "json",
+    "data",
+    "parse",
+    "convert"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": 5.0,
+  "channels": [
+    "github",
+    "gumroad"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": null,
+  "metadata": {}
+}
