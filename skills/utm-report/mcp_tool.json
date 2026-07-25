@@ -1,0 +1,22 @@
+{
+  "name": "utm_report",
+  "description": "Use this skill to audit a batch of URLs for campaign attribution: parses UTM parameters from every URL, flags untagged links, and aggregates counts by source and by campaign. Deterministic, offline. Feed it your link list and get an attribution-readiness report.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "urls": {
+        "type": "array",
+        "description": "List of URLs (or a newline-separated string)"
+      }
+    },
+    "required": [
+      "urls"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "utm-report",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
