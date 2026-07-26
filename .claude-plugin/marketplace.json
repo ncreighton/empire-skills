@@ -1,0 +1,504 @@
+{
+  "name": "empire-skills",
+  "description": "Empire executable agent skills \u2014 deterministic, offline, runnable in Claude Code, MCP clients, and any Python agent.",
+  "plugins": [
+    {
+      "name": "affiliate-link-injector",
+      "source": "./skills/affiliate-link-injector",
+      "description": "Scan content for product mentions and auto-insert compliant affiliate links with FTC disclosures. Use when the user needs to monetize blog posts, reviews, or guides while maintaining legal compliance.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-b2b-intent-data-translator-and-account-scoring-customizer",
+      "source": "./skills/ai-b2b-intent-data-translator-and-account-scoring-customizer",
+      "description": "Normalize B2B intent signals from 6sense, Clearbit, ZoomInfo, LinkedIn and apply custom scoring logic to identify in-market accounts. Use when the user needs account prioritization, competitive intelligence, or daily sales briefings.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-b2b-sales-battlecard-and-competitive-win-loss-narrative-builder",
+      "source": "./skills/ai-b2b-sales-battlecard-and-competitive-win-loss-narrative-builder",
+      "description": "Generate dynamic B2B sales battlecards from win/loss call recordings and competitor analysis. Use when the user needs competitive intelligence, objection handling frameworks, or personalized buyer persona strategies for enterprise deals.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-community-sentiment-and-engagement-opportunity-analyst",
+      "source": "./skills/ai-community-sentiment-and-engagement-opportunity-analyst",
+      "description": "Analyze community sentiment across Discord, Slack, Reddit & forums to identify engagement opportunities, pain points, and influencers. Use when the user needs weekly opportunity reports, collaboration insights, or community growth strategies.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-community-toxic-comment-classifier-and-response-recommendation-engine",
+      "source": "./skills/ai-community-toxic-comment-classifier-and-response-recommendation-engine",
+      "description": "Classify toxic comments by type, assign severity scores, and recommend response strategies. Use when the user needs community moderation, toxicity detection, or automated comment handling for forums, Discord, or WordPress.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-competitor-feature-changelog-and-positioning-narrative-writer",
+      "source": "./skills/ai-competitor-feature-changelog-and-positioning-narrative-writer",
+      "description": "Generate positioning narratives and sales messaging from competitor product releases. Use when the user needs rapid competitive analysis, feature comparison matrices, or differentiation strategies within 2 hours of detection.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-content-localization-and-cultural-adaptation-specialist",
+      "source": "./skills/ai-content-localization-and-cultural-adaptation-specialist",
+      "description": "Adapt English content for global markets with cultural sensitivity, idiom detection, metric conversions, and regional SEO optimization. Use when the user needs international content strategy, market-specific messaging, or localization briefs for human editors.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-customer-churn-prediction-and-win-back-strategist",
+      "source": "./skills/ai-customer-churn-prediction-and-win-back-strategist",
+      "description": "Predict at-risk customers and generate personalized win-back strategies using behavioral signals. Use when the user needs churn prevention, customer retention campaigns, or re-engagement offers ranked by urgency.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-customer-interview-analyst-and-insight-extractor",
+      "source": "./skills/ai-customer-interview-analyst-and-insight-extractor",
+      "description": "Analyze customer interview transcripts to extract pain points, feature requests, and sentiment. Use when the user needs market insights, customer research analysis, or product feedback synthesis from interviews.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-driven-content-taxonomy-and-tagging",
+      "source": "./skills/ai-driven-content-taxonomy-and-tagging",
+      "description": "Automatically categorize and tag content using AI-powered taxonomy to improve discoverability. Use when the user needs content organization, SEO optimization, or multi-platform content management.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-freelancer-rate-card-and-proposal-template-optimizer",
+      "source": "./skills/ai-freelancer-rate-card-and-proposal-template-optimizer",
+      "description": "Generate optimal pricing strategies and customized proposals from project history. Use when the user needs rate recommendations, scope creep prevention, or service bundling analysis for freelance projects.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-image-generator-pipeline",
+      "source": "./skills/ai-image-generator-pipeline",
+      "description": "Automate AI image generation from webhooks with DALL-E/Flux, optimization, and WordPress/CDN upload. Use when the user needs batch image creation, content automation, or visual asset pipelines.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-micro-certification-course-creator-and-quiz-generator",
+      "source": "./skills/ai-micro-certification-course-creator-and-quiz-generator",
+      "description": "Transform expertise into structured micro-certification courses with auto-generated quizzes, flashcards, and skill assessments. Use when the user needs to create lead magnets, paid courses, or training programs from raw content without instructional design experience.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-micro-interaction-copy-and-friction-point-ux-writer",
+      "source": "./skills/ai-micro-interaction-copy-and-friction-point-ux-writer",
+      "description": "Generate contextual microcopy from UX friction analysis. Writes button labels, error messages, tooltips, and empty states that reduce user hesitation. Use when the user needs friction-point identification, A/B copy variants, or tone consistency audits.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-micro-moment-copywriting-specialist",
+      "source": "./skills/ai-micro-moment-copywriting-specialist",
+      "description": "Generate hyper-contextual micro-copy for cart abandonment, password resets, onboarding friction, and permission requests. Use when the user needs conversion-optimized copy for specific user moments, A/B testing variations, or brand voice consistency across micro-interactions.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-micro-saas-product-market-fit-validator",
+      "source": "./skills/ai-micro-saas-product-market-fit-validator",
+      "description": "Validate SaaS product-market fit by researching TAM, identifying 5-7 high-conversion micro-niches, and scoring demand signals from Reddit/Twitter/G2. Use when the user needs go-to-market strategy, niche validation, or founder research for new products.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-niche-authority-report-generator-research-visuals-distribution",
+      "source": "./skills/ai-niche-authority-report-generator-research-visuals-distribution",
+      "description": "Generate comprehensive niche authority reports with AI research synthesis, branded infographics, and multi-channel promotional assets. Use when the user needs thought leadership content, client deliverables, or market trend reports with professional visuals and distribution templates.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-niche-community-discord-slack-moderation-and-growth-specialist",
+      "source": "./skills/ai-niche-community-discord-slack-moderation-and-growth-specialist",
+      "description": "Automate Discord/Slack moderation, toxicity filtering, and community growth with AI-powered member scoring, FAQ auto-responses, viral moment detection, and weekly health reports. Use when the user needs spam prevention, community engagement analytics, member retention strategies, or automated modera",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-niche-keyword-gap-and-content-opportunity-mapper",
+      "source": "./skills/ai-niche-keyword-gap-and-content-opportunity-mapper",
+      "description": "Analyze competitor content gaps and identify high-intent keyword clusters your competitors missed. Use when the user needs SEO content strategy, niche keyword research, or competitive content opportunities.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-niche-newsletter-editorial-calendar-and-subscriber-segment-matcher",
+      "source": "./skills/ai-niche-newsletter-editorial-calendar-and-subscriber-segment-matcher",
+      "description": "Generate optimized editorial calendars and segment-specific content strategies from subscriber engagement data. Use when the user needs newsletter planning, churn prevention, or audience-targeted send time optimization.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-powered-e-commerce-product-description-writer",
+      "source": "./skills/ai-powered-e-commerce-product-description-writer",
+      "description": "Generate SEO-optimized e-commerce product descriptions with features, benefits, and unique selling points. Use when the user needs product copy for Shopify, WooCommerce, Amazon, or any online store.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-powered-video-transcription-with-timestamps",
+      "source": "./skills/ai-powered-video-transcription-with-timestamps",
+      "description": "Transcribe videos to text with automatic timestamped segments for editing, SEO, and content repurposing. Use when the user needs accurate transcripts, captions, clip extraction, or searchable video archives.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-pricing-psychology-consultant-and-anchoring-strategy-designer",
+      "source": "./skills/ai-pricing-psychology-consultant-and-anchoring-strategy-designer",
+      "description": "Design tiered pricing strategies with psychological anchoring, competitor analysis, and value-based packaging. Use when the user needs pricing optimization, discount framing, or willingness-to-pay research for SaaS, products, or services.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-product-hunt-launch-strategist-and-copy-optimizer",
+      "source": "./skills/ai-product-hunt-launch-strategist-and-copy-optimizer",
+      "description": "Optimize Product Hunt launches with AI-powered tagline generation, competitor analysis, and engagement playbooks. Use when the user needs launch strategy, copy optimization, or hunter outreach for maximum upvotes and visibility.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-proposal-and-contract-risk-auditor-with-negotiation-leverage-finder",
+      "source": "./skills/ai-proposal-and-contract-risk-auditor-with-negotiation-leverage-finder",
+      "description": "Analyze vendor contracts and partnership proposals to flag unfavorable terms, identify negotiation leverage, and generate counter-proposal language. Use when the user needs contract review, risk assessment, or negotiation strategy for agreements.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-proposal-to-contract-revenue-maximizer",
+      "source": "./skills/ai-proposal-to-contract-revenue-maximizer",
+      "description": "Analyze client proposals pre-signature to identify revenue leakage, compare against historical deals and benchmarks, and recommend contract modifications. Use when the user needs to maximize deal value, negotiate better terms, or flag compliance risks.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-refund-fraud-and-abuse-pattern-detector",
+      "source": "./skills/ai-refund-fraud-and-abuse-pattern-detector",
+      "description": "Analyze refund requests and chargebacks against behavioral profiles to identify fraud patterns, assign risk scores, and recommend approval/denial/escalation. Use when the user needs chargeback protection, refund abuse prevention, or fraud detection for e-commerce.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-refund-request-analyzer-and-policy-loophole-identifier",
+      "source": "./skills/ai-refund-request-analyzer-and-policy-loophole-identifier",
+      "description": "Analyze refund requests to identify fraud patterns, serial refunders, and policy loopholes. Use when the user needs to approve/deny refunds, detect suspicious behavior, or improve refund policies.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-sales-call-trauma-detector-and-objection-reframer",
+      "source": "./skills/ai-sales-call-trauma-detector-and-objection-reframer",
+      "description": "Analyze sales calls to identify hesitation patterns, emotional friction points, and objection triggers. Generate personalized reframes and follow-up scripts. Use when the user needs to improve close rates, understand prospect psychology, or recover stalled deals.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-solopreneur-business-model-pivot-validator-and-scenario-simulator",
+      "source": "./skills/ai-solopreneur-business-model-pivot-validator-and-scenario-simulator",
+      "description": "Simulate 12-month financial projections for solopreneur business pivots. Tests new models against 5000+ benchmarks, identifies cash flow risks, and generates go/no-go recommendations. Use when the user needs pivot validation, revenue forecasting, or business model stress testing.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ai-voice-clone-and-personalized-audio-brand-voice-creator",
+      "source": "./skills/ai-voice-clone-and-personalized-audio-brand-voice-creator",
+      "description": "Create custom AI voice clones from audio samples, then generate branded audio content for YouTube, podcasts, audiobooks, and IVR systems. Use when the user needs voice cloning, audio branding, podcast production, or narration automation.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "amazon-ads-roas-optimizer-budget-reallocator",
+      "source": "./skills/amazon-ads-roas-optimizer-budget-reallocator",
+      "description": "Analyze Amazon PPC campaigns in real-time, identify underperformers, calculate true ROAS with organic lift, and reallocate budgets across campaigns. Use when the user needs campaign optimization, keyword analysis, budget recommendations, or A/B testing strategies.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "amazon-listing-forensics-conversion-optimizer",
+      "source": "./skills/amazon-listing-forensics-conversion-optimizer",
+      "description": "Audit Amazon product listings for conversion killers: bullet clarity, A+ gaps, pricing psychology, image sequences, and review sentiment. Provides rewrites ranked by estimated lift (+8-12% CTR). Use when the user needs listing optimization, conversion analysis, or competitive benchmarking.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "competitor-spy-tool",
+      "source": "./skills/competitor-spy-tool",
+      "description": "Monitor competitor websites for pricing changes, new content, and keyword movements. Use when the user needs competitive intelligence, market tracking, or SEO benchmarking across multiple domains.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "compliance-reporter",
+      "source": "./skills/compliance-reporter",
+      "description": "Generate automated compliance reports with customizable templates and regulatory system integration. Use when the user needs SOX, GDPR, HIPAA, or industry-specific compliance documentation, audit trails, or regulatory submissions.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "content-calendar-generator",
+      "source": "./skills/content-calendar-generator",
+      "description": "Generate AI-powered monthly content calendars from trending topics, seasonal events, and keyword gaps. Use when the user needs SEO content planning, editorial calendars, or multi-channel publishing schedules.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "content-stats",
+      "source": "./skills/content-stats",
+      "description": "Use this skill to get objective stats for a piece of text: word count, character count, sentence count, paragraph count, and estimated reading time in minutes (at 220 wpm). Deterministic, offline, no dependencies. Good for grading draft length before publishing.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "contractai",
+      "source": "./skills/contractai",
+      "description": "Analyze and review contracts with AI-powered insights, risk detection, and clause recommendations. Use when the user needs contract analysis, legal risk assessment, or template generation for agreements, NDAs, or service contracts.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "conversion-rate-audit-specialist-by-traffic-source",
+      "source": "./skills/conversion-rate-audit-specialist-by-traffic-source",
+      "description": "Analyze conversion funnels by traffic source (organic, paid, referral, direct) with drop-off identification, true CAC calculations including platform fees, and channel-specific optimization recommendations prioritized by revenue impact.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "cross-platform-content-syncer",
+      "source": "./skills/cross-platform-content-syncer",
+      "description": "Distribute content across WordPress, Substack, Medium, and LinkedIn with one-click automation. Use when the user needs multi-channel publishing, content syndication, or unified social distribution.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "csv-to-json",
+      "source": "./skills/csv-to-json",
+      "description": "Use this skill to convert CSV text into a list of JSON records, auto-detecting the delimiter (comma, semicolon, tab, or pipe) and using the first row as headers. Handles ragged rows. Deterministic, offline. The reliable first step before processing spreadsheet exports.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "customer-review-sentiment-product-feature-mapper",
+      "source": "./skills/customer-review-sentiment-product-feature-mapper",
+      "description": "Extract sentiment from customer reviews across Amazon, Etsy, Shopify, Google and map complaints/praise to product features. Use when the user needs feature prioritization, competitive analysis, or data-driven product roadmap creation from real customer feedback.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "customerconnect",
+      "source": "./skills/customerconnect",
+      "description": "Integrate and synchronize customer data from multiple sources with automated validation and real-time normalization. Use when the user needs unified customer profiles, data quality assurance, or multi-source CRM synchronization across WordPress, Salesforce, HubSpot, and Stripe.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "email-drip-sequence-builder",
+      "source": "./skills/email-drip-sequence-builder",
+      "description": "Generate complete email drip sequences from product descriptions with personalization, A/B subject lines, and ESP-ready formatting. Use when the user needs email campaigns, welcome series, product launch sequences, re-engagement flows, or nurture campaigns for any industry.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "email-sequence-builder",
+      "source": "./skills/email-sequence-builder",
+      "description": "```markdown",
+      "version": "1.0.0"
+    },
+    {
+      "name": "email-subject-line-alchemist",
+      "source": "./skills/email-subject-line-alchemist",
+      "description": "Generate 50+ AI-powered subject line variations using psychological frameworks (scarcity, curiosity, specificity) with predicted CTR uplift. Use when the user needs email campaign optimization, A/B testing data, or competitor benchmarking.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "etsy-listing-optimizer",
+      "source": "./skills/etsy-listing-optimizer",
+      "description": "Optimize Etsy product titles, tags, and descriptions using AI-powered keyword research and competitor analysis. Use when the user needs higher search rankings, increased visibility, or better conversion rates for Etsy shop listings.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "extract-emails",
+      "source": "./skills/extract-emails",
+      "description": "Use this skill to extract all valid email addresses from arbitrary text, de-duplicated and lowercased. Uses RFC-ish validation. Deterministic, offline. Useful for parsing scraped pages, contact forms, or documents for leads.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "extract-json-block",
+      "source": "./skills/extract-json-block",
+      "description": "Use this skill to pull the first valid JSON object or array out of noisy or LLM-generated text: strips ```json code fences, does a balanced-brace scan, and repairs trailing commas. Returns the parsed data. Deterministic, offline. Essential for safely parsing LLM output before using it.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "format-price",
+      "source": "./skills/format-price",
+      "description": "Use this skill to format a numeric amount as a currency string with the correct symbol, thousands separators, and two decimals (USD, EUR, GBP, etc.). Handles ints, floats, and numeric strings. Deterministic, offline.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "fulfillio",
+      "source": "./skills/fulfillio",
+      "description": "Automate multi-step e-commerce order fulfillment with intelligent routing, real-time inventory tracking, and shipping integration. Use when the user needs order automation, inventory management, or fulfillment workflows across multiple channels.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "funnel-leak-detector-attribution-mapper",
+      "source": "./skills/funnel-leak-detector-attribution-mapper",
+      "description": "Analyze complete sales funnels to identify drop-off points, traffic source attribution, and conversion leaks. Use when the user needs CRO audits, funnel optimization, or revenue recovery strategies.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "google-analytics-intelligence",
+      "source": "./skills/google-analytics-intelligence",
+      "description": "Extract GA4 metrics, detect traffic anomalies, and auto-generate growth recommendations. Use when the user needs analytics reports, conversion tracking, or traffic diagnosis across websites.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "hrflow",
+      "source": "./skills/hrflow",
+      "description": "Automate employee onboarding and offboarding workflows with HRIS integration, compliance tracking, and multi-step task automation. Use when the user needs to streamline HR processes, ensure compliance, or manage employee lifecycle events across systems.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "html-to-text",
+      "source": "./skills/html-to-text",
+      "description": "Use this skill to convert HTML into clean plain text: removes script/style, turns block tags and <br> into newlines, strips remaining tags, unescapes HTML entities, and collapses whitespace. Deterministic, offline. The right first step before readability, word-count, or slop analysis on scraped or W",
+      "version": "0.1.0"
+    },
+    {
+      "name": "inventorygenie",
+      "source": "./skills/inventorygenie",
+      "description": "Automate inventory forecasting, supplier integration, and stock analytics for retail operations. Use when the user needs demand prediction, automated reordering, inventory optimization, or multi-location stock management.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "inventorymaster",
+      "source": "./skills/inventorymaster",
+      "description": "Track and manage e-commerce inventory in real-time with automated low-stock alerts and multi-platform integration. Use when the user needs inventory tracking, stock replenishment automation, or warehouse management across Shopify, WooCommerce, and Amazon.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "inventorypro",
+      "source": "./skills/inventorypro",
+      "description": "Automate inventory tracking, order fulfillment, and shipping across e-commerce platforms. Use when the user needs real-time stock management, multi-channel order processing, or automated fulfillment workflows.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "json-validator",
+      "source": "./skills/json-validator",
+      "description": "Use this skill to check whether a string is valid JSON and describe its shape: top-level type, key count (objects) or length (arrays), and the specific parse error with line/column if invalid. Deterministic, offline. Great for validating LLM output before using it.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "keyword-density",
+      "source": "./skills/keyword-density",
+      "description": "Use this skill to compute how often a target keyword (or phrase) appears in a text, as a raw count and as a percentage of total words (0-100). Case-insensitive, whole-word matching, supports multi-word phrases. Deterministic, offline. Flags over-optimization above 3%.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "linkedin-profile-optimizer-authority-builder",
+      "source": "./skills/linkedin-profile-optimizer-authority-builder",
+      "description": "Optimize LinkedIn profiles and build personal authority by analyzing profiles, rewriting headlines/bios for keyword optimization, and recommending content pillars. Use when the user needs LinkedIn positioning, credibility building, or personal branding without a strategist.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "micro-niche-market-validator",
+      "source": "./skills/micro-niche-market-validator",
+      "description": "Validate micro-niche viability by analyzing search trends, Reddit/Twitter sentiment, competitor saturation, and buyer intent across 8 data sources. Use when the user needs TAM estimates, pricing benchmarks, and GO/NO-GO recommendations with hidden gem detection.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "micro-saas-idea-validator-go-to-market-blueprint-generator",
+      "source": "./skills/micro-saas-idea-validator-go-to-market-blueprint-generator",
+      "description": "Validate SaaS ideas by analyzing TAM, pricing, founder fit, and go-to-market strategy. Use when the user needs a comprehensive pre-launch business case, competitive positioning, or runway runway requirements before building.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "modopro",
+      "source": "./skills/modopro",
+      "description": "Automate social media content moderation with real-time analysis, policy enforcement, and compliance tracking. Use when the user needs to moderate user-generated content, enforce community guidelines, or scale content review across multiple platforms.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "parse-any-date",
+      "source": "./skills/parse-any-date",
+      "description": "Use this skill to parse a date/time from almost any format (ISO 8601, GMT/RFC, epoch seconds or millis, common US/EU formats), normalize it to UTC, and get a humanized 'time ago' string plus age in hours. Deterministic, offline. Handles the messy timestamps agents get from APIs and scraped pages.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "pinterest-pin-factory",
+      "source": "./skills/pinterest-pin-factory",
+      "description": "Generate SEO-optimized Pinterest pins from articles with descriptions, images, and scheduling. Use when the user needs social automation, content repurposing, or bulk pin creation for traffic growth.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "product-waitlist-copy-converter",
+      "source": "./skills/product-waitlist-copy-converter",
+      "description": "Transform product descriptions into high-converting waitlist copy with persuasion frameworks, competitor analysis, and A/B variations. Use when the user needs landing page copy, email sequences, or pre-launch marketing for SaaS, apps, or digital products.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "readability-grade",
+      "source": "./skills/readability-grade",
+      "description": "Use this skill to score text readability with the correct Flesch Reading Ease (0-100) and Flesch-Kincaid grade-level formulas, plus a plain-language difficulty band. Deterministic, offline, no dependencies. Grade a draft before publishing to check it matches your audience.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "reddit-niche-validator-community-intelligence-analyst",
+      "source": "./skills/reddit-niche-validator-community-intelligence-analyst",
+      "description": "Analyze Reddit communities to identify underserved niches, map competitor mentions, extract pain points, and generate monthly intelligence reports. Use when the user needs niche validation, market research, audience insights, or competitive analysis before launching products.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "reverse-string",
+      "source": "./skills/reverse-string",
+      "description": "Use this skill to reverse a string character by character. Deterministic offline.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "segmento",
+      "source": "./skills/segmento",
+      "description": "Segment customers into AI-powered clusters using behavioral, demographic, and transactional data. Use when the user needs customer segmentation, audience targeting, or CRM list organization for marketing automation.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "slugify",
+      "source": "./skills/slugify",
+      "description": "Use this skill whenever you need to convert an arbitrary string into a clean URL slug: lowercase, non-alphanumerics to single hyphens, collapse repeats, trim, optional max length on a word boundary. Deterministic, offline, no dependencies.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "smart-truncate",
+      "source": "./skills/smart-truncate",
+      "description": "Use this skill to truncate text to a max length at a word boundary with an ellipsis, without cutting words in half. Ideal for meta descriptions (155 chars), social previews, and card summaries. Deterministic, offline.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "socialmediagenie",
+      "source": "./skills/socialmediagenie",
+      "description": "Generate engaging social media posts, captions, and visual content strategies across platforms. Use when the user needs Instagram content, TikTok scripts, LinkedIn posts, or multi-platform campaigns with AI-powered tone customization.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "strip-markdown",
+      "source": "./skills/strip-markdown",
+      "description": "Use this skill to strip markdown formatting from text and return clean plain text: removes headings, bold/italic, links (keeps link text), code fences, list markers, and blockquotes. Deterministic, offline. Great for generating previews or plain-text excerpts.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "supply-chain-optimizer",
+      "source": "./skills/supply-chain-optimizer",
+      "description": "Optimize supply chains automatically using demand forecasting, inventory analysis, and cost reduction algorithms. Use when the user needs demand planning, inventory optimization, supplier coordination, or cost reduction across warehouses and distribution networks.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "supplychainvision",
+      "source": "./skills/supplychainvision",
+      "description": "Monitor and automate supply chain operations with real-time tracking, analytics dashboards, and customizable workflows. Use when the user needs supply chain visibility, inventory alerts, or shipment monitoring across multiple vendors and locations.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "trackpro",
+      "source": "./skills/trackpro",
+      "description": "Automate supply chain visibility and tracking with real-time data aggregation, customizable workflows, and compliance reporting. Use when the user needs inventory tracking, shipment monitoring, supplier compliance, or supply chain analytics.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "utm-builder",
+      "source": "./skills/utm-builder",
+      "description": "Use this skill to append correctly-encoded UTM tracking parameters to a URL for campaign attribution (source, medium, campaign, term, content). Handles existing query strings and fragments. Deterministic, offline. Returns the tagged URL.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "utm-report",
+      "source": "./skills/utm-report",
+      "description": "Use this skill to audit a batch of URLs for campaign attribution: parses UTM parameters from every URL, flags untagged links, and aggregates counts by source and by campaign. Deterministic, offline. Feed it your link list and get an attribution-readiness report.",
+      "version": "0.1.0"
+    },
+    {
+      "name": "video-transcript-optimizer-for-seo-repurposing",
+      "source": "./skills/video-transcript-optimizer-for-seo-repurposing",
+      "description": "Auto-extract SEO descriptions, chapters, social clips, blog outlines & quote graphics from raw video transcripts. Use when the user needs content repurposing, multi-format distribution, or timestamp-based editing for video content.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "video-transcript-to-micro-content-repurposer",
+      "source": "./skills/video-transcript-to-micro-content-repurposer",
+      "description": "Repurpose long-form video transcripts into platform-optimized micro-content: short clips with captions, pull quotes for LinkedIn/Twitter, blog snippets, and email hooks. Use when the user needs multi-channel content distribution from webinars, YouTube videos, or Loom recordings.",
+      "version": "1.0.0"
+    },
+    {
+      "name": "wordpress-seo-autopilot",
+      "source": "./skills/wordpress-seo-autopilot",
+      "description": "Automate WordPress SEO optimization with meta tags, schema markup, internal linking, and RankMath integration. Use when the user needs to improve search rankings, bulk optimize pages, or set up continuous SEO monitoring.",
+      "version": "1.0.0"
+    }
+  ]
+}
