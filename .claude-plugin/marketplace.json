@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 16 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 19 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -325,6 +325,13 @@
       "type": "instruction"
     },
     {
+      "name": "estimate-tokens",
+      "source": "./skills/estimate-tokens",
+      "description": "Use this skill to approximate the LLM token count of a text before an API call, for cost/budget guarding. Averages two estimators (~4 chars/token and ~0.75 tokens/word). Deterministic, offline, no tokenizer dependency. Not exact, but reliable for gating oversized prompts.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "etsy-listing-optimizer",
       "source": "./skills/etsy-listing-optimizer",
       "description": "Optimize Etsy product titles, tags, and descriptions using AI-powered keyword research and competitor analysis. Use when the user needs higher search rankings, increased visibility, or better conversion rates for Etsy shop listings.",
@@ -332,9 +339,23 @@
       "type": "instruction"
     },
     {
+      "name": "extract-domains",
+      "source": "./skills/extract-domains",
+      "description": "Use this skill to extract and normalize the domains of all URLs in a text: strips www, ports, and paths, de-duplicates, and counts links per domain. Deterministic, offline. Ideal for auditing outbound/affiliate links in an article or checking link diversity.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "extract-emails",
       "source": "./skills/extract-emails",
       "description": "Use this skill to extract all valid email addresses from arbitrary text, de-duplicated and lowercased. Uses RFC-ish validation. Deterministic, offline. Useful for parsing scraped pages, contact forms, or documents for leads.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "extract-hashtags",
+      "source": "./skills/extract-hashtags",
+      "description": "Use this skill to extract hashtags from social text: pulls #tags, de-duplicates case-insensitively, drops numeric-only tags, and returns them both with and without the # prefix. Deterministic, offline. Useful for auditing or reusing the tag set of a post.",
       "version": "0.1.0",
       "type": "executable"
     },
