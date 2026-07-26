@@ -1,0 +1,22 @@
+{
+  "name": "estimate_tokens",
+  "description": "Use this skill to approximate the LLM token count of a text before an API call, for cost/budget guarding. Averages two estimators (~4 chars/token and ~0.75 tokens/word). Deterministic, offline, no tokenizer dependency. Not exact, but reliable for gating oversized prompts.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Text to estimate"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "estimate-tokens",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
