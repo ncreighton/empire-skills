@@ -1,0 +1,22 @@
+{
+  "name": "extract_domains",
+  "description": "Use this skill to extract and normalize the domains of all URLs in a text: strips www, ports, and paths, de-duplicates, and counts links per domain. Deterministic, offline. Ideal for auditing outbound/affiliate links in an article or checking link diversity.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Text containing URLs"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "extract-domains",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}

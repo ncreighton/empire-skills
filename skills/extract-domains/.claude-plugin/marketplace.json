@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "extract-domains",
+      "source": "./skills/extract-domains",
+      "description": "Use this skill to extract and normalize the domains of all URLs in a text: strips www, ports, and paths, de-duplicates, and counts links per domain. Deterministic, offline. Ideal for auditing outbound/affiliate links in an article or checking link diversity.",
+      "version": "0.1.0"
+    }
+  ]
+}

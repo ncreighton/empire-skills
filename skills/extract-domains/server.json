@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/extract-domains",
+  "description": "Use this skill to extract and normalize the domains of all URLs in a text: strips www, ports, and paths, de-duplicates, and counts links per domain. Deterministic, offline. Ideal for auditing outbound/affiliate links in an article or checking link diversity.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "extract-domains",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Text containing URLs"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}
