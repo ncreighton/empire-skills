@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 19 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 21 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -304,6 +304,13 @@
       "type": "instruction"
     },
     {
+      "name": "dedupe-lines",
+      "source": "./skills/dedupe-lines",
+      "description": "Use this skill to remove duplicate lines from text, preserving first-seen order by default (optionally sorted or case-insensitive). Deterministic, offline. Returns the deduped text plus kept/removed counts.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "email-drip-sequence-builder",
       "source": "./skills/email-drip-sequence-builder",
       "description": "Generate complete email drip sequences from product descriptions with personalization, A/B subject lines, and ESP-ready formatting. Use when the user needs email campaigns, welcome series, product launch sequences, re-engagement flows, or nurture campaigns for any industry.",
@@ -449,6 +456,13 @@
       "description": "Optimize LinkedIn profiles and build personal authority by analyzing profiles, rewriting headlines/bios for keyword optimization, and recommending content pillars. Use when the user needs LinkedIn positioning, credibility building, or personal branding without a strategist.",
       "version": "1.0.0",
       "type": "instruction"
+    },
+    {
+      "name": "mask-secrets",
+      "source": "./skills/mask-secrets",
+      "description": "Use this skill to redact secrets from text before logging or sharing: masks OpenAI keys (sk-), GitHub PATs, AWS access keys, Slack tokens, Bearer tokens, and email addresses. Deterministic, offline. Returns the masked text and a redaction count.",
+      "version": "0.1.0",
+      "type": "executable"
     },
     {
       "name": "micro-niche-market-validator",
