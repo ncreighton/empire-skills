@@ -1,0 +1,34 @@
+{
+  "name": "io.github.ncreighton/normalize-phone",
+  "description": "Use this skill to normalize a phone number to E.164 format (+<country><number>): strips formatting, applies a default country code for bare 10-digit US numbers, preserves an explicit +prefix, and flags whether the result is a plausible length. Deterministic, offline. For cleaning contact/lead data.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "normalize-phone",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "phone": {
+          "type": "string",
+          "description": "Phone number in any format"
+        },
+        "default_country_code": {
+          "type": "string",
+          "description": "Country code for bare local numbers (default '1')"
+        }
+      },
+      "required": [
+        "phone"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

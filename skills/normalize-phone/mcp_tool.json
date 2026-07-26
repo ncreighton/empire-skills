@@ -1,0 +1,26 @@
+{
+  "name": "normalize_phone",
+  "description": "Use this skill to normalize a phone number to E.164 format (+<country><number>): strips formatting, applies a default country code for bare 10-digit US numbers, preserves an explicit +prefix, and flags whether the result is a plausible length. Deterministic, offline. For cleaning contact/lead data.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "phone": {
+        "type": "string",
+        "description": "Phone number in any format"
+      },
+      "default_country_code": {
+        "type": "string",
+        "description": "Country code for bare local numbers (default '1')"
+      }
+    },
+    "required": [
+      "phone"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "normalize-phone",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
