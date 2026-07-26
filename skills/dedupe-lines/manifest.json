@@ -1,0 +1,53 @@
+{
+  "name": "dedupe-lines",
+  "description": "Use this skill to remove duplicate lines from text, preserving first-seen order by default (optionally sorted or case-insensitive). Deterministic, offline. Returns the deduped text plus kept/removed counts.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "publishing",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Text with lines",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "case_insensitive",
+      "type": "boolean",
+      "description": "Treat lines differing only in case as duplicates",
+      "required": false,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "keep_order",
+      "type": "boolean",
+      "description": "Preserve first-seen order (else sorted)",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "text",
+    "dedupe",
+    "lines",
+    "content"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "956",
+  "metadata": {}
+}

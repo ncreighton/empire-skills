@@ -1,0 +1,30 @@
+{
+  "name": "dedupe_lines",
+  "description": "Use this skill to remove duplicate lines from text, preserving first-seen order by default (optionally sorted or case-insensitive). Deterministic, offline. Returns the deduped text plus kept/removed counts.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Text with lines"
+      },
+      "case_insensitive": {
+        "type": "boolean",
+        "description": "Treat lines differing only in case as duplicates"
+      },
+      "keep_order": {
+        "type": "boolean",
+        "description": "Preserve first-seen order (else sorted)"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "dedupe-lines",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}

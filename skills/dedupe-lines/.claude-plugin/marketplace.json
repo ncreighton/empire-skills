@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "dedupe-lines",
+      "source": "./skills/dedupe-lines",
+      "description": "Use this skill to remove duplicate lines from text, preserving first-seen order by default (optionally sorted or case-insensitive). Deterministic, offline. Returns the deduped text plus kept/removed counts.",
+      "version": "0.1.0"
+    }
+  ]
+}
