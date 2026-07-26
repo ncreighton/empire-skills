@@ -1,0 +1,22 @@
+{
+  "name": "extract_hashtags",
+  "description": "Use this skill to extract hashtags from social text: pulls #tags, de-duplicates case-insensitively, drops numeric-only tags, and returns them both with and without the # prefix. Deterministic, offline. Useful for auditing or reusing the tag set of a post.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Social post text"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "extract-hashtags",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}

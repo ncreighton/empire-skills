@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/extract-hashtags",
+  "description": "Use this skill to extract hashtags from social text: pulls #tags, de-duplicates case-insensitively, drops numeric-only tags, and returns them both with and without the # prefix. Deterministic, offline. Useful for auditing or reusing the tag set of a post.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "extract-hashtags",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Social post text"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

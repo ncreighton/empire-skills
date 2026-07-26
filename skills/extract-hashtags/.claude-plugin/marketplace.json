@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "extract-hashtags",
+      "source": "./skills/extract-hashtags",
+      "description": "Use this skill to extract hashtags from social text: pulls #tags, de-duplicates case-insensitively, drops numeric-only tags, and returns them both with and without the # prefix. Deterministic, offline. Useful for auditing or reusing the tag set of a post.",
+      "version": "0.1.0"
+    }
+  ]
+}
