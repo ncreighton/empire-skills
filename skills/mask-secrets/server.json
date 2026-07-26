@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/mask-secrets",
+  "description": "Use this skill to redact secrets from text before logging or sharing: masks OpenAI keys (sk-), GitHub PATs, AWS access keys, Slack tokens, Bearer tokens, and email addresses. Deterministic, offline. Returns the masked text and a redaction count.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "mask-secrets",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Text possibly containing secrets"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

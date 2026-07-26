@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "mask-secrets",
+      "source": "./skills/mask-secrets",
+      "description": "Use this skill to redact secrets from text before logging or sharing: masks OpenAI keys (sk-), GitHub PATs, AWS access keys, Slack tokens, Bearer tokens, and email addresses. Deterministic, offline. Returns the masked text and a redaction count.",
+      "version": "0.1.0"
+    }
+  ]
+}
