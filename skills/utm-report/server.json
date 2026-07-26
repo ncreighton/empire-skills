@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/utm-report",
+  "description": "Use this skill to audit a batch of URLs for campaign attribution: parses UTM parameters from every URL, flags untagged links, and aggregates counts by source and by campaign. Deterministic, offline. Feed it your link list and get an attribution-readiness report.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "utm-report",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "urls": {
+          "type": "array",
+          "description": "List of URLs (or a newline-separated string)"
+        }
+      },
+      "required": [
+        "urls"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

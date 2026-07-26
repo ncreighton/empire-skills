@@ -1,0 +1,34 @@
+{
+  "name": "io.github.ncreighton/format-price",
+  "description": "Use this skill to format a numeric amount as a currency string with the correct symbol, thousands separators, and two decimals (USD, EUR, GBP, etc.). Handles ints, floats, and numeric strings. Deterministic, offline.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "format-price",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "description": "The amount"
+        },
+        "currency": {
+          "type": "string",
+          "description": "ISO code (USD/EUR/GBP/JPY), default USD"
+        }
+      },
+      "required": [
+        "amount"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

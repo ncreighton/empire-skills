@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/parse-any-date",
+  "description": "Use this skill to parse a date/time from almost any format (ISO 8601, GMT/RFC, epoch seconds or millis, common US/EU formats), normalize it to UTC, and get a humanized 'time ago' string plus age in hours. Deterministic, offline. Handles the messy timestamps agents get from APIs and scraped pages.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "parse-any-date",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "A date/time in any common format (or epoch number)"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

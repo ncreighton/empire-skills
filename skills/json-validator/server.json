@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/json-validator",
+  "description": "Use this skill to check whether a string is valid JSON and describe its shape: top-level type, key count (objects) or length (arrays), and the specific parse error with line/column if invalid. Deterministic, offline. Great for validating LLM output before using it.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "json-validator",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "The JSON string to validate"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

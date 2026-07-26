@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/extract-emails",
+  "description": "Use this skill to extract all valid email addresses from arbitrary text, de-duplicated and lowercased. Uses RFC-ish validation. Deterministic, offline. Useful for parsing scraped pages, contact forms, or documents for leads.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "extract-emails",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Text to scan for emails"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

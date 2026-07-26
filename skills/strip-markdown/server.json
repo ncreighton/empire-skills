@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/strip-markdown",
+  "description": "Use this skill to strip markdown formatting from text and return clean plain text: removes headings, bold/italic, links (keeps link text), code fences, list markers, and blockquotes. Deterministic, offline. Great for generating previews or plain-text excerpts.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "strip-markdown",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "markdown": {
+          "type": "string",
+          "description": "Markdown text"
+        }
+      },
+      "required": [
+        "markdown"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

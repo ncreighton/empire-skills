@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/readability-grade",
+  "description": "Use this skill to score text readability with the correct Flesch Reading Ease (0-100) and Flesch-Kincaid grade-level formulas, plus a plain-language difficulty band. Deterministic, offline, no dependencies. Grade a draft before publishing to check it matches your audience.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "readability-grade",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Text to grade"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

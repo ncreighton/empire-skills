@@ -1,0 +1,53 @@
+{
+  "name": "io.github.ncreighton/utm-builder",
+  "description": "Use this skill to append correctly-encoded UTM tracking parameters to a URL for campaign attribution (source, medium, campaign, term, content). Handles existing query strings and fragments. Deterministic, offline. Returns the tagged URL.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "utm-builder",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "Base URL"
+        },
+        "source": {
+          "type": "string",
+          "description": "utm_source"
+        },
+        "medium": {
+          "type": "string",
+          "description": "utm_medium"
+        },
+        "campaign": {
+          "type": "string",
+          "description": "utm_campaign"
+        },
+        "term": {
+          "type": "string",
+          "description": "utm_term"
+        },
+        "content": {
+          "type": "string",
+          "description": "utm_content"
+        }
+      },
+      "required": [
+        "url",
+        "source",
+        "medium",
+        "campaign"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}
