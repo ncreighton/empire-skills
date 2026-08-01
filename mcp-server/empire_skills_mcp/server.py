@@ -31,8 +31,13 @@ class _Ctx:
 
 
 def _load(name: str):
+    # The real implementation lives in <name>_skill.py; skill.py is just a
+    # re-export shim (from <name>_skill import skill) that doesn't resolve as a
+    # bundled module. Load the impl file directly.
+    impl = _SKILLS / name / (name.replace("-", "_") + "_skill.py")
+    target = impl if impl.exists() else (_SKILLS / name / "skill.py")
     spec = importlib.util.spec_from_file_location(
-        f"skill_{name.replace('-', '_')}", _SKILLS / name / "skill.py")
+        f"skill_{name.replace('-', '_')}", target)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return getattr(mod, "skill")
