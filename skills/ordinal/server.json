@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/ordinal",
+  "description": "Use this skill to convert an integer to its ordinal string (1->1st, 22->22nd, 113->113th). Deterministic, offline. For ranks and dates.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "ordinal",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "type": "number",
+          "description": "Integer to convert"
+        }
+      },
+      "required": [
+        "number"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

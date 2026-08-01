@@ -1,0 +1,37 @@
+{
+  "name": "ordinal",
+  "description": "Use this skill to convert an integer to its ordinal string (1->1st, 22->22nd, 113->113th). Deterministic, offline. For ranks and dates.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "ai",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "number",
+      "type": "number",
+      "description": "Integer to convert",
+      "required": true,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "ordinal",
+    "number",
+    "rank",
+    "format"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1068",
+  "metadata": {}
+}
