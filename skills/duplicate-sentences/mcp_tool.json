@@ -1,0 +1,22 @@
+{
+  "name": "duplicate_sentences",
+  "description": "Use this skill to detect repeated sentences in text (case/whitespace-insensitive) with their counts. Deterministic, offline. For catching LLM repetition and thin/padded content.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "duplicate-sentences",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
