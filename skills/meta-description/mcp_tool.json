@@ -1,0 +1,26 @@
+{
+  "name": "meta_description",
+  "description": "Use this skill to generate a clean SEO meta description from article body text: strips markdown/URLs, collapses whitespace, truncates to a max length (default 155) on a word boundary. Deterministic, offline.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      },
+      "max_length": {
+        "type": "number",
+        "description": "Max chars (default 155)"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "meta-description",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}

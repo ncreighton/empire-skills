@@ -1,0 +1,45 @@
+{
+  "name": "meta-description",
+  "description": "Use this skill to generate a clean SEO meta description from article body text: strips markdown/URLs, collapses whitespace, truncates to a max length (default 155) on a word boundary. Deterministic, offline.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "publishing",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Input text",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "max_length",
+      "type": "number",
+      "description": "Max chars (default 155)",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "seo",
+    "meta",
+    "description",
+    "content"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1069",
+  "metadata": {}
+}

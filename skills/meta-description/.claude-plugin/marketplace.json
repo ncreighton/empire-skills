@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "meta-description",
+      "source": "./skills/meta-description",
+      "description": "Use this skill to generate a clean SEO meta description from article body text: strips markdown/URLs, collapses whitespace, truncates to a max length (default 155) on a word boundary. Deterministic, offline.",
+      "version": "0.1.0"
+    }
+  ]
+}
