@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "json-format",
+      "source": "./skills/json-format",
+      "description": "Use this skill to pretty-print or minify a JSON string (mode=pretty|minify, optional sort_keys). Validates first. Deterministic, offline.",
+      "version": "0.1.0"
+    }
+  ]
+}

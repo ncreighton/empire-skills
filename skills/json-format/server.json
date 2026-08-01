@@ -1,0 +1,38 @@
+{
+  "name": "io.github.ncreighton/json-format",
+  "description": "Use this skill to pretty-print or minify a JSON string (mode=pretty|minify, optional sort_keys). Validates first. Deterministic, offline.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "json-format",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Input text"
+        },
+        "mode": {
+          "type": "string",
+          "description": "pretty (default) or minify"
+        },
+        "sort_keys": {
+          "type": "boolean",
+          "description": "sort object keys"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}
