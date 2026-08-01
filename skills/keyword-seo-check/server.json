@@ -1,0 +1,38 @@
+{
+  "name": "io.github.ncreighton/keyword-seo-check",
+  "description": "Use this skill to check whether a target keyword appears in the title and slug (and at the title start) and returns an SEO placement score. Deterministic, offline. For on-page SEO validation.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "keyword-seo-check",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "keyword": {
+          "type": "string",
+          "description": "Target keyword"
+        },
+        "title": {
+          "type": "string",
+          "description": "Post title"
+        },
+        "slug": {
+          "type": "string",
+          "description": "Post slug"
+        }
+      },
+      "required": [
+        "keyword"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

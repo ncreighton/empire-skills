@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "keyword-seo-check",
+      "source": "./skills/keyword-seo-check",
+      "description": "Use this skill to check whether a target keyword appears in the title and slug (and at the title start) and returns an SEO placement score. Deterministic, offline. For on-page SEO validation.",
+      "version": "0.1.0"
+    }
+  ]
+}

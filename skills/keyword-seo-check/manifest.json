@@ -1,0 +1,53 @@
+{
+  "name": "keyword-seo-check",
+  "description": "Use this skill to check whether a target keyword appears in the title and slug (and at the title start) and returns an SEO placement score. Deterministic, offline. For on-page SEO validation.",
+  "version": "0.1.0",
+  "kind": "analyzer",
+  "niche": "publishing",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "keyword",
+      "type": "string",
+      "description": "Target keyword",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "title",
+      "type": "string",
+      "description": "Post title",
+      "required": false,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "slug",
+      "type": "string",
+      "description": "Post slug",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "seo",
+    "keyword",
+    "title",
+    "slug"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1071",
+  "metadata": {}
+}
