@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "hex-to-rgb",
+      "source": "./skills/hex-to-rgb",
+      "description": "Use this skill to convert a hex color (#rrggbb or #rgb) to RGB values and a css rgb() string. Deterministic, offline.",
+      "version": "0.1.0"
+    }
+  ]
+}

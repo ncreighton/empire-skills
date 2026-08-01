@@ -1,0 +1,38 @@
+{
+  "name": "hex-to-rgb",
+  "description": "Use this skill to convert a hex color (#rrggbb or #rgb) to RGB values and a css rgb() string. Deterministic, offline.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "reviews",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "hex",
+      "type": "string",
+      "description": "Hex color, e.g. #1a2b3c",
+      "required": true,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "color",
+    "hex",
+    "rgb",
+    "css",
+    "design"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1059",
+  "metadata": {}
+}
