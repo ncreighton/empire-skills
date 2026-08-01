@@ -1,0 +1,26 @@
+{
+  "name": "truncate_words",
+  "description": "Use this skill to truncate text to a max number of words with an ellipsis (default 50). Deterministic, offline. For excerpts and previews.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      },
+      "words": {
+        "type": "number",
+        "description": "Max words (default 50)"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "truncate-words",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}

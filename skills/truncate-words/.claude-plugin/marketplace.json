@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "truncate-words",
+      "source": "./skills/truncate-words",
+      "description": "Use this skill to truncate text to a max number of words with an ellipsis (default 50). Deterministic, offline. For excerpts and previews.",
+      "version": "0.1.0"
+    }
+  ]
+}
