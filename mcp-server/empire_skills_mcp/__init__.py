@@ -1,0 +1,1 @@
+"""empire-skills MCP server."""

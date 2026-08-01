@@ -1,0 +1,77 @@
+{
+  "name": "utm-builder",
+  "description": "Use this skill to append correctly-encoded UTM tracking parameters to a URL for campaign attribution (source, medium, campaign, term, content). Handles existing query strings and fragments. Deterministic, offline. Returns the tagged URL.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "reviews",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "url",
+      "type": "string",
+      "description": "Base URL",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "description": "utm_source",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "medium",
+      "type": "string",
+      "description": "utm_medium",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "campaign",
+      "type": "string",
+      "description": "utm_campaign",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "term",
+      "type": "string",
+      "description": "utm_term",
+      "required": false,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "content",
+      "type": "string",
+      "description": "utm_content",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "marketing",
+    "utm",
+    "url",
+    "analytics"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": null,
+  "metadata": {}
+}

@@ -1,0 +1,15 @@
+{
+  "name": "io.github.ncreighton/empire-skills",
+  "description": "Empire executable agent skills as MCP tools \u2014 23 deterministic, offline tools (slugify, readability-grade, mask-secrets, csv-to-json, \u2026).",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi",
+      "identifier": "empire-skills-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

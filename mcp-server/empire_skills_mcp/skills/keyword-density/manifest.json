@@ -1,0 +1,45 @@
+{
+  "name": "keyword-density",
+  "description": "Use this skill to compute how often a target keyword (or phrase) appears in a text, as a raw count and as a percentage of total words (0-100). Case-insensitive, whole-word matching, supports multi-word phrases. Deterministic, offline. Flags over-optimization above 3%.",
+  "version": "0.1.0",
+  "kind": "analyzer",
+  "niche": "publishing",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "The body text",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "keyword",
+      "type": "string",
+      "description": "Keyword or phrase to measure",
+      "required": true,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "seo",
+    "keyword",
+    "density",
+    "content"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": null,
+  "metadata": {}
+}

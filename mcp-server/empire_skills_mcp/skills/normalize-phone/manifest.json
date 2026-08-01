@@ -1,0 +1,46 @@
+{
+  "name": "normalize-phone",
+  "description": "Use this skill to normalize a phone number to E.164 format (+<country><number>): strips formatting, applies a default country code for bare 10-digit US numbers, preserves an explicit +prefix, and flags whether the result is a plausible length. Deterministic, offline. For cleaning contact/lead data.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "reviews",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "phone",
+      "type": "string",
+      "description": "Phone number in any format",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "default_country_code",
+      "type": "string",
+      "description": "Country code for bare local numbers (default '1')",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "phone",
+    "e164",
+    "normalize",
+    "contact",
+    "data"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "957",
+  "metadata": {}
+}
