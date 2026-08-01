@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 24 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 29 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -234,6 +234,13 @@
       "type": "instruction"
     },
     {
+      "name": "base64",
+      "source": "./skills/base64",
+      "description": "Use this skill to base64-encode or -decode text (mode=encode|decode). Deterministic, offline. For tokens, data URIs, and encoding payloads.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "competitor-spy-tool",
       "source": "./skills/competitor-spy-tool",
       "description": "Monitor competitor websites for pricing changes, new content, and keyword movements. Use when the user needs competitive intelligence, market tracking, or SEO benchmarking across multiple domains.",
@@ -402,6 +409,13 @@
       "type": "instruction"
     },
     {
+      "name": "hex-to-rgb",
+      "source": "./skills/hex-to-rgb",
+      "description": "Use this skill to convert a hex color (#rrggbb or #rgb) to RGB values and a css rgb() string. Deterministic, offline.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "hrflow",
       "source": "./skills/hrflow",
       "description": "Automate employee onboarding and offboarding workflows with HRIS integration, compliance tracking, and multi-step task automation. Use when the user needs to streamline HR processes, ensure compliance, or manage employee lifecycle events across systems.",
@@ -412,6 +426,13 @@
       "name": "html-to-text",
       "source": "./skills/html-to-text",
       "description": "Use this skill to convert HTML into clean plain text: removes script/style, turns block tags and <br> into newlines, strips remaining tags, unescapes HTML entities, and collapses whitespace. Deterministic, offline. The right first step before readability, word-count, or slop analysis on scraped or W",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "humanize-duration",
+      "source": "./skills/humanize-duration",
+      "description": "Use this skill to convert a number of seconds into a human duration like '2h 5m 30s'. Deterministic, offline. For run-times, ETAs, video lengths.",
       "version": "0.1.0",
       "type": "executable"
     },
@@ -435,6 +456,13 @@
       "description": "Automate inventory tracking, order fulfillment, and shipping across e-commerce platforms. Use when the user needs real-time stock management, multi-channel order processing, or automated fulfillment workflows.",
       "version": "1.0.0",
       "type": "instruction"
+    },
+    {
+      "name": "json-format",
+      "source": "./skills/json-format",
+      "description": "Use this skill to pretty-print or minify a JSON string (mode=pretty|minify, optional sort_keys). Validates first. Deterministic, offline.",
+      "version": "0.1.0",
+      "type": "executable"
     },
     {
       "name": "json-validator",
@@ -496,6 +524,13 @@
       "name": "parse-any-date",
       "source": "./skills/parse-any-date",
       "description": "Use this skill to parse a date/time from almost any format (ISO 8601, GMT/RFC, epoch seconds or millis, common US/EU formats), normalize it to UTC, and get a humanized 'time ago' string plus age in hours. Deterministic, offline. Handles the messy timestamps agents get from APIs and scraped pages.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "percent-change",
+      "source": "./skills/percent-change",
+      "description": "Use this skill to compute the percentage change from an old value to a new value, plus absolute change and direction. Handles old=0. Deterministic, offline. For metrics/analytics.",
       "version": "0.1.0",
       "type": "executable"
     },
