@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 23 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 24 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -624,6 +624,13 @@
       "description": "Repurpose long-form video transcripts into platform-optimized micro-content: short clips with captions, pull quotes for LinkedIn/Twitter, blog snippets, and email hooks. Use when the user needs multi-channel content distribution from webinars, YouTube videos, or Loom recordings.",
       "version": "1.0.0",
       "type": "instruction"
+    },
+    {
+      "name": "word-frequency",
+      "source": "./skills/word-frequency",
+      "description": "Use this skill to get the most frequent words in a text: tokenizes, lowercases, drops common stopwords (optional), and returns the top-N words with counts plus total/unique word counts. Deterministic, offline. For content analysis, keyword discovery, and tag suggestions.",
+      "version": "0.1.0",
+      "type": "executable"
     },
     {
       "name": "wordpress-seo-autopilot",
