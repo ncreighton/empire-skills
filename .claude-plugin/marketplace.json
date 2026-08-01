@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 29 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 33 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -241,6 +241,13 @@
       "type": "executable"
     },
     {
+      "name": "chunk-list",
+      "source": "./skills/chunk-list",
+      "description": "Use this skill to split a list (or comma string) into fixed-size chunks. Deterministic, offline. For batching, pagination, grid layouts.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "competitor-spy-tool",
       "source": "./skills/competitor-spy-tool",
       "description": "Monitor competitor websites for pricing changes, new content, and keyword movements. Use when the user needs competitive intelligence, market tracking, or SEO benchmarking across multiple domains.",
@@ -377,6 +384,13 @@
       "name": "extract-json-block",
       "source": "./skills/extract-json-block",
       "description": "Use this skill to pull the first valid JSON object or array out of noisy or LLM-generated text: strips ```json code fences, does a balanced-brace scan, and repairs trailing commas. Returns the parsed data. Deterministic, offline. Essential for safely parsing LLM output before using it.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "extract-numbers",
+      "source": "./skills/extract-numbers",
+      "description": "Use this skill to pull all numbers (ints, decimals, thousands-separated) from text, with their sum. Deterministic, offline. For parsing prices, stats, and quantities out of copy.",
       "version": "0.1.0",
       "type": "executable"
     },
@@ -570,6 +584,13 @@
       "type": "executable"
     },
     {
+      "name": "rot13",
+      "source": "./skills/rot13",
+      "description": "Use this skill to apply the ROT13 cipher to text (its own inverse). Deterministic, offline. For spoiler-hiding and light obfuscation.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "segmento",
       "source": "./skills/segmento",
       "description": "Segment customers into AI-powered clusters using behavioral, demographic, and transactional data. Use when the user needs customer segmentation, audience targeting, or CRM list organization for marketing automation.",
@@ -617,6 +638,13 @@
       "description": "Monitor and automate supply chain operations with real-time tracking, analytics dashboards, and customizable workflows. Use when the user needs supply chain visibility, inventory alerts, or shipment monitoring across multiple vendors and locations.",
       "version": "1.0.0",
       "type": "instruction"
+    },
+    {
+      "name": "title-to-path",
+      "source": "./skills/title-to-path",
+      "description": "Use this skill to turn a title or breadcrumb (split on / \\ > | or arrows) into a clean lowercase URL path with slugged segments. Deterministic, offline. For building nested URLs from titles.",
+      "version": "0.1.0",
+      "type": "executable"
     },
     {
       "name": "titlecase-headline",
