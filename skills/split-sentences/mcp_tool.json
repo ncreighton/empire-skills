@@ -1,0 +1,22 @@
+{
+  "name": "split_sentences",
+  "description": "Use this skill to split text into sentences (on . ! ? followed by a capital/quote). Deterministic, offline. For readability, summarization prep, and per-sentence processing.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "split-sentences",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}

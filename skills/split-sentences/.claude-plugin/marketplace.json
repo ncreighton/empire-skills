@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "split-sentences",
+      "source": "./skills/split-sentences",
+      "description": "Use this skill to split text into sentences (on . ! ? followed by a capital/quote). Deterministic, offline. For readability, summarization prep, and per-sentence processing.",
+      "version": "0.1.0"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/split-sentences",
+  "description": "Use this skill to split text into sentences (on . ! ? followed by a capital/quote). Deterministic, offline. For readability, summarization prep, and per-sentence processing.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "split-sentences",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Input text"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}
