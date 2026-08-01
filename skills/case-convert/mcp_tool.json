@@ -1,0 +1,26 @@
+{
+  "name": "case_convert",
+  "description": "Use this skill to convert an identifier between snake_case, camelCase, PascalCase, and kebab-case (to=snake|camel|pascal|kebab). Deterministic, offline. For code/config transforms.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      },
+      "to": {
+        "type": "string",
+        "description": "snake|camel|pascal|kebab (default snake)"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "case-convert",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
