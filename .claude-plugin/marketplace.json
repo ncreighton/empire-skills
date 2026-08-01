@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 33 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 36 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -241,6 +241,13 @@
       "type": "executable"
     },
     {
+      "name": "case-convert",
+      "source": "./skills/case-convert",
+      "description": "Use this skill to convert an identifier between snake_case, camelCase, PascalCase, and kebab-case (to=snake|camel|pascal|kebab). Deterministic, offline. For code/config transforms.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "chunk-list",
       "source": "./skills/chunk-list",
       "description": "Use this skill to split a list (or comma string) into fixed-size chunks. Deterministic, offline. For batching, pagination, grid layouts.",
@@ -451,6 +458,13 @@
       "type": "executable"
     },
     {
+      "name": "initials",
+      "source": "./skills/initials",
+      "description": "Use this skill to get the initials of a name/phrase (first letter of each word, uppercased, capped at max). Deterministic, offline. For avatars/monograms.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "inventorygenie",
       "source": "./skills/inventorygenie",
       "description": "Automate inventory forecasting, supplier integration, and stock analytics for retail operations. Use when the user needs demand prediction, automated reordering, inventory optimization, or multi-location stock management.",
@@ -531,6 +545,13 @@
       "name": "normalize-phone",
       "source": "./skills/normalize-phone",
       "description": "Use this skill to normalize a phone number to E.164 format (+<country><number>): strips formatting, applies a default country code for bare 10-digit US numbers, preserves an explicit +prefix, and flags whether the result is a plausible length. Deterministic, offline. For cleaning contact/lead data.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "ordinal",
+      "source": "./skills/ordinal",
+      "description": "Use this skill to convert an integer to its ordinal string (1->1st, 22->22nd, 113->113th). Deterministic, offline. For ranks and dates.",
       "version": "0.1.0",
       "type": "executable"
     },
