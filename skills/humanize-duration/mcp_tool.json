@@ -1,0 +1,22 @@
+{
+  "name": "humanize_duration",
+  "description": "Use this skill to convert a number of seconds into a human duration like '2h 5m 30s'. Deterministic, offline. For run-times, ETAs, video lengths.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "seconds": {
+        "type": "number",
+        "description": "Duration in seconds"
+      }
+    },
+    "required": [
+      "seconds"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "humanize-duration",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
