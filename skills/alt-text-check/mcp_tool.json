@@ -1,0 +1,22 @@
+{
+  "name": "alt_text_check",
+  "description": "Use this skill to audit image alt text in markdown: counts images, missing alt, and alt over 125 chars. Deterministic, offline. For accessibility + SEO image compliance.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "markdown": {
+        "type": "string",
+        "description": "Markdown/HTML content"
+      }
+    },
+    "required": [
+      "markdown"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "alt-text-check",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}

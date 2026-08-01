@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "alt-text-check",
+      "source": "./skills/alt-text-check",
+      "description": "Use this skill to audit image alt text in markdown: counts images, missing alt, and alt over 125 chars. Deterministic, offline. For accessibility + SEO image compliance.",
+      "version": "0.1.0"
+    }
+  ]
+}
