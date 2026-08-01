@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "extract-numbers",
+      "source": "./skills/extract-numbers",
+      "description": "Use this skill to pull all numbers (ints, decimals, thousands-separated) from text, with their sum. Deterministic, offline. For parsing prices, stats, and quantities out of copy.",
+      "version": "0.1.0"
+    }
+  ]
+}

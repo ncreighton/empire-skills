@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/extract-numbers",
+  "description": "Use this skill to pull all numbers (ints, decimals, thousands-separated) from text, with their sum. Deterministic, offline. For parsing prices, stats, and quantities out of copy.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "extract-numbers",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Input text"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

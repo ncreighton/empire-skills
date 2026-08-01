@@ -1,0 +1,22 @@
+{
+  "name": "extract_numbers",
+  "description": "Use this skill to pull all numbers (ints, decimals, thousands-separated) from text, with their sum. Deterministic, offline. For parsing prices, stats, and quantities out of copy.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "extract-numbers",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "extract-numbers",
+  "description": "Use this skill to pull all numbers (ints, decimals, thousands-separated) from text, with their sum. Deterministic, offline. For parsing prices, stats, and quantities out of copy.",
+  "version": "0.1.0",
+  "kind": "analyzer",
+  "niche": "reviews",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Input text",
+      "required": true,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "numbers",
+    "extract",
+    "parse",
+    "data"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1065",
+  "metadata": {}
+}
