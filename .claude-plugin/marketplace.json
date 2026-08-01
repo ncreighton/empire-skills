@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 36 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 41 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -430,6 +430,13 @@
       "type": "instruction"
     },
     {
+      "name": "heading-outline",
+      "source": "./skills/heading-outline",
+      "description": "Use this skill to extract the heading outline (H1-H6) from markdown and check hierarchy health: flags multiple H1s and level jumps (H2->H4). Deterministic, offline. For SEO structure audits.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "hex-to-rgb",
       "source": "./skills/hex-to-rgb",
       "description": "Use this skill to convert a hex color (#rrggbb or #rgb) to RGB values and a css rgb() string. Deterministic, offline.",
@@ -507,6 +514,20 @@
       "type": "executable"
     },
     {
+      "name": "keyword-seo-check",
+      "source": "./skills/keyword-seo-check",
+      "description": "Use this skill to check whether a target keyword appears in the title and slug (and at the title start) and returns an SEO placement score. Deterministic, offline. For on-page SEO validation.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "link-audit",
+      "source": "./skills/link-audit",
+      "description": "Use this skill to audit markdown links: counts internal vs external (by site_domain) and checks the 3-5 internal-links-per-post convention. Deterministic, offline. For SEO link hygiene.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "linkedin-profile-optimizer-authority-builder",
       "source": "./skills/linkedin-profile-optimizer-authority-builder",
       "description": "Optimize LinkedIn profiles and build personal authority by analyzing profiles, rewriting headlines/bios for keyword optimization, and recommending content pillars. Use when the user needs LinkedIn positioning, credibility building, or personal branding without a strategist.",
@@ -517,6 +538,13 @@
       "name": "mask-secrets",
       "source": "./skills/mask-secrets",
       "description": "Use this skill to redact secrets from text before logging or sharing: masks OpenAI keys (sk-), GitHub PATs, AWS access keys, Slack tokens, Bearer tokens, and email addresses. Deterministic, offline. Returns the masked text and a redaction count.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "meta-description",
+      "source": "./skills/meta-description",
+      "description": "Use this skill to generate a clean SEO meta description from article body text: strips markdown/URLs, collapses whitespace, truncates to a max length (default 155) on a word boundary. Deterministic, offline.",
       "version": "0.1.0",
       "type": "executable"
     },
@@ -638,6 +666,13 @@
       "description": "Generate engaging social media posts, captions, and visual content strategies across platforms. Use when the user needs Instagram content, TikTok scripts, LinkedIn posts, or multi-platform campaigns with AI-powered tone customization.",
       "version": "1.0.0",
       "type": "instruction"
+    },
+    {
+      "name": "split-sentences",
+      "source": "./skills/split-sentences",
+      "description": "Use this skill to split text into sentences (on . ! ? followed by a capital/quote). Deterministic, offline. For readability, summarization prep, and per-sentence processing.",
+      "version": "0.1.0",
+      "type": "executable"
     },
     {
       "name": "strip-markdown",
