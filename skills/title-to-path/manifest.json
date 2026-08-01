@@ -1,0 +1,37 @@
+{
+  "name": "title-to-path",
+  "description": "Use this skill to turn a title or breadcrumb (split on / \\ > | or arrows) into a clean lowercase URL path with slugged segments. Deterministic, offline. For building nested URLs from titles.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "publishing",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Input text",
+      "required": true,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "url",
+    "slug",
+    "path",
+    "seo"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1064",
+  "metadata": {}
+}
