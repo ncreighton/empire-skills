@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "link-audit",
+      "source": "./skills/link-audit",
+      "description": "Use this skill to audit markdown links: counts internal vs external (by site_domain) and checks the 3-5 internal-links-per-post convention. Deterministic, offline. For SEO link hygiene.",
+      "version": "0.1.0"
+    }
+  ]
+}

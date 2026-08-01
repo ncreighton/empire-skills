@@ -1,0 +1,45 @@
+{
+  "name": "link-audit",
+  "description": "Use this skill to audit markdown links: counts internal vs external (by site_domain) and checks the 3-5 internal-links-per-post convention. Deterministic, offline. For SEO link hygiene.",
+  "version": "0.1.0",
+  "kind": "analyzer",
+  "niche": "publishing",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "markdown",
+      "type": "string",
+      "description": "Markdown/HTML content",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "site_domain",
+      "type": "string",
+      "description": "Your domain, e.g. wealthfromai.com",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "seo",
+    "links",
+    "internal",
+    "audit"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1073",
+  "metadata": {}
+}

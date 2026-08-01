@@ -1,0 +1,34 @@
+{
+  "name": "io.github.ncreighton/link-audit",
+  "description": "Use this skill to audit markdown links: counts internal vs external (by site_domain) and checks the 3-5 internal-links-per-post convention. Deterministic, offline. For SEO link hygiene.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "link-audit",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "markdown": {
+          "type": "string",
+          "description": "Markdown/HTML content"
+        },
+        "site_domain": {
+          "type": "string",
+          "description": "Your domain, e.g. wealthfromai.com"
+        }
+      },
+      "required": [
+        "markdown"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}
