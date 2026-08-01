@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "percent-change",
+      "source": "./skills/percent-change",
+      "description": "Use this skill to compute the percentage change from an old value to a new value, plus absolute change and direction. Handles old=0. Deterministic, offline. For metrics/analytics.",
+      "version": "0.1.0"
+    }
+  ]
+}

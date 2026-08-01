@@ -1,0 +1,35 @@
+{
+  "name": "io.github.ncreighton/percent-change",
+  "description": "Use this skill to compute the percentage change from an old value to a new value, plus absolute change and direction. Handles old=0. Deterministic, offline. For metrics/analytics.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "percent-change",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "old": {
+          "type": "number",
+          "description": "Original value"
+        },
+        "new": {
+          "type": "number",
+          "description": "New value"
+        }
+      },
+      "required": [
+        "old",
+        "new"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

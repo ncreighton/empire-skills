@@ -1,0 +1,27 @@
+{
+  "name": "percent_change",
+  "description": "Use this skill to compute the percentage change from an old value to a new value, plus absolute change and direction. Handles old=0. Deterministic, offline. For metrics/analytics.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "old": {
+        "type": "number",
+        "description": "Original value"
+      },
+      "new": {
+        "type": "number",
+        "description": "New value"
+      }
+    },
+    "required": [
+      "old",
+      "new"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "percent-change",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
