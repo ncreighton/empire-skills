@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/rot13",
+  "description": "Use this skill to apply the ROT13 cipher to text (its own inverse). Deterministic, offline. For spoiler-hiding and light obfuscation.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "rot13",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Input text"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "rot13",
+      "source": "./skills/rot13",
+      "description": "Use this skill to apply the ROT13 cipher to text (its own inverse). Deterministic, offline. For spoiler-hiding and light obfuscation.",
+      "version": "0.1.0"
+    }
+  ]
+}

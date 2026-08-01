@@ -1,0 +1,37 @@
+{
+  "name": "rot13",
+  "description": "Use this skill to apply the ROT13 cipher to text (its own inverse). Deterministic, offline. For spoiler-hiding and light obfuscation.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "ai",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Input text",
+      "required": true,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "rot13",
+    "cipher",
+    "text",
+    "obfuscate"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1063",
+  "metadata": {}
+}

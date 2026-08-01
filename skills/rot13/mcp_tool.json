@@ -1,0 +1,22 @@
+{
+  "name": "rot13",
+  "description": "Use this skill to apply the ROT13 cipher to text (its own inverse). Deterministic, offline. For spoiler-hiding and light obfuscation.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "rot13",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
