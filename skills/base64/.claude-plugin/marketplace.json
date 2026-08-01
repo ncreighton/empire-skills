@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "base64",
+      "source": "./skills/base64",
+      "description": "Use this skill to base64-encode or -decode text (mode=encode|decode). Deterministic, offline. For tokens, data URIs, and encoding payloads.",
+      "version": "0.1.0"
+    }
+  ]
+}

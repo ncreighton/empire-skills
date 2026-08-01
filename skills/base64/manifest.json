@@ -1,0 +1,45 @@
+{
+  "name": "base64",
+  "description": "Use this skill to base64-encode or -decode text (mode=encode|decode). Deterministic, offline. For tokens, data URIs, and encoding payloads.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "ai",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Input text",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "mode",
+      "type": "string",
+      "description": "encode (default) or decode",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "base64",
+    "encode",
+    "decode",
+    "data"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1057",
+  "metadata": {}
+}

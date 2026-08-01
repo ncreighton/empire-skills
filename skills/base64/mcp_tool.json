@@ -1,0 +1,26 @@
+{
+  "name": "base64",
+  "description": "Use this skill to base64-encode or -decode text (mode=encode|decode). Deterministic, offline. For tokens, data URIs, and encoding payloads.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      },
+      "mode": {
+        "type": "string",
+        "description": "encode (default) or decode"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "base64",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
