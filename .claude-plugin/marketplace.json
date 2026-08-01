@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 41 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 44 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -220,6 +220,13 @@
       "type": "instruction"
     },
     {
+      "name": "alt-text-check",
+      "source": "./skills/alt-text-check",
+      "description": "Use this skill to audit image alt text in markdown: counts images, missing alt, and alt over 125 chars. Deterministic, offline. For accessibility + SEO image compliance.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "amazon-ads-roas-optimizer-budget-reallocator",
       "source": "./skills/amazon-ads-roas-optimizer-budget-reallocator",
       "description": "Analyze Amazon PPC campaigns in real-time, identify underperformers, calculate true ROAS with organic lift, and reallocate budgets across campaigns. Use when the user needs campaign optimization, keyword analysis, budget recommendations, or A/B testing strategies.",
@@ -328,6 +335,13 @@
       "name": "dedupe-lines",
       "source": "./skills/dedupe-lines",
       "description": "Use this skill to remove duplicate lines from text, preserving first-seen order by default (optionally sorted or case-insensitive). Deterministic, offline. Returns the deduped text plus kept/removed counts.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "duplicate-sentences",
+      "source": "./skills/duplicate-sentences",
+      "description": "Use this skill to detect repeated sentences in text (case/whitespace-insensitive) with their counts. Deterministic, offline. For catching LLM repetition and thin/padded content.",
       "version": "0.1.0",
       "type": "executable"
     },
@@ -715,6 +729,13 @@
       "description": "Automate supply chain visibility and tracking with real-time data aggregation, customizable workflows, and compliance reporting. Use when the user needs inventory tracking, shipment monitoring, supplier compliance, or supply chain analytics.",
       "version": "1.0.0",
       "type": "instruction"
+    },
+    {
+      "name": "truncate-words",
+      "source": "./skills/truncate-words",
+      "description": "Use this skill to truncate text to a max number of words with an ellipsis (default 50). Deterministic, offline. For excerpts and previews.",
+      "version": "0.1.0",
+      "type": "executable"
     },
     {
       "name": "utm-builder",
