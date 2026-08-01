@@ -1,0 +1,22 @@
+{
+  "name": "heading_outline",
+  "description": "Use this skill to extract the heading outline (H1-H6) from markdown and check hierarchy health: flags multiple H1s and level jumps (H2->H4). Deterministic, offline. For SEO structure audits.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "markdown": {
+        "type": "string",
+        "description": "Markdown/HTML content"
+      }
+    },
+    "required": [
+      "markdown"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "heading-outline",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "heading-outline",
+      "source": "./skills/heading-outline",
+      "description": "Use this skill to extract the heading outline (H1-H6) from markdown and check hierarchy health: flags multiple H1s and level jumps (H2->H4). Deterministic, offline. For SEO structure audits.",
+      "version": "0.1.0"
+    }
+  ]
+}
