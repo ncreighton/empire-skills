@@ -1,0 +1,26 @@
+{
+  "name": "initials",
+  "description": "Use this skill to get the initials of a name/phrase (first letter of each word, uppercased, capped at max). Deterministic, offline. For avatars/monograms.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      },
+      "max": {
+        "type": "number",
+        "description": "Max initials (default 3)"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "initials",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}

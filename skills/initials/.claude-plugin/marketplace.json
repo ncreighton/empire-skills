@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "initials",
+      "source": "./skills/initials",
+      "description": "Use this skill to get the initials of a name/phrase (first letter of each word, uppercased, capped at max). Deterministic, offline. For avatars/monograms.",
+      "version": "0.1.0"
+    }
+  ]
+}
