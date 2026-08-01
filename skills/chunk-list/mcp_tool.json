@@ -1,0 +1,26 @@
+{
+  "name": "chunk_list",
+  "description": "Use this skill to split a list (or comma string) into fixed-size chunks. Deterministic, offline. For batching, pagination, grid layouts.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "items": {
+        "type": "array",
+        "description": "List or comma-separated string"
+      },
+      "size": {
+        "type": "number",
+        "description": "Chunk size (default 3)"
+      }
+    },
+    "required": [
+      "items"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "chunk-list",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}

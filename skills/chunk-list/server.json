@@ -1,0 +1,34 @@
+{
+  "name": "io.github.ncreighton/chunk-list",
+  "description": "Use this skill to split a list (or comma string) into fixed-size chunks. Deterministic, offline. For batching, pagination, grid layouts.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "chunk-list",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "description": "List or comma-separated string"
+        },
+        "size": {
+          "type": "number",
+          "description": "Chunk size (default 3)"
+        }
+      },
+      "required": [
+        "items"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

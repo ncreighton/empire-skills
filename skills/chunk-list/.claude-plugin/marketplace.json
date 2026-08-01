@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "chunk-list",
+      "source": "./skills/chunk-list",
+      "description": "Use this skill to split a list (or comma string) into fixed-size chunks. Deterministic, offline. For batching, pagination, grid layouts.",
+      "version": "0.1.0"
+    }
+  ]
+}
