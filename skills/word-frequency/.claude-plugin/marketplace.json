@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "word-frequency",
+      "source": "./skills/word-frequency",
+      "description": "Use this skill to get the most frequent words in a text: tokenizes, lowercases, drops common stopwords (optional), and returns the top-N words with counts plus total/unique word counts. Deterministic, offline. For content analysis, keyword discovery, and tag suggestions.",
+      "version": "0.1.0"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "word-frequency",
+  "description": "Use this skill to get the most frequent words in a text: tokenizes, lowercases, drops common stopwords (optional), and returns the top-N words with counts plus total/unique word counts. Deterministic, offline. For content analysis, keyword discovery, and tag suggestions.",
+  "version": "0.1.0",
+  "kind": "analyzer",
+  "niche": "publishing",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Text to analyze",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "top",
+      "type": "number",
+      "description": "How many top words (default 10)",
+      "required": false,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "include_stopwords",
+      "type": "boolean",
+      "description": "Include common stopwords (default false)",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "text",
+    "frequency",
+    "keyword",
+    "content",
+    "analysis"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1056",
+  "metadata": {}
+}

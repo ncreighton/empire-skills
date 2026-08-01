@@ -1,0 +1,30 @@
+{
+  "name": "word_frequency",
+  "description": "Use this skill to get the most frequent words in a text: tokenizes, lowercases, drops common stopwords (optional), and returns the top-N words with counts plus total/unique word counts. Deterministic, offline. For content analysis, keyword discovery, and tag suggestions.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Text to analyze"
+      },
+      "top": {
+        "type": "number",
+        "description": "How many top words (default 10)"
+      },
+      "include_stopwords": {
+        "type": "boolean",
+        "description": "Include common stopwords (default false)"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "word-frequency",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
