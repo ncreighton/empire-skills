@@ -1,0 +1,37 @@
+{
+  "name": "extract-key-phrases",
+  "description": "Use this skill to extract the most important key phrases / topics from a text as a short list. Uses an LLM. For tagging and SEO keyword discovery.",
+  "version": "0.1.0",
+  "kind": "analyzer",
+  "niche": "publishing",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Input text",
+      "required": true,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "near_free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "keywords",
+    "phrases",
+    "llm",
+    "seo"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1085",
+  "metadata": {}
+}

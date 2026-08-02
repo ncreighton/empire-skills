@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "extract-key-phrases",
+      "source": "./skills/extract-key-phrases",
+      "description": "Use this skill to extract the most important key phrases / topics from a text as a short list. Uses an LLM. For tagging and SEO keyword discovery.",
+      "version": "0.1.0"
+    }
+  ]
+}

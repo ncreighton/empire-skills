@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/extract-key-phrases",
+  "description": "Use this skill to extract the most important key phrases / topics from a text as a short list. Uses an LLM. For tagging and SEO keyword discovery.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "extract-key-phrases",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Input text"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "near_free"
+  }
+}
