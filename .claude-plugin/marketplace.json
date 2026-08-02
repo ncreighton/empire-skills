@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 44 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 49 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -262,6 +262,13 @@
       "type": "executable"
     },
     {
+      "name": "classify-sentiment",
+      "source": "./skills/classify-sentiment",
+      "description": "Use this skill to classify the sentiment of a short text as positive, negative, or neutral, with a one-line reason. Uses an LLM. For review/comment triage.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "competitor-spy-tool",
       "source": "./skills/competitor-spy-tool",
       "description": "Monitor competitor websites for pricing changes, new content, and keyword movements. Use when the user needs competitive intelligence, market tracking, or SEO benchmarking across multiple domains.",
@@ -405,6 +412,13 @@
       "name": "extract-json-block",
       "source": "./skills/extract-json-block",
       "description": "Use this skill to pull the first valid JSON object or array out of noisy or LLM-generated text: strips ```json code fences, does a balanced-brace scan, and repairs trailing commas. Returns the parsed data. Deterministic, offline. Essential for safely parsing LLM output before using it.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "extract-key-phrases",
+      "source": "./skills/extract-key-phrases",
+      "description": "Use this skill to extract the most important key phrases / topics from a text as a short list. Uses an LLM. For tagging and SEO keyword discovery.",
       "version": "0.1.0",
       "type": "executable"
     },
@@ -647,6 +661,13 @@
       "type": "executable"
     },
     {
+      "name": "rewrite-tone",
+      "source": "./skills/rewrite-tone",
+      "description": "Use this skill to rewrite text in a target tone (e.g. professional, friendly, punchy, formal) while preserving meaning. Uses an LLM.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "rot13",
       "source": "./skills/rot13",
       "description": "Use this skill to apply the ROT13 cipher to text (its own inverse). Deterministic, offline. For spoiler-hiding and light obfuscation.",
@@ -692,6 +713,20 @@
       "name": "strip-markdown",
       "source": "./skills/strip-markdown",
       "description": "Use this skill to strip markdown formatting from text and return clean plain text: removes headings, bold/italic, links (keeps link text), code fences, list markers, and blockquotes. Deterministic, offline. Great for generating previews or plain-text excerpts.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "suggest-titles",
+      "source": "./skills/suggest-titles",
+      "description": "Use this skill to generate N catchy, SEO-aware title options for an article given its topic or first paragraph. Uses an LLM.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "summarize-bullets",
+      "source": "./skills/summarize-bullets",
+      "description": "Use this skill to summarize a block of text into N concise bullet points capturing the key ideas. Uses an LLM. Good for TL;DRs and article recaps.",
       "version": "0.1.0",
       "type": "executable"
     },
