@@ -1,0 +1,45 @@
+{
+  "name": "summarize-bullets",
+  "description": "Use this skill to summarize a block of text into N concise bullet points capturing the key ideas. Uses an LLM. Good for TL;DRs and article recaps.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "ai",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Input text",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "count",
+      "type": "number",
+      "description": "Number of bullets (default 3)",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "near_free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "summarize",
+    "llm",
+    "content",
+    "tldr"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1082",
+  "metadata": {}
+}

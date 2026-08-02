@@ -1,0 +1,34 @@
+{
+  "name": "io.github.ncreighton/summarize-bullets",
+  "description": "Use this skill to summarize a block of text into N concise bullet points capturing the key ideas. Uses an LLM. Good for TL;DRs and article recaps.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "summarize-bullets",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Input text"
+        },
+        "count": {
+          "type": "number",
+          "description": "Number of bullets (default 3)"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "near_free"
+  }
+}
