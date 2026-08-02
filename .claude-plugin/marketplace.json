@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 49 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 50 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -239,6 +239,13 @@
       "description": "Audit Amazon product listings for conversion killers: bullet clarity, A+ gaps, pricing psychology, image sequences, and review sentiment. Provides rewrites ranked by estimated lift (+8-12% CTR). Use when the user needs listing optimization, conversion analysis, or competitive benchmarking.",
       "version": "1.0.0",
       "type": "instruction"
+    },
+    {
+      "name": "answer-faq",
+      "source": "./skills/answer-faq",
+      "description": "Use this skill to generate a concise FAQ answer for a given question, optionally grounded in provided context text. Uses an LLM.",
+      "version": "0.1.0",
+      "type": "executable"
     },
     {
       "name": "base64",
