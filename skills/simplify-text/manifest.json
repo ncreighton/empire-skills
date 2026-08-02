@@ -1,0 +1,37 @@
+{
+  "name": "simplify-text",
+  "description": "Use this skill to rewrite complex text in plain, simple language at a roughly 8th-grade reading level while preserving meaning. Uses an LLM.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "publishing",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Input text",
+      "required": true,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "near_free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "simplify",
+    "plain-language",
+    "rewrite",
+    "llm"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1090",
+  "metadata": {}
+}

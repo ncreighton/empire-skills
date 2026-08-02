@@ -1,0 +1,22 @@
+{
+  "name": "simplify_text",
+  "description": "Use this skill to rewrite complex text in plain, simple language at a roughly 8th-grade reading level while preserving meaning. Uses an LLM.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "simplify-text",
+    "cost_tier": "near_free",
+    "requires_creds": []
+  }
+}

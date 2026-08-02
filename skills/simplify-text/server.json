@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/simplify-text",
+  "description": "Use this skill to rewrite complex text in plain, simple language at a roughly 8th-grade reading level while preserving meaning. Uses an LLM.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "simplify-text",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Input text"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "near_free"
+  }
+}

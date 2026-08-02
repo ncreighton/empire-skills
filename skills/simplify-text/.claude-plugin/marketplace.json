@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "simplify-text",
+      "source": "./skills/simplify-text",
+      "description": "Use this skill to rewrite complex text in plain, simple language at a roughly 8th-grade reading level while preserving meaning. Uses an LLM.",
+      "version": "0.1.0"
+    }
+  ]
+}
