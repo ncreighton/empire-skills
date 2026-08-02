@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/extract-action-items",
+  "description": "Use this skill to extract a clean list of concrete action items / to-dos from meeting notes or a message thread. Uses an LLM. Returns a list of short imperative tasks.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "extract-action-items",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Input text"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "near_free"
+  }
+}

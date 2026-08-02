@@ -1,0 +1,22 @@
+{
+  "name": "extract_action_items",
+  "description": "Use this skill to extract a clean list of concrete action items / to-dos from meeting notes or a message thread. Uses an LLM. Returns a list of short imperative tasks.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "extract-action-items",
+    "cost_tier": "near_free",
+    "requires_creds": []
+  }
+}
