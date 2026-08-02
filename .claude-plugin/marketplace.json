@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 50 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 54 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -381,6 +381,13 @@
       "type": "instruction"
     },
     {
+      "name": "email-subject-lines",
+      "source": "./skills/email-subject-lines",
+      "description": "Use this skill to generate N catchy email subject lines from an email body or topic, optimized for open rate (curiosity, brevity, no spam words). Uses an LLM. Returns a list.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "estimate-tokens",
       "source": "./skills/estimate-tokens",
       "description": "Use this skill to approximate the LLM token count of a text before an API call, for cost/budget guarding. Averages two estimators (~4 chars/token and ~0.75 tokens/word). Deterministic, offline, no tokenizer dependency. Not exact, but reliable for gating oversized prompts.",
@@ -393,6 +400,13 @@
       "description": "Optimize Etsy product titles, tags, and descriptions using AI-powered keyword research and competitor analysis. Use when the user needs higher search rankings, increased visibility, or better conversion rates for Etsy shop listings.",
       "version": "1.0.0",
       "type": "instruction"
+    },
+    {
+      "name": "extract-action-items",
+      "source": "./skills/extract-action-items",
+      "description": "Use this skill to extract a clean list of concrete action items / to-dos from meeting notes or a message thread. Uses an LLM. Returns a list of short imperative tasks.",
+      "version": "0.1.0",
+      "type": "executable"
     },
     {
       "name": "extract-domains",
@@ -456,6 +470,13 @@
       "description": "Analyze complete sales funnels to identify drop-off points, traffic source attribution, and conversion leaks. Use when the user needs CRO audits, funnel optimization, or revenue recovery strategies.",
       "version": "1.0.0",
       "type": "instruction"
+    },
+    {
+      "name": "generate-cta",
+      "source": "./skills/generate-cta",
+      "description": "Use this skill to generate N compelling call-to-action lines for a given product or offer description. Uses an LLM. Returns a list of CTA options.",
+      "version": "0.1.0",
+      "type": "executable"
     },
     {
       "name": "google-analytics-intelligence",
@@ -687,6 +708,13 @@
       "description": "Segment customers into AI-powered clusters using behavioral, demographic, and transactional data. Use when the user needs customer segmentation, audience targeting, or CRM list organization for marketing automation.",
       "version": "1.0.0",
       "type": "instruction"
+    },
+    {
+      "name": "simplify-text",
+      "source": "./skills/simplify-text",
+      "description": "Use this skill to rewrite complex text in plain, simple language at a roughly 8th-grade reading level while preserving meaning. Uses an LLM.",
+      "version": "0.1.0",
+      "type": "executable"
     },
     {
       "name": "slugify",
