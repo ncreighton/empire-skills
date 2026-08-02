@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "jaccard-similarity",
+      "source": "./skills/jaccard-similarity",
+      "description": "Use this skill to measure word-set (Jaccard) similarity between two texts (0-1), with shared-word count and a near-duplicate flag (>=0.8). Deterministic, offline. For dedup and content-overlap detection.",
+      "version": "0.1.0"
+    }
+  ]
+}

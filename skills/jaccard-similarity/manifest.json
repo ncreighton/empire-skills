@@ -1,0 +1,45 @@
+{
+  "name": "jaccard-similarity",
+  "description": "Use this skill to measure word-set (Jaccard) similarity between two texts (0-1), with shared-word count and a near-duplicate flag (>=0.8). Deterministic, offline. For dedup and content-overlap detection.",
+  "version": "0.1.0",
+  "kind": "analyzer",
+  "niche": "publishing",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text_a",
+      "type": "string",
+      "description": "First text",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "text_b",
+      "type": "string",
+      "description": "Second text",
+      "required": true,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "similarity",
+    "jaccard",
+    "dedup",
+    "content"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1101",
+  "metadata": {}
+}

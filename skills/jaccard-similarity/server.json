@@ -1,0 +1,35 @@
+{
+  "name": "io.github.ncreighton/jaccard-similarity",
+  "description": "Use this skill to measure word-set (Jaccard) similarity between two texts (0-1), with shared-word count and a near-duplicate flag (>=0.8). Deterministic, offline. For dedup and content-overlap detection.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "jaccard-similarity",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text_a": {
+          "type": "string",
+          "description": "First text"
+        },
+        "text_b": {
+          "type": "string",
+          "description": "Second text"
+        }
+      },
+      "required": [
+        "text_a",
+        "text_b"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}
