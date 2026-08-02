@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 62 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 63 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -265,6 +265,13 @@
       "name": "case-convert",
       "source": "./skills/case-convert",
       "description": "Use this skill to convert an identifier between snake_case, camelCase, PascalCase, and kebab-case (to=snake|camel|pascal|kebab). Deterministic, offline. For code/config transforms.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "categorize-text",
+      "source": "./skills/categorize-text",
+      "description": "Use this skill to assign the single best category to a text from a provided list of candidate categories, with a confidence note. Uses an LLM. For routing, tagging, and triage.",
       "version": "0.1.0",
       "type": "executable"
     },
