@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "csv-column",
+      "source": "./skills/csv-column",
+      "description": "Use this skill to extract a single column's values from CSV text by header name or index. Deterministic, offline. For pulling one field out of a spreadsheet export.",
+      "version": "0.1.0"
+    }
+  ]
+}

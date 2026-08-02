@@ -1,0 +1,27 @@
+{
+  "name": "csv_column",
+  "description": "Use this skill to extract a single column's values from CSV text by header name or index. Deterministic, offline. For pulling one field out of a spreadsheet export.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "csv": {
+        "type": "string",
+        "description": "CSV text"
+      },
+      "column": {
+        "type": "string",
+        "description": "Header name or 0-based index"
+      }
+    },
+    "required": [
+      "csv",
+      "column"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "csv-column",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
