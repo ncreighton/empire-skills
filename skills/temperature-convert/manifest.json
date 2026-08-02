@@ -1,0 +1,52 @@
+{
+  "name": "temperature-convert",
+  "description": "Use this skill to convert a temperature between Celsius, Fahrenheit, and Kelvin (from_unit/to_unit = C/F/K). Deterministic, offline.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "ai",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "value",
+      "type": "number",
+      "description": "Temperature value",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "from_unit",
+      "type": "string",
+      "description": "C/F/K (default C)",
+      "required": false,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "to_unit",
+      "type": "string",
+      "description": "C/F/K (default F)",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "temperature",
+    "convert",
+    "units"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1100",
+  "metadata": {}
+}

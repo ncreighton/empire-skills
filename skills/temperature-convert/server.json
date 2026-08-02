@@ -1,0 +1,38 @@
+{
+  "name": "io.github.ncreighton/temperature-convert",
+  "description": "Use this skill to convert a temperature between Celsius, Fahrenheit, and Kelvin (from_unit/to_unit = C/F/K). Deterministic, offline.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "temperature-convert",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "description": "Temperature value"
+        },
+        "from_unit": {
+          "type": "string",
+          "description": "C/F/K (default C)"
+        },
+        "to_unit": {
+          "type": "string",
+          "description": "C/F/K (default F)"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

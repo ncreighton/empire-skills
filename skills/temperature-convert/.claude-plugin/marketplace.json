@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "temperature-convert",
+      "source": "./skills/temperature-convert",
+      "description": "Use this skill to convert a temperature between Celsius, Fahrenheit, and Kelvin (from_unit/to_unit = C/F/K). Deterministic, offline.",
+      "version": "0.1.0"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "temperature_convert",
+  "description": "Use this skill to convert a temperature between Celsius, Fahrenheit, and Kelvin (from_unit/to_unit = C/F/K). Deterministic, offline.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "value": {
+        "type": "number",
+        "description": "Temperature value"
+      },
+      "from_unit": {
+        "type": "string",
+        "description": "C/F/K (default C)"
+      },
+      "to_unit": {
+        "type": "string",
+        "description": "C/F/K (default F)"
+      }
+    },
+    "required": [
+      "value"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "temperature-convert",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
