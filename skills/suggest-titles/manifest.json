@@ -1,0 +1,45 @@
+{
+  "name": "suggest-titles",
+  "description": "Use this skill to generate N catchy, SEO-aware title options for an article given its topic or first paragraph. Uses an LLM.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "publishing",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Input text",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "count",
+      "type": "number",
+      "description": "How many titles (default 5)",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "near_free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "titles",
+    "seo",
+    "llm",
+    "content"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1086",
+  "metadata": {}
+}

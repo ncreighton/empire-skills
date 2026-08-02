@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "suggest-titles",
+      "source": "./skills/suggest-titles",
+      "description": "Use this skill to generate N catchy, SEO-aware title options for an article given its topic or first paragraph. Uses an LLM.",
+      "version": "0.1.0"
+    }
+  ]
+}

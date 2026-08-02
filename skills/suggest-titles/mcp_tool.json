@@ -1,0 +1,26 @@
+{
+  "name": "suggest_titles",
+  "description": "Use this skill to generate N catchy, SEO-aware title options for an article given its topic or first paragraph. Uses an LLM.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      },
+      "count": {
+        "type": "number",
+        "description": "How many titles (default 5)"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "suggest-titles",
+    "cost_tier": "near_free",
+    "requires_creds": []
+  }
+}
