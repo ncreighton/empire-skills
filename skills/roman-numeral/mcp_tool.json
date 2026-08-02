@@ -1,0 +1,26 @@
+{
+  "name": "roman_numeral",
+  "description": "Use this skill to convert an integer (1-3999) to a Roman numeral, or a Roman numeral back to an integer (to=roman|int). Deterministic, offline.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "value": {
+        "type": "string",
+        "description": "Integer or roman numeral"
+      },
+      "to": {
+        "type": "string",
+        "description": "roman (default) or int"
+      }
+    },
+    "required": [
+      "value"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "roman-numeral",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}

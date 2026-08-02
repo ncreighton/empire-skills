@@ -1,0 +1,44 @@
+{
+  "name": "roman-numeral",
+  "description": "Use this skill to convert an integer (1-3999) to a Roman numeral, or a Roman numeral back to an integer (to=roman|int). Deterministic, offline.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "ai",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "value",
+      "type": "string",
+      "description": "Integer or roman numeral",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "to",
+      "type": "string",
+      "description": "roman (default) or int",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "roman",
+    "numeral",
+    "convert"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1099",
+  "metadata": {}
+}

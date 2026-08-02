@@ -1,0 +1,34 @@
+{
+  "name": "io.github.ncreighton/roman-numeral",
+  "description": "Use this skill to convert an integer (1-3999) to a Roman numeral, or a Roman numeral back to an integer (to=roman|int). Deterministic, offline.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "roman-numeral",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "Integer or roman numeral"
+        },
+        "to": {
+          "type": "string",
+          "description": "roman (default) or int"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}
