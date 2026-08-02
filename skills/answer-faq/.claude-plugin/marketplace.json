@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "answer-faq",
+      "source": "./skills/answer-faq",
+      "description": "Use this skill to generate a concise FAQ answer for a given question, optionally grounded in provided context text. Uses an LLM.",
+      "version": "0.1.0"
+    }
+  ]
+}

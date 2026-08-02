@@ -1,0 +1,45 @@
+{
+  "name": "answer-faq",
+  "description": "Use this skill to generate a concise FAQ answer for a given question, optionally grounded in provided context text. Uses an LLM.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "ai",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "question",
+      "type": "string",
+      "description": "The question",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "context",
+      "type": "string",
+      "description": "Optional grounding context",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "near_free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "faq",
+    "answer",
+    "llm",
+    "content"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1087",
+  "metadata": {}
+}

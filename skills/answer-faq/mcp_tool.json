@@ -1,0 +1,26 @@
+{
+  "name": "answer_faq",
+  "description": "Use this skill to generate a concise FAQ answer for a given question, optionally grounded in provided context text. Uses an LLM.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "question": {
+        "type": "string",
+        "description": "The question"
+      },
+      "context": {
+        "type": "string",
+        "description": "Optional grounding context"
+      }
+    },
+    "required": [
+      "question"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "answer-faq",
+    "cost_tier": "near_free",
+    "requires_creds": []
+  }
+}

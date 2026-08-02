@@ -1,0 +1,34 @@
+{
+  "name": "io.github.ncreighton/answer-faq",
+  "description": "Use this skill to generate a concise FAQ answer for a given question, optionally grounded in provided context text. Uses an LLM.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "answer-faq",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string",
+          "description": "The question"
+        },
+        "context": {
+          "type": "string",
+          "description": "Optional grounding context"
+        }
+      },
+      "required": [
+        "question"
+      ]
+    },
+    "cost_tier": "near_free"
+  }
+}
