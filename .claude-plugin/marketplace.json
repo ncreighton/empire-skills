@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 60 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 62 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -251,6 +251,13 @@
       "name": "base64",
       "source": "./skills/base64",
       "description": "Use this skill to base64-encode or -decode text (mode=encode|decode). Deterministic, offline. For tokens, data URIs, and encoding payloads.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "bytes-human",
+      "source": "./skills/bytes-human",
+      "description": "Use this skill to format a byte count as a human-readable size (B/KB/MB/GB/TB/PB). Deterministic, offline. For file sizes and quotas.",
       "version": "0.1.0",
       "type": "executable"
     },
@@ -853,6 +860,13 @@
       "name": "utm-report",
       "source": "./skills/utm-report",
       "description": "Use this skill to audit a batch of URLs for campaign attribution: parses UTM parameters from every URL, flags untagged links, and aggregates counts by source and by campaign. Deterministic, offline. Feed it your link list and get an attribution-readiness report.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "uuid-check",
+      "source": "./skills/uuid-check",
+      "description": "Use this skill to validate whether a string is a well-formed UUID (v1-v5) and report its version. Deterministic, offline. For ID validation.",
       "version": "0.1.0",
       "type": "executable"
     },
