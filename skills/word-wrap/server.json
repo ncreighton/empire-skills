@@ -1,0 +1,34 @@
+{
+  "name": "io.github.ncreighton/word-wrap",
+  "description": "Use this skill to wrap text to a given column width (default 80), preserving words. Deterministic, offline. For plain-text formatting and emails.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "word-wrap",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Text to wrap"
+        },
+        "width": {
+          "type": "number",
+          "description": "Column width (default 80)"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}
