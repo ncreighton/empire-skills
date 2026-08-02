@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/bytes-human",
+  "description": "Use this skill to format a byte count as a human-readable size (B/KB/MB/GB/TB/PB). Deterministic, offline. For file sizes and quotas.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "bytes-human",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "bytes": {
+          "type": "number",
+          "description": "Number of bytes"
+        }
+      },
+      "required": [
+        "bytes"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

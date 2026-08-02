@@ -1,0 +1,37 @@
+{
+  "name": "bytes-human",
+  "description": "Use this skill to format a byte count as a human-readable size (B/KB/MB/GB/TB/PB). Deterministic, offline. For file sizes and quotas.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "ai",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "bytes",
+      "type": "number",
+      "description": "Number of bytes",
+      "required": true,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "bytes",
+    "size",
+    "humanize",
+    "format"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1106",
+  "metadata": {}
+}

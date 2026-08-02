@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "bytes-human",
+      "source": "./skills/bytes-human",
+      "description": "Use this skill to format a byte count as a human-readable size (B/KB/MB/GB/TB/PB). Deterministic, offline. For file sizes and quotas.",
+      "version": "0.1.0"
+    }
+  ]
+}

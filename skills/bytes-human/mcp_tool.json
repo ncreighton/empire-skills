@@ -1,0 +1,22 @@
+{
+  "name": "bytes_human",
+  "description": "Use this skill to format a byte count as a human-readable size (B/KB/MB/GB/TB/PB). Deterministic, offline. For file sizes and quotas.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "bytes": {
+        "type": "number",
+        "description": "Number of bytes"
+      }
+    },
+    "required": [
+      "bytes"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "bytes-human",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
