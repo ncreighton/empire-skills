@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "generate-cta",
+      "source": "./skills/generate-cta",
+      "description": "Use this skill to generate N compelling call-to-action lines for a given product or offer description. Uses an LLM. Returns a list of CTA options.",
+      "version": "0.1.0"
+    }
+  ]
+}

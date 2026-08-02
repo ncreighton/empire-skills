@@ -1,0 +1,45 @@
+{
+  "name": "generate-cta",
+  "description": "Use this skill to generate N compelling call-to-action lines for a given product or offer description. Uses an LLM. Returns a list of CTA options.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "reviews",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Input text",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "count",
+      "type": "number",
+      "description": "How many CTAs (default 5)",
+      "required": false,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "near_free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "cta",
+    "copywriting",
+    "marketing",
+    "llm"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1091",
+  "metadata": {}
+}

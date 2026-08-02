@@ -1,0 +1,26 @@
+{
+  "name": "generate_cta",
+  "description": "Use this skill to generate N compelling call-to-action lines for a given product or offer description. Uses an LLM. Returns a list of CTA options.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      },
+      "count": {
+        "type": "number",
+        "description": "How many CTAs (default 5)"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "generate-cta",
+    "cost_tier": "near_free",
+    "requires_creds": []
+  }
+}
