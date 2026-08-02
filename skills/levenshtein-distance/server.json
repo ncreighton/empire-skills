@@ -1,0 +1,35 @@
+{
+  "name": "io.github.ncreighton/levenshtein-distance",
+  "description": "Use this skill to compute the Levenshtein edit distance between two strings plus a 0-1 similarity ratio. Deterministic, offline. For fuzzy matching and typo detection.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "levenshtein-distance",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "string",
+          "description": "First string"
+        },
+        "b": {
+          "type": "string",
+          "description": "Second string"
+        }
+      },
+      "required": [
+        "a",
+        "b"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "levenshtein_distance",
+  "description": "Use this skill to compute the Levenshtein edit distance between two strings plus a 0-1 similarity ratio. Deterministic, offline. For fuzzy matching and typo detection.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "a": {
+        "type": "string",
+        "description": "First string"
+      },
+      "b": {
+        "type": "string",
+        "description": "Second string"
+      }
+    },
+    "required": [
+      "a",
+      "b"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "levenshtein-distance",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}
