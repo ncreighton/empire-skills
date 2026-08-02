@@ -1,0 +1,22 @@
+{
+  "name": "uuid_check",
+  "description": "Use this skill to validate whether a string is a well-formed UUID (v1-v5) and report its version. Deterministic, offline. For ID validation.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "value": {
+        "type": "string",
+        "description": "String to check"
+      }
+    },
+    "required": [
+      "value"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "uuid-check",
+    "cost_tier": "free",
+    "requires_creds": []
+  }
+}

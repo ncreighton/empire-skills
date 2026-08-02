@@ -1,0 +1,30 @@
+{
+  "name": "io.github.ncreighton/uuid-check",
+  "description": "Use this skill to validate whether a string is a well-formed UUID (v1-v5) and report its version. Deterministic, offline. For ID validation.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "uuid-check",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "String to check"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    },
+    "cost_tier": "free"
+  }
+}
