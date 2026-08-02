@@ -1,0 +1,34 @@
+{
+  "name": "io.github.ncreighton/email-subject-lines",
+  "description": "Use this skill to generate N catchy email subject lines from an email body or topic, optimized for open rate (curiosity, brevity, no spam words). Uses an LLM. Returns a list.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "email-subject-lines",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Input text"
+        },
+        "count": {
+          "type": "number",
+          "description": "How many subject lines (default 5)"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "near_free"
+  }
+}
