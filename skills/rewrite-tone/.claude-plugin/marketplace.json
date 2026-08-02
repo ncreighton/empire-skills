@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "rewrite-tone",
+      "source": "./skills/rewrite-tone",
+      "description": "Use this skill to rewrite text in a target tone (e.g. professional, friendly, punchy, formal) while preserving meaning. Uses an LLM.",
+      "version": "0.1.0"
+    }
+  ]
+}

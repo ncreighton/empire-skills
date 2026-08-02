@@ -1,0 +1,45 @@
+{
+  "name": "rewrite-tone",
+  "description": "Use this skill to rewrite text in a target tone (e.g. professional, friendly, punchy, formal) while preserving meaning. Uses an LLM.",
+  "version": "0.1.0",
+  "kind": "tool",
+  "niche": "publishing",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Input text",
+      "required": true,
+      "default": null,
+      "enum": null
+    },
+    {
+      "name": "tone",
+      "type": "string",
+      "description": "Target tone",
+      "required": true,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "near_free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "rewrite",
+    "tone",
+    "llm",
+    "content"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1084",
+  "metadata": {}
+}

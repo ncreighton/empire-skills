@@ -1,0 +1,35 @@
+{
+  "name": "io.github.ncreighton/rewrite-tone",
+  "description": "Use this skill to rewrite text in a target tone (e.g. professional, friendly, punchy, formal) while preserving meaning. Uses an LLM.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "rewrite-tone",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Input text"
+        },
+        "tone": {
+          "type": "string",
+          "description": "Target tone"
+        }
+      },
+      "required": [
+        "text",
+        "tone"
+      ]
+    },
+    "cost_tier": "near_free"
+  }
+}

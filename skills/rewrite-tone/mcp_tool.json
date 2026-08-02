@@ -1,0 +1,27 @@
+{
+  "name": "rewrite_tone",
+  "description": "Use this skill to rewrite text in a target tone (e.g. professional, friendly, punchy, formal) while preserving meaning. Uses an LLM.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      },
+      "tone": {
+        "type": "string",
+        "description": "Target tone"
+      }
+    },
+    "required": [
+      "text",
+      "tone"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "rewrite-tone",
+    "cost_tier": "near_free",
+    "requires_creds": []
+  }
+}
