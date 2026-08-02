@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 54 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 57 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -549,6 +549,13 @@
       "type": "instruction"
     },
     {
+      "name": "jaccard-similarity",
+      "source": "./skills/jaccard-similarity",
+      "description": "Use this skill to measure word-set (Jaccard) similarity between two texts (0-1), with shared-word count and a near-duplicate flag (>=0.8). Deterministic, offline. For dedup and content-overlap detection.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "json-format",
       "source": "./skills/json-format",
       "description": "Use this skill to pretty-print or minify a JSON string (mode=pretty|minify, optional sort_keys). Validates first. Deterministic, offline.",
@@ -696,6 +703,13 @@
       "type": "executable"
     },
     {
+      "name": "roman-numeral",
+      "source": "./skills/roman-numeral",
+      "description": "Use this skill to convert an integer (1-3999) to a Roman numeral, or a Roman numeral back to an integer (to=roman|int). Deterministic, offline.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "rot13",
       "source": "./skills/rot13",
       "description": "Use this skill to apply the ROT13 cipher to text (its own inverse). Deterministic, offline. For spoiler-hiding and light obfuscation.",
@@ -778,6 +792,13 @@
       "description": "Monitor and automate supply chain operations with real-time tracking, analytics dashboards, and customizable workflows. Use when the user needs supply chain visibility, inventory alerts, or shipment monitoring across multiple vendors and locations.",
       "version": "1.0.0",
       "type": "instruction"
+    },
+    {
+      "name": "temperature-convert",
+      "source": "./skills/temperature-convert",
+      "description": "Use this skill to convert a temperature between Celsius, Fahrenheit, and Kelvin (from_unit/to_unit = C/F/K). Deterministic, offline.",
+      "version": "0.1.0",
+      "type": "executable"
     },
     {
       "name": "title-to-path",
