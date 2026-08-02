@@ -1,6 +1,6 @@
 {
   "name": "empire-skills",
-  "description": "Empire agent skills: 57 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
+  "description": "Empire agent skills: 60 executable (runnable skill.py \u2014 deterministic, offline, callable via run_skill/MCP/CLI) and 67 instruction skills (SKILL.md that tells a Claude Code agent how to do something). Each entry is tagged with its type.",
   "plugins": [
     {
       "name": "affiliate-link-injector",
@@ -325,6 +325,13 @@
       "type": "instruction"
     },
     {
+      "name": "csv-column",
+      "source": "./skills/csv-column",
+      "description": "Use this skill to extract a single column's values from CSV text by header name or index. Deterministic, offline. For pulling one field out of a spreadsheet export.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
       "name": "csv-to-json",
       "source": "./skills/csv-to-json",
       "description": "Use this skill to convert CSV text into a list of JSON records, auto-detecting the delimiter (comma, semicolon, tab, or pipe) and using the first row as headers. Handles ragged rows. Deterministic, offline. The reliable first step before processing spreadsheet exports.",
@@ -580,6 +587,13 @@
       "name": "keyword-seo-check",
       "source": "./skills/keyword-seo-check",
       "description": "Use this skill to check whether a target keyword appears in the title and slug (and at the title start) and returns an SEO placement score. Deterministic, offline. For on-page SEO validation.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "levenshtein-distance",
+      "source": "./skills/levenshtein-distance",
+      "description": "Use this skill to compute the Levenshtein edit distance between two strings plus a 0-1 similarity ratio. Deterministic, offline. For fuzzy matching and typo detection.",
       "version": "0.1.0",
       "type": "executable"
     },
@@ -860,6 +874,13 @@
       "name": "word-frequency",
       "source": "./skills/word-frequency",
       "description": "Use this skill to get the most frequent words in a text: tokenizes, lowercases, drops common stopwords (optional), and returns the top-N words with counts plus total/unique word counts. Deterministic, offline. For content analysis, keyword discovery, and tag suggestions.",
+      "version": "0.1.0",
+      "type": "executable"
+    },
+    {
+      "name": "word-wrap",
+      "source": "./skills/word-wrap",
+      "description": "Use this skill to wrap text to a given column width (default 80), preserving words. Deterministic, offline. For plain-text formatting and emails.",
       "version": "0.1.0",
       "type": "executable"
     },
