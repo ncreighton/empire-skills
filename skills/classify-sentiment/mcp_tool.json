@@ -1,0 +1,22 @@
+{
+  "name": "classify_sentiment",
+  "description": "Use this skill to classify the sentiment of a short text as positive, negative, or neutral, with a one-line reason. Uses an LLM. For review/comment triage.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      }
+    },
+    "required": [
+      "text"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "classify-sentiment",
+    "cost_tier": "near_free",
+    "requires_creds": []
+  }
+}

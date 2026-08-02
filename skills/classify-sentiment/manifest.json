@@ -1,0 +1,37 @@
+{
+  "name": "classify-sentiment",
+  "description": "Use this skill to classify the sentiment of a short text as positive, negative, or neutral, with a one-line reason. Uses an LLM. For review/comment triage.",
+  "version": "0.1.0",
+  "kind": "analyzer",
+  "niche": "reviews",
+  "entry": "skill",
+  "params": [
+    {
+      "name": "text",
+      "type": "string",
+      "description": "Input text",
+      "required": true,
+      "default": null,
+      "enum": null
+    }
+  ],
+  "returns": "object",
+  "cost_tier": "near_free",
+  "requires_creds": [],
+  "requires_python": [],
+  "tags": [
+    "sentiment",
+    "classify",
+    "llm",
+    "reviews"
+  ],
+  "author": "SkillForge",
+  "license": "proprietary",
+  "price_usd": null,
+  "channels": [
+    "github"
+  ],
+  "manifest_version": "1.0",
+  "source_spec_id": "1083",
+  "metadata": {}
+}

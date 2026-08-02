@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "classify-sentiment",
+      "source": "./skills/classify-sentiment",
+      "description": "Use this skill to classify the sentiment of a short text as positive, negative, or neutral, with a one-line reason. Uses an LLM. For review/comment triage.",
+      "version": "0.1.0"
+    }
+  ]
+}
