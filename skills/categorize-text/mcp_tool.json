@@ -1,0 +1,27 @@
+{
+  "name": "categorize_text",
+  "description": "Use this skill to assign the single best category to a text from a provided list of candidate categories, with a confidence note. Uses an LLM. For routing, tagging, and triage.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Input text"
+      },
+      "categories": {
+        "type": "array",
+        "description": "Candidate categories (list or comma string)"
+      }
+    },
+    "required": [
+      "text",
+      "categories"
+    ]
+  },
+  "_dispatch": {
+    "runtime": "aten",
+    "skill_id": "categorize-text",
+    "cost_tier": "near_free",
+    "requires_creds": []
+  }
+}

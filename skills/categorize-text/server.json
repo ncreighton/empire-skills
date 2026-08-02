@@ -1,0 +1,35 @@
+{
+  "name": "io.github.ncreighton/categorize-text",
+  "description": "Use this skill to assign the single best category to a text from a provided list of candidate categories, with a confidence note. Uses an LLM. For routing, tagging, and triage.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "categorize-text",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Input text"
+        },
+        "categories": {
+          "type": "array",
+          "description": "Candidate categories (list or comma string)"
+        }
+      },
+      "required": [
+        "text",
+        "categories"
+      ]
+    },
+    "cost_tier": "near_free"
+  }
+}

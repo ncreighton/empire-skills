@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "categorize-text",
+      "source": "./skills/categorize-text",
+      "description": "Use this skill to assign the single best category to a text from a provided list of candidate categories, with a confidence note. Uses an LLM. For routing, tagging, and triage.",
+      "version": "0.1.0"
+    }
+  ]
+}
