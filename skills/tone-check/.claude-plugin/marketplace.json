@@ -1,0 +1,11 @@
+{
+  "name": "empire-skills",
+  "plugins": [
+    {
+      "name": "tone-check",
+      "source": "./skills/tone-check",
+      "description": "Use this skill to assess the tone of a text (e.g. professional, casual, aggressive, warm) and flag any tone that clashes with a stated target tone. Uses an LLM. For brand-voice QA.",
+      "version": "0.1.0"
+    }
+  ]
+}

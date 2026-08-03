@@ -1,0 +1,34 @@
+{
+  "name": "io.github.ncreighton/tone-check",
+  "description": "Use this skill to assess the tone of a text (e.g. professional, casual, aggressive, warm) and flag any tone that clashes with a stated target tone. Uses an LLM. For brand-voice QA.",
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registry_type": "pypi_or_git",
+      "identifier": "tone-check",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "_skill": {
+    "entry": "skill",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Input text"
+        },
+        "target_tone": {
+          "type": "string",
+          "description": "Desired tone to check against"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    },
+    "cost_tier": "near_free"
+  }
+}
